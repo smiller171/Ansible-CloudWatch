@@ -1,7 +1,7 @@
 ---
 - name: Deploy CloudWatch Scripts
   sudo: yes
-  copy: src={{item}} dest={{script_dir}}{item}}
+  copy: src={{item}} dest={{script_dir}}{{item}} mode=0774
   with_items:
   - awscreds.conf
   - CloudWatchClient.pm
