@@ -11,7 +11,7 @@
 
 - name: Install Ubuntu dependencies
   sudo: yes
-  apt: update_cache=yes name={{item}} state=lates
+  apt: update_cache=yes name={{item}} state=latest
   with_items: 
   - unzip
   - libwww-perl
