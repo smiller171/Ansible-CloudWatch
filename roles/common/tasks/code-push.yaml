@@ -1,7 +1,7 @@
 ---
 - name: Deploy CloudWatch Scripts
   sudo: yes
-  synchronize: src=files/{{item}} dest={{script_dir}}{{item}}
+  copy: src={{item}} dest={{script_dir}}{{item}}
   with_items:
   - awscreds.conf
   - CloudWatchClient.pm
