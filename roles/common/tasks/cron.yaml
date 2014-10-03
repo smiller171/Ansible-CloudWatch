@@ -3,6 +3,6 @@
   sudo: yes
   cron:
     name="CloudWatch"
-    minute=*/5
-    job="/var/local/cloudwatch/mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron"
+    minute=*/{{cron_interval}}
+    job="{{script_dir}}mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron"
     state=present

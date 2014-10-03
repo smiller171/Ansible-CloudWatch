@@ -3,4 +3,7 @@
   hosts: "{{ hosts }}"
   remote_user: "{{ user }}"
   roles:
-   - common
+  - common
+  vars:
+    cron_interval: 5
+    script_dir: /var/local/cloudwatch/
