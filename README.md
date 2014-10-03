@@ -5,5 +5,5 @@ Before running this play, create an awscreds.conf file in roles/common/files or 
 The format for awscreds.conf is:
 
 
-`AWSAccessKeyId= //enter key ID here`  
-`AWSSecretKey= //enter secret key here`
+`AWSAccessKeyId= //enter key ID here  
+AWSSecretKey= //enter secret key here`
