@@ -7,7 +7,7 @@
   - perl-Sys-Syslog
   - perl-LWP-Protocol-https
   - cron
-  when: anisble_distribution == Amazon
+  when: anisble_distribution == "Amazon"
 
 - name: Install Ubuntu dependencies
   sudo: yes
@@ -18,4 +18,4 @@
   - libcrypt-ssleay-perl
   - libswitch-perl
   - cron
-  when: anisble_distribution == Ubuntu
+  when: anisble_distribution == "Ubuntu"
