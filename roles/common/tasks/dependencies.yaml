@@ -7,7 +7,7 @@
   - perl-Sys-Syslog
   - perl-LWP-Protocol-https
   - cronie
-  when: anisble_distribution == "Amazon"
+  when: ansible_distribution == "Amazon"
 
 - name: Install Ubuntu dependencies
   sudo: yes
