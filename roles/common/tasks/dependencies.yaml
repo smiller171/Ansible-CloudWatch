@@ -1,0 +1,21 @@
+---
+- name: Install Amazon-Linux dependencies
+  sudo: yes
+  yum: name={{item}} state=latest
+  with_items: 
+  - perl-Switch
+  - perl-Sys-Syslog
+  - perl-LWP-Protocol-https
+  - cron
+  when: anisble_distribution == Amazon
+
+- name: Install Ubuntu dependencies
+  sudo: yes
+  apt: update_cache=yes name={{item}} state=latest
+  with_items: 
+  - unzip
+  - libwww-perl
+  - libcrypt-ssleay-perl
+  - libswitch-perl
+  - cron
+  when: anisble_distribution == Ubuntu

@@ -1,0 +1,6 @@
+---
+- name: deploy CloudWatch Scripts
+  hosts: "{{ hosts }}"
+  remote_user: "{{ user }}"
+  roles:
+   - common

@@ -1,0 +1,7 @@
+---
+- name: Deploy CloudWatch Scripts
+  sudo: yes
+  synchronize: src=files/{{item}} dest=/var/local/cloudwatch/{{item}}
+  - awscreds.conf
+  - CloudWatchClient.pm
+  - mon-put-instance-data.pl
