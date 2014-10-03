@@ -1,0 +1,655 @@
+2014-10-03 19:18:32,360 p=4903 u=smiller |   
+2014-10-03 19:18:32,360 p=4903 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 19:18:32,360 p=4903 u=smiller |   
+2014-10-03 19:18:42,362 p=4903 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 19:18:42,365 p=4903 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 19:18:42,698 p=4903 u=smiller |  ok: [localhost]
+2014-10-03 19:18:42,699 p=4903 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 19:18:42,704 p=4903 u=smiller |  fatal: [localhost] => error while evaluating conditional: anisble_distribution == "Amazon"
+2014-10-03 19:18:42,705 p=4903 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 19:18:42,705 p=4903 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 19:18:42,705 p=4903 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 19:18:42,706 p=4903 u=smiller |  localhost                  : ok=1    changed=0    unreachable=1    failed=0   
+2014-10-03 19:19:27,502 p=4972 u=smiller |   
+2014-10-03 19:19:27,502 p=4972 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 19:19:27,502 p=4972 u=smiller |   
+2014-10-03 19:19:27,618 p=4972 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 19:19:27,622 p=4972 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 19:19:27,954 p=4972 u=smiller |  ok: [localhost]
+2014-10-03 19:19:27,955 p=4972 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 19:19:27,965 p=4972 u=smiller |  skipping: [localhost]
+2014-10-03 19:19:27,965 p=4972 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 19:19:27,969 p=4972 u=smiller |  fatal: [localhost] => error while evaluating conditional: anisble_distribution == "Ubuntu"
+2014-10-03 19:19:27,969 p=4972 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 19:19:27,969 p=4972 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 19:19:27,970 p=4972 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 19:19:27,970 p=4972 u=smiller |  localhost                  : ok=1    changed=0    unreachable=1    failed=0   
+2014-10-03 19:20:01,241 p=5041 u=smiller |   
+2014-10-03 19:20:01,241 p=5041 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 19:20:01,241 p=5041 u=smiller |   
+2014-10-03 19:20:01,358 p=5041 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 19:20:01,362 p=5041 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 19:20:01,927 p=5041 u=smiller |  ok: [localhost]
+2014-10-03 19:20:01,928 p=5041 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 19:20:01,939 p=5041 u=smiller |  skipping: [localhost]
+2014-10-03 19:20:01,939 p=5041 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 19:20:02,040 p=5041 u=smiller |  failed: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron) => {"failed": true, "item": "unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron"}
+2014-10-03 19:20:02,041 p=5041 u=smiller |  msg: value of state must be one of: installed,latest,removed,absent,present, got: lates
+2014-10-03 19:20:02,041 p=5041 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 19:20:02,041 p=5041 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 19:20:02,042 p=5041 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 19:20:02,042 p=5041 u=smiller |  localhost                  : ok=1    changed=0    unreachable=0    failed=1   
+2014-10-03 19:20:37,011 p=5120 u=smiller |   
+2014-10-03 19:20:37,011 p=5120 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 19:20:37,011 p=5120 u=smiller |   
+2014-10-03 19:20:37,123 p=5120 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 19:20:37,127 p=5120 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 19:20:37,468 p=5120 u=smiller |  ok: [localhost]
+2014-10-03 19:20:37,468 p=5120 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 19:20:37,478 p=5120 u=smiller |  skipping: [localhost]
+2014-10-03 19:20:37,479 p=5120 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 19:20:48,765 p=5120 u=smiller |  changed: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 19:20:48,766 p=5120 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 19:20:48,955 p=5120 u=smiller |  failed: [localhost] => (item=awscreds.conf) => {"cmd": "rsync --delay-updates -FF --compress --timeout=10 --archive --rsh 'ssh  -o StrictHostKeyChecking=no' --out-format='<<CHANGED>>%i %n%L' files/awscreds.conf {{dir", "failed": true, "item": "awscreds.conf", "rc": 23}
+2014-10-03 19:20:48,956 p=5120 u=smiller |  msg: rsync: change_dir "/home/smiller/ansible/Ansible-CloudWatch//files" failed: No such file or directory (2)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1183) [sender=3.1.0]
+
+2014-10-03 19:20:49,137 p=5120 u=smiller |  failed: [localhost] => (item=CloudWatchClient.pm) => {"cmd": "rsync --delay-updates -FF --compress --timeout=10 --archive --rsh 'ssh  -o StrictHostKeyChecking=no' --out-format='<<CHANGED>>%i %n%L' files/CloudWatchClient.pm {{dir", "failed": true, "item": "CloudWatchClient.pm", "rc": 23}
+2014-10-03 19:20:49,137 p=5120 u=smiller |  msg: rsync: change_dir "/home/smiller/ansible/Ansible-CloudWatch//files" failed: No such file or directory (2)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1183) [sender=3.1.0]
+
+2014-10-03 19:20:49,317 p=5120 u=smiller |  failed: [localhost] => (item=mon-put-instance-data.pl) => {"cmd": "rsync --delay-updates -FF --compress --timeout=10 --archive --rsh 'ssh  -o StrictHostKeyChecking=no' --out-format='<<CHANGED>>%i %n%L' files/mon-put-instance-data.pl {{dir", "failed": true, "item": "mon-put-instance-data.pl", "rc": 23}
+2014-10-03 19:20:49,317 p=5120 u=smiller |  msg: rsync: change_dir "/home/smiller/ansible/Ansible-CloudWatch//files" failed: No such file or directory (2)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1183) [sender=3.1.0]
+
+2014-10-03 19:20:49,318 p=5120 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 19:20:49,318 p=5120 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 19:20:49,319 p=5120 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 19:20:49,319 p=5120 u=smiller |  localhost                  : ok=2    changed=1    unreachable=0    failed=1   
+2014-10-03 19:24:43,971 p=7465 u=smiller |   
+2014-10-03 19:24:43,971 p=7465 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 19:24:43,971 p=7465 u=smiller |   
+2014-10-03 19:24:54,106 p=7465 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 19:24:54,109 p=7465 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 19:24:54,449 p=7465 u=smiller |  ok: [localhost]
+2014-10-03 19:24:54,450 p=7465 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 19:24:54,460 p=7465 u=smiller |  skipping: [localhost]
+2014-10-03 19:24:54,460 p=7465 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 19:24:56,927 p=7465 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 19:24:56,928 p=7465 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 19:24:56,934 p=7465 u=smiller |  fatal: [localhost] => input file not found at /home/smiller/ansible/Ansible-CloudWatch/roles/common/files/awscreds.conf or /home/smiller/ansible/Ansible-CloudWatch/awscreds.conf
+2014-10-03 19:24:56,935 p=7465 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 19:24:56,935 p=7465 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 19:24:56,936 p=7465 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 19:24:56,936 p=7465 u=smiller |  localhost                  : ok=2    changed=0    unreachable=1    failed=0   
+2014-10-03 19:25:38,800 p=7537 u=smiller |   
+2014-10-03 19:25:38,800 p=7537 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 19:25:38,800 p=7537 u=smiller |   
+2014-10-03 19:25:38,914 p=7537 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 19:25:38,917 p=7537 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 19:25:39,243 p=7537 u=smiller |  ok: [localhost]
+2014-10-03 19:25:39,244 p=7537 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 19:25:39,254 p=7537 u=smiller |  skipping: [localhost]
+2014-10-03 19:25:39,254 p=7537 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 19:25:42,127 p=7537 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 19:25:42,128 p=7537 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 19:25:42,197 p=7537 u=smiller |  failed: [localhost] => (item=awscreds.conf) => {"failed": true, "item": "awscreds.conf", "md5sum": "ee053d21ab9d559fb40e4f7da3ce48f0"}
+2014-10-03 19:25:42,197 p=7537 u=smiller |  msg: this module requires key=value arguments (['src=awscreds.conf', 'dest={{dir', '|', 'default(/var/local/cloudwatch/)}}awscreds.conf', 'src=/tmp/ansible/tmp/ansible-tmp-1412364342.15-4370344883422/source', 'dest={{dir', 'original_basename=awscreds.conf'])
+2014-10-03 19:25:42,262 p=7537 u=smiller |  failed: [localhost] => (item=CloudWatchClient.pm) => {"failed": true, "item": "CloudWatchClient.pm", "md5sum": "dcb414488fbb4a158b7b2a39a91ce5ca"}
+2014-10-03 19:25:42,262 p=7537 u=smiller |  msg: this module requires key=value arguments (['src=CloudWatchClient.pm', 'dest={{dir', '|', 'default(/var/local/cloudwatch/)}}CloudWatchClient.pm', 'src=/tmp/ansible/tmp/ansible-tmp-1412364342.21-230537725734282/source', 'dest={{dir', 'original_basename=CloudWatchClient.pm'])
+2014-10-03 19:25:42,328 p=7537 u=smiller |  failed: [localhost] => (item=mon-put-instance-data.pl) => {"failed": true, "item": "mon-put-instance-data.pl", "md5sum": "47c4146f1b3f5a6cd8c71d81cb551932"}
+2014-10-03 19:25:42,329 p=7537 u=smiller |  msg: this module requires key=value arguments (['src=mon-put-instance-data.pl', 'dest={{dir', '|', 'default(/var/local/cloudwatch/)}}mon-put-instance-data.pl', 'src=/tmp/ansible/tmp/ansible-tmp-1412364342.28-111065013514563/source', 'dest={{dir', 'original_basename=mon-put-instance-data.pl'])
+2014-10-03 19:25:42,329 p=7537 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 19:25:42,330 p=7537 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 19:25:42,330 p=7537 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 19:25:42,331 p=7537 u=smiller |  localhost                  : ok=2    changed=0    unreachable=0    failed=1   
+2014-10-03 19:32:57,867 p=7708 u=smiller |   
+2014-10-03 19:32:57,867 p=7708 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 19:32:57,867 p=7708 u=smiller |   
+2014-10-03 19:33:08,423 p=7708 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 19:33:08,426 p=7708 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 19:33:08,765 p=7708 u=smiller |  ok: [localhost]
+2014-10-03 19:33:08,765 p=7708 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 19:33:08,775 p=7708 u=smiller |  skipping: [localhost]
+2014-10-03 19:33:08,776 p=7708 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 19:33:11,661 p=7708 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 19:33:11,661 p=7708 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 19:33:11,733 p=7708 u=smiller |  failed: [localhost] => (item=awscreds.conf) => {"failed": true, "item": "awscreds.conf", "md5sum": "ee053d21ab9d559fb40e4f7da3ce48f0"}
+2014-10-03 19:33:11,733 p=7708 u=smiller |  msg: Destination directory {{dir | default(/var/local/cloudwatch does not exist
+2014-10-03 19:33:11,801 p=7708 u=smiller |  failed: [localhost] => (item=CloudWatchClient.pm) => {"failed": true, "item": "CloudWatchClient.pm", "md5sum": "dcb414488fbb4a158b7b2a39a91ce5ca"}
+2014-10-03 19:33:11,801 p=7708 u=smiller |  msg: Destination directory {{dir | default(/var/local/cloudwatch does not exist
+2014-10-03 19:33:11,869 p=7708 u=smiller |  failed: [localhost] => (item=mon-put-instance-data.pl) => {"failed": true, "item": "mon-put-instance-data.pl", "md5sum": "47c4146f1b3f5a6cd8c71d81cb551932"}
+2014-10-03 19:33:11,869 p=7708 u=smiller |  msg: Destination directory {{dir | default(/var/local/cloudwatch does not exist
+2014-10-03 19:33:11,870 p=7708 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 19:33:11,870 p=7708 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 19:33:11,871 p=7708 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 19:33:11,871 p=7708 u=smiller |  localhost                  : ok=2    changed=0    unreachable=0    failed=1   
+2014-10-03 19:52:04,617 p=7890 u=smiller |   
+2014-10-03 19:52:04,617 p=7890 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 19:52:04,617 p=7890 u=smiller |   
+2014-10-03 19:52:14,755 p=7890 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 19:52:14,759 p=7890 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 19:52:15,105 p=7890 u=smiller |  ok: [localhost]
+2014-10-03 19:52:15,106 p=7890 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 19:52:15,114 p=7890 u=smiller |  skipping: [localhost]
+2014-10-03 19:52:15,115 p=7890 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 19:52:20,150 p=7890 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 19:52:20,151 p=7890 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 19:52:20,220 p=7890 u=smiller |  failed: [localhost] => (item=awscreds.conf) => {"failed": true, "item": "awscreds.conf", "md5sum": "ee053d21ab9d559fb40e4f7da3ce48f0"}
+2014-10-03 19:52:20,220 p=7890 u=smiller |  msg: Destination directory /var/local/cloudwatch does not exist
+2014-10-03 19:52:20,289 p=7890 u=smiller |  failed: [localhost] => (item=CloudWatchClient.pm) => {"failed": true, "item": "CloudWatchClient.pm", "md5sum": "dcb414488fbb4a158b7b2a39a91ce5ca"}
+2014-10-03 19:52:20,290 p=7890 u=smiller |  msg: Destination directory /var/local/cloudwatch does not exist
+2014-10-03 19:52:20,360 p=7890 u=smiller |  failed: [localhost] => (item=mon-put-instance-data.pl) => {"failed": true, "item": "mon-put-instance-data.pl", "md5sum": "47c4146f1b3f5a6cd8c71d81cb551932"}
+2014-10-03 19:52:20,360 p=7890 u=smiller |  msg: Destination directory /var/local/cloudwatch does not exist
+2014-10-03 19:52:20,361 p=7890 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 19:52:20,361 p=7890 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 19:52:20,362 p=7890 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 19:52:20,362 p=7890 u=smiller |  localhost                  : ok=2    changed=0    unreachable=0    failed=1   
+2014-10-03 20:02:21,674 p=8065 u=smiller |   
+2014-10-03 20:02:21,674 p=8065 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 20:02:21,674 p=8065 u=smiller |   
+2014-10-03 20:02:32,426 p=8065 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 20:02:32,430 p=8065 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 20:02:32,762 p=8065 u=smiller |  ok: [localhost]
+2014-10-03 20:02:32,763 p=8065 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 20:02:32,771 p=8065 u=smiller |  skipping: [localhost]
+2014-10-03 20:02:32,771 p=8065 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 20:02:35,665 p=8065 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 20:02:35,666 p=8065 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-03 20:02:35,719 p=8065 u=smiller |  changed: [localhost]
+2014-10-03 20:02:35,719 p=8065 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 20:02:35,785 p=8065 u=smiller |  changed: [localhost] => (item=awscreds.conf)
+2014-10-03 20:02:35,849 p=8065 u=smiller |  changed: [localhost] => (item=CloudWatchClient.pm)
+2014-10-03 20:02:35,915 p=8065 u=smiller |  changed: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-03 20:02:35,916 p=8065 u=smiller |  TASK: [common | Set up cron] ************************************************** 
+2014-10-03 20:02:35,988 p=8065 u=smiller |  failed: [localhost] => {"failed": true, "item": ""}
+2014-10-03 20:02:35,988 p=8065 u=smiller |  msg: "/tmp/crontabb6zQ3a":1: bad minute
+errors in crontab file, can't install.
+
+2014-10-03 20:02:35,989 p=8065 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 20:02:35,989 p=8065 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 20:02:35,990 p=8065 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 20:02:35,990 p=8065 u=smiller |  localhost                  : ok=4    changed=2    unreachable=0    failed=1   
+2014-10-03 20:03:40,688 p=8260 u=smiller |   
+2014-10-03 20:03:40,688 p=8260 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 20:03:40,688 p=8260 u=smiller |   
+2014-10-03 20:03:40,798 p=8260 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 20:03:40,801 p=8260 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 20:03:41,134 p=8260 u=smiller |  ok: [localhost]
+2014-10-03 20:03:41,134 p=8260 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 20:03:41,143 p=8260 u=smiller |  skipping: [localhost]
+2014-10-03 20:03:41,143 p=8260 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 20:03:43,576 p=8260 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 20:03:43,576 p=8260 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-03 20:03:43,630 p=8260 u=smiller |  ok: [localhost]
+2014-10-03 20:03:43,630 p=8260 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 20:03:43,696 p=8260 u=smiller |  ok: [localhost] => (item=awscreds.conf)
+2014-10-03 20:03:43,762 p=8260 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm)
+2014-10-03 20:03:43,828 p=8260 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-03 20:03:43,829 p=8260 u=smiller |  TASK: [common | Set up cron] ************************************************** 
+2014-10-03 20:03:43,907 p=8260 u=smiller |  failed: [localhost] => {"failed": true, "item": ""}
+2014-10-03 20:03:43,908 p=8260 u=smiller |  msg: "/tmp/crontabsyO6GX":1: bad minute
+errors in crontab file, can't install.
+
+2014-10-03 20:03:43,908 p=8260 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 20:03:43,909 p=8260 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 20:03:43,910 p=8260 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 20:03:43,910 p=8260 u=smiller |  localhost                  : ok=4    changed=0    unreachable=0    failed=1   
+2014-10-03 20:06:01,721 p=8431 u=smiller |   
+2014-10-03 20:06:01,721 p=8431 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 20:06:01,721 p=8431 u=smiller |   
+2014-10-03 20:06:01,837 p=8431 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 20:06:01,840 p=8431 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 20:06:02,181 p=8431 u=smiller |  ok: [localhost]
+2014-10-03 20:06:02,182 p=8431 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 20:06:02,190 p=8431 u=smiller |  skipping: [localhost]
+2014-10-03 20:06:02,191 p=8431 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 20:06:04,655 p=8431 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 20:06:04,656 p=8431 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-03 20:06:04,709 p=8431 u=smiller |  ok: [localhost]
+2014-10-03 20:06:04,710 p=8431 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 20:06:04,774 p=8431 u=smiller |  changed: [localhost] => (item=awscreds.conf)
+2014-10-03 20:06:04,838 p=8431 u=smiller |  changed: [localhost] => (item=CloudWatchClient.pm)
+2014-10-03 20:06:04,903 p=8431 u=smiller |  changed: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-03 20:06:04,904 p=8431 u=smiller |  TASK: [common | Set up cron] ************************************************** 
+2014-10-03 20:06:04,973 p=8431 u=smiller |  failed: [localhost] => {"failed": true, "item": ""}
+2014-10-03 20:06:04,974 p=8431 u=smiller |  msg: "/tmp/crontabM6Rt4E":1: bad minute
+errors in crontab file, can't install.
+
+2014-10-03 20:06:04,974 p=8431 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 20:06:04,974 p=8431 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 20:06:04,975 p=8431 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 20:06:04,976 p=8431 u=smiller |  localhost                  : ok=4    changed=1    unreachable=0    failed=1   
+2014-10-03 20:08:31,532 p=8610 u=smiller |   
+2014-10-03 20:08:31,532 p=8610 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 20:08:31,533 p=8610 u=smiller |   
+2014-10-03 20:08:41,965 p=8610 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 20:08:41,969 p=8610 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 20:08:42,329 p=8610 u=smiller |  ok: [localhost]
+2014-10-03 20:08:42,330 p=8610 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 20:08:42,339 p=8610 u=smiller |  skipping: [localhost]
+2014-10-03 20:08:42,339 p=8610 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 20:08:44,802 p=8610 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 20:08:44,803 p=8610 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-03 20:08:44,855 p=8610 u=smiller |  ok: [localhost]
+2014-10-03 20:08:44,856 p=8610 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 20:08:44,923 p=8610 u=smiller |  changed: [localhost] => (item=awscreds.conf)
+2014-10-03 20:08:44,989 p=8610 u=smiller |  changed: [localhost] => (item=CloudWatchClient.pm)
+2014-10-03 20:08:45,054 p=8610 u=smiller |  changed: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-03 20:08:45,054 p=8610 u=smiller |  TASK: [common | Set up cron] ************************************************** 
+2014-10-03 20:08:45,124 p=8610 u=smiller |  failed: [localhost] => {"failed": true, "item": ""}
+2014-10-03 20:08:45,125 p=8610 u=smiller |  msg: "/tmp/crontab0QgRJJ":1: bad minute
+errors in crontab file, can't install.
+
+2014-10-03 20:08:45,125 p=8610 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 20:08:45,126 p=8610 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 20:08:45,127 p=8610 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 20:08:45,127 p=8610 u=smiller |  localhost                  : ok=4    changed=1    unreachable=0    failed=1   
+2014-10-03 20:08:54,118 p=8747 u=smiller |   
+2014-10-03 20:08:54,118 p=8747 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost -vv
+2014-10-03 20:08:54,118 p=8747 u=smiller |   
+2014-10-03 20:08:54,231 p=8747 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 20:08:54,235 p=8747 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 20:08:54,239 p=8747 u=smiller |  <localhost> REMOTE_MODULE setup
+2014-10-03 20:08:54,559 p=8747 u=smiller |  ok: [localhost]
+2014-10-03 20:08:54,559 p=8747 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 20:08:54,568 p=8747 u=smiller |  skipping: [localhost]
+2014-10-03 20:08:54,568 p=8747 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 20:08:54,578 p=8747 u=smiller |  <localhost> REMOTE_MODULE apt update_cache=yes name=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron state=latest
+2014-10-03 20:09:00,040 p=8747 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron) => {"changed": false, "item": "unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron"}
+2014-10-03 20:09:00,041 p=8747 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-03 20:09:00,043 p=8747 u=smiller |  <localhost> REMOTE_MODULE file path=/var/local/cloudwatch/ state=directory
+2014-10-03 20:09:00,093 p=8747 u=smiller |  ok: [localhost] => {"changed": false, "gid": 50, "group": "staff", "item": "", "mode": "02755", "owner": "root", "path": "/var/local/cloudwatch/", "size": 4096, "state": "directory", "uid": 0}
+2014-10-03 20:09:00,093 p=8747 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 20:09:00,157 p=8747 u=smiller |  changed: [localhost] => (item=awscreds.conf) => {"changed": true, "dest": "/var/local/cloudwatch/{item}}", "gid": 1001, "group": "smiller", "item": "awscreds.conf", "md5sum": "ee053d21ab9d559fb40e4f7da3ce48f0", "mode": "0664", "owner": "smiller", "size": 91, "src": "/tmp/ansible/tmp/ansible-tmp-1412366940.11-24688227612416/source", "state": "file", "uid": 1001}
+2014-10-03 20:09:00,222 p=8747 u=smiller |  changed: [localhost] => (item=CloudWatchClient.pm) => {"changed": true, "dest": "/var/local/cloudwatch/{item}}", "gid": 1001, "group": "smiller", "item": "CloudWatchClient.pm", "md5sum": "dcb414488fbb4a158b7b2a39a91ce5ca", "mode": "0664", "owner": "smiller", "size": 16726, "src": "/tmp/ansible/tmp/ansible-tmp-1412366940.17-221980284003832/source", "state": "file", "uid": 1001}
+2014-10-03 20:09:00,285 p=8747 u=smiller |  changed: [localhost] => (item=mon-put-instance-data.pl) => {"changed": true, "dest": "/var/local/cloudwatch/{item}}", "gid": 1001, "group": "smiller", "item": "mon-put-instance-data.pl", "md5sum": "47c4146f1b3f5a6cd8c71d81cb551932", "mode": "0664", "owner": "smiller", "size": 17822, "src": "/tmp/ansible/tmp/ansible-tmp-1412366940.24-30191309909158/source", "state": "file", "uid": 1001}
+2014-10-03 20:09:00,286 p=8747 u=smiller |  TASK: [common | Set up cron] ************************************************** 
+2014-10-03 20:09:00,291 p=8747 u=smiller |  <localhost> REMOTE_MODULE cron name="CloudWatch" minute="*/{{cron_interval}}" job="{{script_dir)}}mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron" state=present
+2014-10-03 20:09:00,361 p=8747 u=smiller |  failed: [localhost] => {"failed": true, "item": ""}
+2014-10-03 20:09:00,361 p=8747 u=smiller |  msg: "/tmp/crontabrMdoxq":1: bad minute
+errors in crontab file, can't install.
+
+2014-10-03 20:09:00,362 p=8747 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 20:09:00,362 p=8747 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 20:09:00,363 p=8747 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 20:09:00,363 p=8747 u=smiller |  localhost                  : ok=4    changed=1    unreachable=0    failed=1   
+2014-10-03 20:09:29,862 p=8888 u=smiller |   
+2014-10-03 20:09:29,862 p=8888 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost -vvv
+2014-10-03 20:09:29,862 p=8888 u=smiller |   
+2014-10-03 20:09:29,976 p=8888 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 20:09:29,980 p=8888 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 20:09:29,984 p=8888 u=smiller |  <localhost> REMOTE_MODULE setup
+2014-10-03 20:09:29,988 p=8888 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412366969.99-63475804376740 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412366969.99-63475804376740 && echo /tmp/ansible/tmp/ansible-tmp-1412366969.99-63475804376740']
+2014-10-03 20:09:29,992 p=8888 u=smiller |  <localhost> PUT /tmp/tmpTaUe0N TO /tmp/ansible/tmp/ansible-tmp-1412366969.99-63475804376740/setup
+2014-10-03 20:09:29,993 p=8888 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412366969.99-63475804376740/setup; rm -rf /tmp/ansible/tmp/ansible-tmp-1412366969.99-63475804376740/ >/dev/null 2>&1']
+2014-10-03 20:09:30,305 p=8888 u=smiller |  ok: [localhost]
+2014-10-03 20:09:30,305 p=8888 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 20:09:30,314 p=8888 u=smiller |  skipping: [localhost]
+2014-10-03 20:09:30,314 p=8888 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 20:09:30,326 p=8888 u=smiller |  <localhost> REMOTE_MODULE apt update_cache=yes name=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron state=latest
+2014-10-03 20:09:30,327 p=8888 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412366970.33-128028646461550 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412366970.33-128028646461550 && echo /tmp/ansible/tmp/ansible-tmp-1412366970.33-128028646461550']
+2014-10-03 20:09:30,331 p=8888 u=smiller |  <localhost> PUT /tmp/tmp7VMmwr TO /tmp/ansible/tmp/ansible-tmp-1412366970.33-128028646461550/apt
+2014-10-03 20:09:30,332 p=8888 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=sehjjxmhkmdtoozjkuaueiubjkwgwclc] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-sehjjxmhkmdtoozjkuaueiubjkwgwclc; /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412366970.33-128028646461550/apt; rm -rf /tmp/ansible/tmp/ansible-tmp-1412366970.33-128028646461550/ >/dev/null 2>&1'"'"''
+2014-10-03 20:09:33,192 p=8888 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron) => {"changed": false, "item": "unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron"}
+2014-10-03 20:09:33,192 p=8888 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-03 20:09:33,195 p=8888 u=smiller |  <localhost> REMOTE_MODULE file path=/var/local/cloudwatch/ state=directory
+2014-10-03 20:09:33,196 p=8888 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412366973.2-72366853737099 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412366973.2-72366853737099 && echo /tmp/ansible/tmp/ansible-tmp-1412366973.2-72366853737099']
+2014-10-03 20:09:33,200 p=8888 u=smiller |  <localhost> PUT /tmp/tmptqfSPk TO /tmp/ansible/tmp/ansible-tmp-1412366973.2-72366853737099/file
+2014-10-03 20:09:33,201 p=8888 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=vsjodqeaytjzkfjvuwccinwdhlfcpupz] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-vsjodqeaytjzkfjvuwccinwdhlfcpupz; /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412366973.2-72366853737099/file; rm -rf /tmp/ansible/tmp/ansible-tmp-1412366973.2-72366853737099/ >/dev/null 2>&1'"'"''
+2014-10-03 20:09:33,246 p=8888 u=smiller |  ok: [localhost] => {"changed": false, "gid": 50, "group": "staff", "item": "", "mode": "02755", "owner": "root", "path": "/var/local/cloudwatch/", "size": 4096, "state": "directory", "uid": 0}
+2014-10-03 20:09:33,246 p=8888 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 20:09:33,251 p=8888 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=pzwxogpkvvjbdjwpxqiqoektazsqjnyz] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-pzwxogpkvvjbdjwpxqiqoektazsqjnyz; rc=0; [ -r "'"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"'" ] || rc=2; [ -f "'"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"'" ] || rc=1; [ -d "'"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"'" ] && echo 3 && exit 0; (/usr/bin/md5sum '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/sbin/md5sum -q '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/usr/bin/digest -a md5 '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/sbin/md5 -q '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/usr/bin/md5 -n '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/bin/md5 -q '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/usr/bin/csum -h MD5 '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/bin/csum -h MD5 '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (echo "${rc} '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"'")'"'"''
+2014-10-03 20:09:33,263 p=8888 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412366973.26-112215355891354 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412366973.26-112215355891354 && echo /tmp/ansible/tmp/ansible-tmp-1412366973.26-112215355891354']
+2014-10-03 20:09:33,266 p=8888 u=smiller |  <localhost> PUT /home/smiller/ansible/Ansible-CloudWatch/roles/common/files/awscreds.conf TO /tmp/ansible/tmp/ansible-tmp-1412366973.26-112215355891354/source
+2014-10-03 20:09:33,268 p=8888 u=smiller |  <localhost> PUT /tmp/tmpJ9V1dB TO /tmp/ansible/tmp/ansible-tmp-1412366973.26-112215355891354/copy
+2014-10-03 20:09:33,269 p=8888 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=xdjhjgippudcwxasgdmyuohfdpsytpsd] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-xdjhjgippudcwxasgdmyuohfdpsytpsd; /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412366973.26-112215355891354/copy; rm -rf /tmp/ansible/tmp/ansible-tmp-1412366973.26-112215355891354/ >/dev/null 2>&1'"'"''
+2014-10-03 20:09:33,314 p=8888 u=smiller |  changed: [localhost] => (item=awscreds.conf) => {"changed": true, "dest": "/var/local/cloudwatch/{item}}", "gid": 1001, "group": "smiller", "item": "awscreds.conf", "md5sum": "ee053d21ab9d559fb40e4f7da3ce48f0", "mode": "0664", "owner": "smiller", "size": 91, "src": "/tmp/ansible/tmp/ansible-tmp-1412366973.26-112215355891354/source", "state": "file", "uid": 1001}
+2014-10-03 20:09:33,318 p=8888 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=kldeheqglbwubhvxbtydpzcqhifukjnm] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-kldeheqglbwubhvxbtydpzcqhifukjnm; rc=0; [ -r "'"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"'" ] || rc=2; [ -f "'"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"'" ] || rc=1; [ -d "'"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"'" ] && echo 3 && exit 0; (/usr/bin/md5sum '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/sbin/md5sum -q '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/usr/bin/digest -a md5 '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/sbin/md5 -q '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/usr/bin/md5 -n '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/bin/md5 -q '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/usr/bin/csum -h MD5 '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/bin/csum -h MD5 '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (echo "${rc} '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"'")'"'"''
+2014-10-03 20:09:33,330 p=8888 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412366973.33-85471015467257 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412366973.33-85471015467257 && echo /tmp/ansible/tmp/ansible-tmp-1412366973.33-85471015467257']
+2014-10-03 20:09:33,334 p=8888 u=smiller |  <localhost> PUT /home/smiller/ansible/Ansible-CloudWatch/roles/common/files/CloudWatchClient.pm TO /tmp/ansible/tmp/ansible-tmp-1412366973.33-85471015467257/source
+2014-10-03 20:09:33,335 p=8888 u=smiller |  <localhost> PUT /tmp/tmpoYZYrL TO /tmp/ansible/tmp/ansible-tmp-1412366973.33-85471015467257/copy
+2014-10-03 20:09:33,336 p=8888 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=zncnljxespfyfqzpccizksysgaccwlsy] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-zncnljxespfyfqzpccizksysgaccwlsy; /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412366973.33-85471015467257/copy; rm -rf /tmp/ansible/tmp/ansible-tmp-1412366973.33-85471015467257/ >/dev/null 2>&1'"'"''
+2014-10-03 20:09:33,381 p=8888 u=smiller |  changed: [localhost] => (item=CloudWatchClient.pm) => {"changed": true, "dest": "/var/local/cloudwatch/{item}}", "gid": 1001, "group": "smiller", "item": "CloudWatchClient.pm", "md5sum": "dcb414488fbb4a158b7b2a39a91ce5ca", "mode": "0664", "owner": "smiller", "size": 16726, "src": "/tmp/ansible/tmp/ansible-tmp-1412366973.33-85471015467257/source", "state": "file", "uid": 1001}
+2014-10-03 20:09:33,385 p=8888 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=hizifratqcuscuglacsxaghzthpqbxez] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-hizifratqcuscuglacsxaghzthpqbxez; rc=0; [ -r "'"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"'" ] || rc=2; [ -f "'"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"'" ] || rc=1; [ -d "'"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"'" ] && echo 3 && exit 0; (/usr/bin/md5sum '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/sbin/md5sum -q '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/usr/bin/digest -a md5 '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/sbin/md5 -q '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/usr/bin/md5 -n '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/bin/md5 -q '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/usr/bin/csum -h MD5 '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (/bin/csum -h MD5 '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"' 2>/dev/null) || (echo "${rc} '"'"'"'"'"'"'"'"'/var/local/cloudwatch/{item}}'"'"'"'"'"'"'"'"'")'"'"''
+2014-10-03 20:09:33,398 p=8888 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412366973.4-200817343863437 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412366973.4-200817343863437 && echo /tmp/ansible/tmp/ansible-tmp-1412366973.4-200817343863437']
+2014-10-03 20:09:33,401 p=8888 u=smiller |  <localhost> PUT /home/smiller/ansible/Ansible-CloudWatch/roles/common/files/mon-put-instance-data.pl TO /tmp/ansible/tmp/ansible-tmp-1412366973.4-200817343863437/source
+2014-10-03 20:09:33,403 p=8888 u=smiller |  <localhost> PUT /tmp/tmpsW0PH7 TO /tmp/ansible/tmp/ansible-tmp-1412366973.4-200817343863437/copy
+2014-10-03 20:09:33,403 p=8888 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=vmfqicnagbktlrskwrhaoffoynlgjjid] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-vmfqicnagbktlrskwrhaoffoynlgjjid; /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412366973.4-200817343863437/copy; rm -rf /tmp/ansible/tmp/ansible-tmp-1412366973.4-200817343863437/ >/dev/null 2>&1'"'"''
+2014-10-03 20:09:33,450 p=8888 u=smiller |  changed: [localhost] => (item=mon-put-instance-data.pl) => {"changed": true, "dest": "/var/local/cloudwatch/{item}}", "gid": 1001, "group": "smiller", "item": "mon-put-instance-data.pl", "md5sum": "47c4146f1b3f5a6cd8c71d81cb551932", "mode": "0664", "owner": "smiller", "size": 17822, "src": "/tmp/ansible/tmp/ansible-tmp-1412366973.4-200817343863437/source", "state": "file", "uid": 1001}
+2014-10-03 20:09:33,451 p=8888 u=smiller |  TASK: [common | Set up cron] ************************************************** 
+2014-10-03 20:09:33,456 p=8888 u=smiller |  <localhost> REMOTE_MODULE cron name="CloudWatch" minute="*/{{cron_interval}}" job="{{script_dir)}}mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron" state=present
+2014-10-03 20:09:33,458 p=8888 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412366973.46-51727711623871 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412366973.46-51727711623871 && echo /tmp/ansible/tmp/ansible-tmp-1412366973.46-51727711623871']
+2014-10-03 20:09:33,462 p=8888 u=smiller |  <localhost> PUT /tmp/tmpVFzhH0 TO /tmp/ansible/tmp/ansible-tmp-1412366973.46-51727711623871/cron
+2014-10-03 20:09:33,463 p=8888 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=cagzxflzekyvqimrrznsveootyrjvxiy] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-cagzxflzekyvqimrrznsveootyrjvxiy; /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412366973.46-51727711623871/cron; rm -rf /tmp/ansible/tmp/ansible-tmp-1412366973.46-51727711623871/ >/dev/null 2>&1'"'"''
+2014-10-03 20:09:33,527 p=8888 u=smiller |  failed: [localhost] => {"failed": true, "item": ""}
+2014-10-03 20:09:33,528 p=8888 u=smiller |  msg: "/tmp/crontabsGBTNb":1: bad minute
+errors in crontab file, can't install.
+
+2014-10-03 20:09:33,528 p=8888 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 20:09:33,528 p=8888 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 20:09:33,529 p=8888 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 20:09:33,529 p=8888 u=smiller |  localhost                  : ok=4    changed=1    unreachable=0    failed=1   
+2014-10-03 20:14:29,315 p=9070 u=smiller |   
+2014-10-03 20:14:29,315 p=9070 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 20:14:29,315 p=9070 u=smiller |   
+2014-10-03 20:14:39,436 p=9070 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 20:14:39,440 p=9070 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 20:14:39,776 p=9070 u=smiller |  ok: [localhost]
+2014-10-03 20:14:39,777 p=9070 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 20:14:39,785 p=9070 u=smiller |  skipping: [localhost]
+2014-10-03 20:14:39,786 p=9070 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 20:14:44,538 p=9070 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 20:14:44,538 p=9070 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-03 20:14:44,591 p=9070 u=smiller |  ok: [localhost]
+2014-10-03 20:14:44,592 p=9070 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 20:14:44,656 p=9070 u=smiller |  changed: [localhost] => (item=awscreds.conf)
+2014-10-03 20:14:44,720 p=9070 u=smiller |  changed: [localhost] => (item=CloudWatchClient.pm)
+2014-10-03 20:14:44,786 p=9070 u=smiller |  changed: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-03 20:14:44,787 p=9070 u=smiller |  TASK: [common | Set up cron] ************************************************** 
+2014-10-03 20:14:44,857 p=9070 u=smiller |  failed: [localhost] => {"failed": true, "item": ""}
+2014-10-03 20:14:44,857 p=9070 u=smiller |  msg: "/tmp/crontabEkFpk3":1: bad minute
+errors in crontab file, can't install.
+
+2014-10-03 20:14:44,858 p=9070 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 20:14:44,858 p=9070 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 20:14:44,859 p=9070 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 20:14:44,859 p=9070 u=smiller |  localhost                  : ok=4    changed=1    unreachable=0    failed=1   
+2014-10-03 20:18:47,885 p=9233 u=smiller |   
+2014-10-03 20:18:47,885 p=9233 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 20:18:47,885 p=9233 u=smiller |   
+2014-10-03 20:18:48,000 p=9233 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 20:18:48,004 p=9233 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 20:18:48,345 p=9233 u=smiller |  ok: [localhost]
+2014-10-03 20:18:48,346 p=9233 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 20:18:48,355 p=9233 u=smiller |  skipping: [localhost]
+2014-10-03 20:18:48,355 p=9233 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 20:18:51,066 p=9233 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 20:18:51,067 p=9233 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-03 20:18:51,121 p=9233 u=smiller |  ok: [localhost]
+2014-10-03 20:18:51,122 p=9233 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 20:18:51,187 p=9233 u=smiller |  changed: [localhost] => (item=awscreds.conf)
+2014-10-03 20:18:51,251 p=9233 u=smiller |  changed: [localhost] => (item=CloudWatchClient.pm)
+2014-10-03 20:18:51,315 p=9233 u=smiller |  changed: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-03 20:18:51,316 p=9233 u=smiller |  TASK: [common | Set up cron] ************************************************** 
+2014-10-03 20:18:51,385 p=9233 u=smiller |  failed: [localhost] => {"failed": true, "item": ""}
+2014-10-03 20:18:51,385 p=9233 u=smiller |  msg: "/tmp/crontabpK07Fw":1: bad minute
+errors in crontab file, can't install.
+
+2014-10-03 20:18:51,386 p=9233 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 20:18:51,386 p=9233 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 20:18:51,387 p=9233 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 20:18:51,387 p=9233 u=smiller |  localhost                  : ok=4    changed=1    unreachable=0    failed=1   
+2014-10-03 20:19:19,667 p=9378 u=smiller |   
+2014-10-03 20:19:19,667 p=9378 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 20:19:19,668 p=9378 u=smiller |   
+2014-10-03 20:19:19,778 p=9378 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 20:19:19,782 p=9378 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 20:19:20,103 p=9378 u=smiller |  ok: [localhost]
+2014-10-03 20:19:20,104 p=9378 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 20:19:20,113 p=9378 u=smiller |  skipping: [localhost]
+2014-10-03 20:19:20,113 p=9378 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 20:19:22,980 p=9378 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 20:19:22,980 p=9378 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-03 20:19:23,032 p=9378 u=smiller |  ok: [localhost]
+2014-10-03 20:19:23,032 p=9378 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 20:19:23,097 p=9378 u=smiller |  changed: [localhost] => (item=awscreds.conf)
+2014-10-03 20:19:23,160 p=9378 u=smiller |  changed: [localhost] => (item=CloudWatchClient.pm)
+2014-10-03 20:19:23,226 p=9378 u=smiller |  changed: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-03 20:19:23,227 p=9378 u=smiller |  TASK: [common | Set up cron] ************************************************** 
+2014-10-03 20:19:23,295 p=9378 u=smiller |  failed: [localhost] => {"failed": true, "item": ""}
+2014-10-03 20:19:23,296 p=9378 u=smiller |  msg: "/tmp/crontabxn0yds":1: bad minute
+errors in crontab file, can't install.
+
+2014-10-03 20:19:23,296 p=9378 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 20:19:23,296 p=9378 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 20:19:23,297 p=9378 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 20:19:23,297 p=9378 u=smiller |  localhost                  : ok=4    changed=1    unreachable=0    failed=1   
+2014-10-03 20:20:08,824 p=9517 u=smiller |   
+2014-10-03 20:20:08,824 p=9517 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 20:20:08,825 p=9517 u=smiller |   
+2014-10-03 20:20:20,183 p=9517 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 20:20:20,187 p=9517 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 20:20:20,536 p=9517 u=smiller |  ok: [localhost]
+2014-10-03 20:20:20,537 p=9517 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 20:20:20,545 p=9517 u=smiller |  skipping: [localhost]
+2014-10-03 20:20:20,546 p=9517 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 20:20:23,442 p=9517 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 20:20:23,443 p=9517 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-03 20:20:23,497 p=9517 u=smiller |  ok: [localhost]
+2014-10-03 20:20:23,498 p=9517 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 20:20:23,566 p=9517 u=smiller |  changed: [localhost] => (item=awscreds.conf)
+2014-10-03 20:20:23,633 p=9517 u=smiller |  changed: [localhost] => (item=CloudWatchClient.pm)
+2014-10-03 20:20:23,701 p=9517 u=smiller |  changed: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-03 20:20:23,701 p=9517 u=smiller |  TASK: [common | Set up cron] ************************************************** 
+2014-10-03 20:20:23,774 p=9517 u=smiller |  failed: [localhost] => {"failed": true, "item": ""}
+2014-10-03 20:20:23,774 p=9517 u=smiller |  msg: "/tmp/crontabG5U5_e":1: bad minute
+errors in crontab file, can't install.
+
+2014-10-03 20:20:23,775 p=9517 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 20:20:23,775 p=9517 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 20:20:23,776 p=9517 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 20:20:23,776 p=9517 u=smiller |  localhost                  : ok=4    changed=1    unreachable=0    failed=1   
+2014-10-03 20:21:11,474 p=9667 u=smiller |   
+2014-10-03 20:21:11,474 p=9667 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 20:21:11,474 p=9667 u=smiller |   
+2014-10-03 20:21:11,590 p=9667 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 20:21:11,593 p=9667 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 20:21:11,929 p=9667 u=smiller |  ok: [localhost]
+2014-10-03 20:21:11,930 p=9667 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 20:21:11,938 p=9667 u=smiller |  skipping: [localhost]
+2014-10-03 20:21:11,939 p=9667 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 20:21:14,825 p=9667 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 20:21:14,825 p=9667 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-03 20:21:14,879 p=9667 u=smiller |  ok: [localhost]
+2014-10-03 20:21:14,879 p=9667 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 20:21:14,950 p=9667 u=smiller |  changed: [localhost] => (item=awscreds.conf)
+2014-10-03 20:21:15,016 p=9667 u=smiller |  changed: [localhost] => (item=CloudWatchClient.pm)
+2014-10-03 20:21:15,082 p=9667 u=smiller |  changed: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-03 20:21:15,083 p=9667 u=smiller |  TASK: [common | Set up cron] ************************************************** 
+2014-10-03 20:21:15,158 p=9667 u=smiller |  failed: [localhost] => {"failed": true, "item": ""}
+2014-10-03 20:21:15,158 p=9667 u=smiller |  msg: "/tmp/crontabgJ5Lbe":1: bad minute
+errors in crontab file, can't install.
+
+2014-10-03 20:21:15,159 p=9667 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 20:21:15,159 p=9667 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 20:21:15,160 p=9667 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 20:21:15,160 p=9667 u=smiller |  localhost                  : ok=4    changed=1    unreachable=0    failed=1   
+2014-10-03 20:21:59,545 p=9806 u=smiller |   
+2014-10-03 20:21:59,546 p=9806 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 20:21:59,546 p=9806 u=smiller |   
+2014-10-03 20:21:59,657 p=9806 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 20:21:59,661 p=9806 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 20:22:00,000 p=9806 u=smiller |  ok: [localhost]
+2014-10-03 20:22:00,001 p=9806 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 20:22:00,010 p=9806 u=smiller |  skipping: [localhost]
+2014-10-03 20:22:00,010 p=9806 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 20:22:02,975 p=9806 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 20:22:02,975 p=9806 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-03 20:22:03,029 p=9806 u=smiller |  ok: [localhost]
+2014-10-03 20:22:03,029 p=9806 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 20:22:03,095 p=9806 u=smiller |  changed: [localhost] => (item=awscreds.conf)
+2014-10-03 20:22:03,164 p=9806 u=smiller |  changed: [localhost] => (item=CloudWatchClient.pm)
+2014-10-03 20:22:03,231 p=9806 u=smiller |  changed: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-03 20:22:03,232 p=9806 u=smiller |  TASK: [common | Set up cron] ************************************************** 
+2014-10-03 20:22:03,303 p=9806 u=smiller |  failed: [localhost] => {"failed": true, "item": ""}
+2014-10-03 20:22:03,304 p=9806 u=smiller |  msg: "/tmp/crontabD5AeFk":1: bad minute
+errors in crontab file, can't install.
+
+2014-10-03 20:22:03,304 p=9806 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 20:22:03,305 p=9806 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 20:22:03,306 p=9806 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 20:22:03,306 p=9806 u=smiller |  localhost                  : ok=4    changed=1    unreachable=0    failed=1   
+2014-10-03 20:22:21,185 p=9944 u=smiller |   
+2014-10-03 20:22:21,185 p=9944 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 20:22:21,185 p=9944 u=smiller |   
+2014-10-03 20:22:21,299 p=9944 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 20:22:21,302 p=9944 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 20:22:21,628 p=9944 u=smiller |  ok: [localhost]
+2014-10-03 20:22:21,628 p=9944 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 20:22:21,637 p=9944 u=smiller |  skipping: [localhost]
+2014-10-03 20:22:21,637 p=9944 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 20:22:24,086 p=9944 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 20:22:24,087 p=9944 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-03 20:22:24,140 p=9944 u=smiller |  ok: [localhost]
+2014-10-03 20:22:24,141 p=9944 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 20:22:24,207 p=9944 u=smiller |  changed: [localhost] => (item=awscreds.conf)
+2014-10-03 20:22:24,273 p=9944 u=smiller |  changed: [localhost] => (item=CloudWatchClient.pm)
+2014-10-03 20:22:24,338 p=9944 u=smiller |  changed: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-03 20:22:24,339 p=9944 u=smiller |  TASK: [common | Set up cron] ************************************************** 
+2014-10-03 20:22:24,411 p=9944 u=smiller |  failed: [localhost] => {"failed": true, "item": ""}
+2014-10-03 20:22:24,412 p=9944 u=smiller |  msg: "/tmp/crontabIlxDch":1: bad minute
+errors in crontab file, can't install.
+
+2014-10-03 20:22:24,412 p=9944 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 20:22:24,412 p=9944 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 20:22:24,413 p=9944 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 20:22:24,414 p=9944 u=smiller |  localhost                  : ok=4    changed=1    unreachable=0    failed=1   
+2014-10-03 20:22:40,809 p=10082 u=smiller |   
+2014-10-03 20:22:40,809 p=10082 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 20:22:40,809 p=10082 u=smiller |   
+2014-10-03 20:22:40,924 p=10082 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 20:22:40,928 p=10082 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 20:22:41,256 p=10082 u=smiller |  ok: [localhost]
+2014-10-03 20:22:41,256 p=10082 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 20:22:41,265 p=10082 u=smiller |  skipping: [localhost]
+2014-10-03 20:22:41,265 p=10082 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 20:22:43,800 p=10082 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 20:22:43,801 p=10082 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-03 20:22:43,854 p=10082 u=smiller |  ok: [localhost]
+2014-10-03 20:22:43,855 p=10082 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 20:22:43,920 p=10082 u=smiller |  changed: [localhost] => (item=awscreds.conf)
+2014-10-03 20:22:43,985 p=10082 u=smiller |  changed: [localhost] => (item=CloudWatchClient.pm)
+2014-10-03 20:22:44,048 p=10082 u=smiller |  changed: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-03 20:22:44,049 p=10082 u=smiller |  TASK: [common | Set up cron] ************************************************** 
+2014-10-03 20:22:44,115 p=10082 u=smiller |  changed: [localhost]
+2014-10-03 20:22:44,116 p=10082 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 20:22:44,116 p=10082 u=smiller |  localhost                  : ok=5    changed=2    unreachable=0    failed=0   
+2014-10-03 20:23:29,905 p=10221 u=smiller |   
+2014-10-03 20:23:29,905 p=10221 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 20:23:29,905 p=10221 u=smiller |   
+2014-10-03 20:23:30,003 p=10221 u=smiller |  ERROR: Syntax Error while loading YAML script, deploy.yaml
+Note: The error may actually appear before this position: line 8, column 21
+
+  vars:
+    cron_interval: */5
+                    ^
+2014-10-03 20:23:48,849 p=10228 u=smiller |   
+2014-10-03 20:23:48,849 p=10228 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 20:23:48,849 p=10228 u=smiller |   
+2014-10-03 20:23:48,964 p=10228 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 20:23:48,967 p=10228 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 20:23:49,477 p=10228 u=smiller |  ok: [localhost]
+2014-10-03 20:23:49,477 p=10228 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 20:23:49,486 p=10228 u=smiller |  skipping: [localhost]
+2014-10-03 20:23:49,486 p=10228 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 20:23:51,905 p=10228 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 20:23:51,905 p=10228 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-03 20:23:51,958 p=10228 u=smiller |  ok: [localhost]
+2014-10-03 20:23:51,959 p=10228 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 20:23:52,024 p=10228 u=smiller |  changed: [localhost] => (item=awscreds.conf)
+2014-10-03 20:23:52,087 p=10228 u=smiller |  changed: [localhost] => (item=CloudWatchClient.pm)
+2014-10-03 20:23:52,151 p=10228 u=smiller |  changed: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-03 20:23:52,151 p=10228 u=smiller |  TASK: [common | Set up cron] ************************************************** 
+2014-10-03 20:23:52,219 p=10228 u=smiller |  failed: [localhost] => {"failed": true, "item": ""}
+2014-10-03 20:23:52,219 p=10228 u=smiller |  msg: "/tmp/crontabd2u3Xq":1: bad minute
+errors in crontab file, can't install.
+
+2014-10-03 20:23:52,220 p=10228 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 20:23:52,220 p=10228 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 20:23:52,221 p=10228 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 20:23:52,221 p=10228 u=smiller |  localhost                  : ok=4    changed=1    unreachable=0    failed=1   
+2014-10-03 20:24:06,991 p=10366 u=smiller |   
+2014-10-03 20:24:06,991 p=10366 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 20:24:06,991 p=10366 u=smiller |   
+2014-10-03 20:24:07,104 p=10366 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 20:24:07,108 p=10366 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 20:24:07,438 p=10366 u=smiller |  ok: [localhost]
+2014-10-03 20:24:07,438 p=10366 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 20:24:07,447 p=10366 u=smiller |  skipping: [localhost]
+2014-10-03 20:24:07,447 p=10366 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 20:24:10,359 p=10366 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 20:24:10,359 p=10366 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-03 20:24:10,412 p=10366 u=smiller |  ok: [localhost]
+2014-10-03 20:24:10,413 p=10366 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 20:24:10,480 p=10366 u=smiller |  changed: [localhost] => (item=awscreds.conf)
+2014-10-03 20:24:10,545 p=10366 u=smiller |  changed: [localhost] => (item=CloudWatchClient.pm)
+2014-10-03 20:24:10,611 p=10366 u=smiller |  changed: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-03 20:24:10,612 p=10366 u=smiller |  TASK: [common | Set up cron] ************************************************** 
+2014-10-03 20:24:10,682 p=10366 u=smiller |  failed: [localhost] => {"failed": true, "item": ""}
+2014-10-03 20:24:10,683 p=10366 u=smiller |  msg: "/tmp/crontabWtO836":1: bad minute
+errors in crontab file, can't install.
+
+2014-10-03 20:24:10,683 p=10366 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 20:24:10,684 p=10366 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 20:24:10,685 p=10366 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 20:24:10,685 p=10366 u=smiller |  localhost                  : ok=4    changed=1    unreachable=0    failed=1   
+2014-10-03 20:24:25,510 p=10504 u=smiller |   
+2014-10-03 20:24:25,510 p=10504 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 20:24:25,510 p=10504 u=smiller |   
+2014-10-03 20:24:25,623 p=10504 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 20:24:25,627 p=10504 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 20:24:25,957 p=10504 u=smiller |  ok: [localhost]
+2014-10-03 20:24:25,957 p=10504 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 20:24:25,966 p=10504 u=smiller |  skipping: [localhost]
+2014-10-03 20:24:25,966 p=10504 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 20:24:28,887 p=10504 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 20:24:28,888 p=10504 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-03 20:24:28,941 p=10504 u=smiller |  ok: [localhost]
+2014-10-03 20:24:28,942 p=10504 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 20:24:29,009 p=10504 u=smiller |  changed: [localhost] => (item=awscreds.conf)
+2014-10-03 20:24:29,077 p=10504 u=smiller |  changed: [localhost] => (item=CloudWatchClient.pm)
+2014-10-03 20:24:29,145 p=10504 u=smiller |  changed: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-03 20:24:29,146 p=10504 u=smiller |  TASK: [common | Set up cron] ************************************************** 
+2014-10-03 20:24:29,218 p=10504 u=smiller |  failed: [localhost] => {"failed": true, "item": ""}
+2014-10-03 20:24:29,218 p=10504 u=smiller |  msg: "/tmp/crontabNZ3tyH":1: bad minute
+errors in crontab file, can't install.
+
+2014-10-03 20:24:29,218 p=10504 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-03 20:24:29,219 p=10504 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 20:24:29,220 p=10504 u=smiller |             to retry, use: --limit @/home/smiller/deploy.yaml.retry
+
+2014-10-03 20:24:29,220 p=10504 u=smiller |  localhost                  : ok=4    changed=1    unreachable=0    failed=1   
+2014-10-03 20:25:27,333 p=10650 u=smiller |   
+2014-10-03 20:25:27,333 p=10650 u=smiller |  /usr/bin/ansible-playbook deploy.yaml -e hosts=localhost
+2014-10-03 20:25:27,333 p=10650 u=smiller |   
+2014-10-03 20:25:37,393 p=10650 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-03 20:25:37,396 p=10650 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-03 20:25:37,739 p=10650 u=smiller |  ok: [localhost]
+2014-10-03 20:25:37,740 p=10650 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-03 20:25:37,748 p=10650 u=smiller |  skipping: [localhost]
+2014-10-03 20:25:37,749 p=10650 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-03 20:25:40,169 p=10650 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-03 20:25:40,170 p=10650 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-03 20:25:40,222 p=10650 u=smiller |  ok: [localhost]
+2014-10-03 20:25:40,222 p=10650 u=smiller |  TASK: [common | Deploy CloudWatch Scripts] ************************************ 
+2014-10-03 20:25:40,288 p=10650 u=smiller |  changed: [localhost] => (item=awscreds.conf)
+2014-10-03 20:25:40,353 p=10650 u=smiller |  changed: [localhost] => (item=CloudWatchClient.pm)
+2014-10-03 20:25:40,417 p=10650 u=smiller |  changed: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-03 20:25:40,418 p=10650 u=smiller |  TASK: [common | Set up cron] ************************************************** 
+2014-10-03 20:25:40,477 p=10650 u=smiller |  ok: [localhost]
+2014-10-03 20:25:40,478 p=10650 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-03 20:25:40,478 p=10650 u=smiller |  localhost                  : ok=5    changed=1    unreachable=0    failed=0   
