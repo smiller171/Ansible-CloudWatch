@@ -7,3 +7,6 @@ The format for awscreds.conf is:
 
 >AWSAccessKeyId= //enter key ID here     
 >AWSSecretKey= //enter secret key here
+
+
+You also will need to pass variables for "hosts" and "user"
