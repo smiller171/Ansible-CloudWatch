@@ -1,0 +1,4 @@
+---
+- name: Create script dir
+  sudo: yes
+  file: path={{script_dir}} state=directory
