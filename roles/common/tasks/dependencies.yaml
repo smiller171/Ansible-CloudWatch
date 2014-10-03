@@ -6,12 +6,12 @@
   - perl-Switch
   - perl-Sys-Syslog
   - perl-LWP-Protocol-https
-  - cron
+  - cronie
   when: anisble_distribution == "Amazon"
 
 - name: Install Ubuntu dependencies
   sudo: yes
-  apt: update_cache=yes name={{item}} state=latest
+  apt: update_cache=yes name={{item}} state=lates
   with_items: 
   - unzip
   - libwww-perl
