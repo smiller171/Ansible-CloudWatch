@@ -18,4 +18,4 @@
   - libcrypt-ssleay-perl
   - libswitch-perl
   - cron
-  when: anisble_distribution == "Ubuntu"
+  when: ansible_distribution == "Ubuntu"
