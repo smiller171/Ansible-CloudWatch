@@ -1,8 +1,18 @@
 ---
-- name: Set up cron
+- name: Set up cron with credentials
   sudo: yes
   cron:
     name="CloudWatch"
     minute=*/5
     job={{ script_dir }}"mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron  --aws-credential-file="{{script_dir}}"awscreds.conf"
     state=present
+    when: iam_role == false
+
+- name: Set up cron with IAM role
+  sudo: yes
+  cron:
+    name="CloudWatch"
+    minute=*/5
+    job={{ script_dir }}"mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron
+    state=present
+    when: iam_role == true

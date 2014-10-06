@@ -1,9 +1,17 @@
 ---
-- name: Deploy CloudWatch Scripts
+- name: Deploy CloudWatch Scripts with credentials
   sudo: yes
   copy: src={{item}} dest={{script_dir}}{{item}} mode=0774
   with_items:
   - awscreds.conf
   - CloudWatchClient.pm
   - mon-put-instance-data.pl
+  when: iam_role == false
   
+  - name: Deploy CloudWatch Scripts with IAM role
+  sudo: yes
+  copy: src={{item}} dest={{script_dir}}{{item}} mode=0774
+  with_items:
+  - CloudWatchClient.pm
+  - mon-put-instance-data.pl
+  when: iam_role == true

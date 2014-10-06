@@ -6,3 +6,4 @@
   - common
   vars:
     script_dir: /var/local/cloudwatch/
+    iam_role: false
