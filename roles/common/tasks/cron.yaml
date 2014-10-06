@@ -4,5 +4,5 @@
   cron:
     name="CloudWatch"
     minute=*/5
-    job="{{script_dir)}}mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron"
+    job="{{script_dir)}}mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron  --aws-credential-file={{script_dir}}awscreds.conf"
     state=present
