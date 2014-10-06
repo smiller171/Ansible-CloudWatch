@@ -8,7 +8,7 @@
   - mon-put-instance-data.pl
   when: iam_role == false
   
-  - name: Deploy CloudWatch Scripts with IAM role
+- name: Deploy CloudWatch Scripts with IAM role
   sudo: yes
   copy: src={{item}} dest={{script_dir}}{{item}} mode=0774
   with_items:
