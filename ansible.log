@@ -2524,3 +2524,44 @@ AttributeError: 'NoneType' object has no attribute 'describe_alarms'
 2014-10-07 16:30:04,904 p=778 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
 
 2014-10-07 16:30:04,904 p=778 u=smiller |  localhost                  : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-07 16:33:33,529 p=961 u=smiller |   
+2014-10-07 16:33:33,530 p=961 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost
+2014-10-07 16:33:33,530 p=961 u=smiller |   
+2014-10-07 16:33:43,948 p=961 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 16:33:43,953 p=961 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 16:33:44,309 p=961 u=smiller |  ok: [localhost]
+2014-10-07 16:33:44,310 p=961 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 16:33:44,319 p=961 u=smiller |  skipping: [localhost]
+2014-10-07 16:33:44,319 p=961 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 16:33:46,764 p=961 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-07 16:33:46,764 p=961 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 16:33:46,825 p=961 u=smiller |  ok: [localhost]
+2014-10-07 16:33:46,826 p=961 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 16:33:46,901 p=961 u=smiller |  ok: [localhost] => (item=awscreds.conf)
+2014-10-07 16:33:46,976 p=961 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 16:33:47,050 p=961 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 16:33:47,051 p=961 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 16:33:47,054 p=961 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 16:33:47,056 p=961 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 16:33:47,056 p=961 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 16:33:47,124 p=961 u=smiller |  ok: [localhost]
+2014-10-07 16:33:47,124 p=961 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-07 16:33:47,127 p=961 u=smiller |  skipping: [localhost]
+2014-10-07 16:33:47,128 p=961 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-07 16:33:47,244 p=961 u=smiller |  ok: [localhost]
+2014-10-07 16:33:47,245 p=961 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-07 16:33:47,340 p=961 u=smiller |  failed: [localhost -> localhost] => {"failed": true, "parsed": false}
+2014-10-07 16:33:47,341 p=961 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "/tmp/ansible/tmp/ansible-tmp-1412699627.25-238544724030680/ec2_metric_alarm", line 1818, in <module>
+    main()
+  File "/tmp/ansible/tmp/ansible-tmp-1412699627.25-238544724030680/ec2_metric_alarm", line 1814, in main
+    create_metric_alarm(connection, module)
+  File "/tmp/ansible/tmp/ansible-tmp-1412699627.25-238544724030680/ec2_metric_alarm", line 1683, in create_metric_alarm
+    alarms = connection.describe_alarms(alarm_names=[name])
+AttributeError: 'NoneType' object has no attribute 'describe_alarms'
+
+2014-10-07 16:33:47,341 p=961 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-07 16:33:47,342 p=961 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 16:33:47,343 p=961 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-07 16:33:47,343 p=961 u=smiller |  localhost                  : ok=7    changed=0    unreachable=0    failed=1   

@@ -15,3 +15,4 @@
     dimensions="{'InstanceId':'{{ec2_facts.ansible_facts.ansible_ec2_instance_id}}'}"
     alarm_actions=["arn:aws:sns:us-east-1:406822941806:infrastructure_alarms"]
     ok_actions=["arn:aws:sns:us-east-1:406822941806:infrastructure_alarms"]
+  delegate_to: localhost
