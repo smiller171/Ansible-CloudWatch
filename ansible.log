@@ -1326,3 +1326,546 @@ Note: The error may actually appear before this position: line 11, column 5
 2014-10-07 15:31:02,665 p=28155 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
 
 2014-10-07 15:31:02,665 p=28155 u=smiller |  localhost                  : ok=7    changed=0    unreachable=1    failed=0   
+2014-10-07 15:34:21,957 p=28319 u=smiller |   
+2014-10-07 15:34:21,957 p=28319 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost
+2014-10-07 15:34:21,957 p=28319 u=smiller |   
+2014-10-07 15:34:22,078 p=28319 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 15:34:22,082 p=28319 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 15:34:22,440 p=28319 u=smiller |  ok: [localhost]
+2014-10-07 15:34:22,440 p=28319 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 15:34:22,449 p=28319 u=smiller |  skipping: [localhost]
+2014-10-07 15:34:22,450 p=28319 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 15:34:24,902 p=28319 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-07 15:34:24,903 p=28319 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 15:34:24,955 p=28319 u=smiller |  ok: [localhost]
+2014-10-07 15:34:24,955 p=28319 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 15:34:25,021 p=28319 u=smiller |  ok: [localhost] => (item=awscreds.conf)
+2014-10-07 15:34:25,088 p=28319 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 15:34:25,155 p=28319 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 15:34:25,155 p=28319 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 15:34:25,158 p=28319 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 15:34:25,160 p=28319 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 15:34:25,160 p=28319 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 15:34:25,219 p=28319 u=smiller |  ok: [localhost]
+2014-10-07 15:34:25,219 p=28319 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-07 15:34:25,222 p=28319 u=smiller |  skipping: [localhost]
+2014-10-07 15:34:25,222 p=28319 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-07 15:34:25,325 p=28319 u=smiller |  ok: [localhost]
+2014-10-07 15:34:25,325 p=28319 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-07 15:34:25,330 p=28319 u=smiller |  fatal: [localhost] => module ec2_metric_alarm not found in /usr/share/ansible/packaging:/usr/share/ansible/inventory:/usr/share/ansible/commands:/usr/share/ansible/utilities:/usr/share/ansible/files:/usr/share/ansible/internal:/usr/share/ansible/cloud:/usr/share/ansible/source_control:/usr/share/ansible/network:/usr/share/ansible/notification:/usr/share/ansible/system:/usr/share/ansible/net_infrastructure:/usr/share/ansible/database:/usr/share/ansible/messaging:/usr/share/ansible/monitoring:/usr/share/ansible/web_infrastructure:/usr/share/ansible
+2014-10-07 15:34:25,330 p=28319 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-07 15:34:25,330 p=28319 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 15:34:25,331 p=28319 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-07 15:34:25,331 p=28319 u=smiller |  localhost                  : ok=7    changed=0    unreachable=1    failed=0   
+2014-10-07 15:38:24,710 p=28500 u=smiller |   
+2014-10-07 15:38:24,710 p=28500 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost
+2014-10-07 15:38:24,710 p=28500 u=smiller |   
+2014-10-07 15:38:35,018 p=28500 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 15:38:35,022 p=28500 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 15:38:35,358 p=28500 u=smiller |  ok: [localhost]
+2014-10-07 15:38:35,359 p=28500 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 15:38:35,367 p=28500 u=smiller |  skipping: [localhost]
+2014-10-07 15:38:35,368 p=28500 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 15:38:37,806 p=28500 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-07 15:38:37,806 p=28500 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 15:38:37,858 p=28500 u=smiller |  ok: [localhost]
+2014-10-07 15:38:37,858 p=28500 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 15:38:37,925 p=28500 u=smiller |  ok: [localhost] => (item=awscreds.conf)
+2014-10-07 15:38:37,989 p=28500 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 15:38:38,056 p=28500 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 15:38:38,057 p=28500 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 15:38:38,059 p=28500 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 15:38:38,061 p=28500 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 15:38:38,061 p=28500 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 15:38:38,118 p=28500 u=smiller |  ok: [localhost]
+2014-10-07 15:38:38,119 p=28500 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-07 15:38:38,122 p=28500 u=smiller |  skipping: [localhost]
+2014-10-07 15:38:38,122 p=28500 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-07 15:38:38,233 p=28500 u=smiller |  ok: [localhost]
+2014-10-07 15:38:38,233 p=28500 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-07 15:38:38,238 p=28500 u=smiller |  fatal: [localhost] => module ec2_metric_alarm not found in /usr/share/ansible/packaging:/usr/share/ansible/inventory:/usr/share/ansible/commands:/usr/share/ansible/utilities:/usr/share/ansible/files:/usr/share/ansible/internal:/usr/share/ansible/cloud:/usr/share/ansible/source_control:/usr/share/ansible/network:/usr/share/ansible/notification:/usr/share/ansible/system:/usr/share/ansible/net_infrastructure:/usr/share/ansible/database:/usr/share/ansible/messaging:/usr/share/ansible/monitoring:/usr/share/ansible/web_infrastructure:/usr/share/ansible
+2014-10-07 15:38:38,238 p=28500 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-07 15:38:38,238 p=28500 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 15:38:38,239 p=28500 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-07 15:38:38,239 p=28500 u=smiller |  localhost                  : ok=7    changed=0    unreachable=1    failed=0   
+2014-10-07 15:44:21,410 p=28729 u=smiller |  
+2014-10-07 15:44:21,410 p=28729 u=smiller |  /usr/bin/ansible --version
+2014-10-07 15:44:21,410 p=28729 u=smiller |  
+2014-10-07 15:46:26,867 p=29241 u=smiller |  
+2014-10-07 15:46:26,867 p=29241 u=smiller |  /usr/bin/ansible --version
+2014-10-07 15:46:26,867 p=29241 u=smiller |  
+2014-10-07 15:46:38,776 p=29242 u=smiller |   
+2014-10-07 15:46:38,776 p=29242 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost
+2014-10-07 15:46:38,776 p=29242 u=smiller |   
+2014-10-07 15:46:48,656 p=29242 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 15:46:48,661 p=29242 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 15:46:49,010 p=29242 u=smiller |  ok: [localhost]
+2014-10-07 15:46:49,011 p=29242 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 15:46:49,020 p=29242 u=smiller |  skipping: [localhost]
+2014-10-07 15:46:49,020 p=29242 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 15:46:51,901 p=29242 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-07 15:46:51,901 p=29242 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 15:46:51,959 p=29242 u=smiller |  ok: [localhost]
+2014-10-07 15:46:51,959 p=29242 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 15:46:52,032 p=29242 u=smiller |  ok: [localhost] => (item=awscreds.conf)
+2014-10-07 15:46:52,105 p=29242 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 15:46:52,178 p=29242 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 15:46:52,178 p=29242 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 15:46:52,181 p=29242 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 15:46:52,183 p=29242 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 15:46:52,184 p=29242 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 15:46:52,188 p=29242 u=smiller |  fatal: [localhost] => A variable inserted a new parameter into the module args. Be sure to quote variables if they contain equal signs (for example: "{{var}}").
+2014-10-07 15:46:52,188 p=29242 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-07 15:46:52,189 p=29242 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 15:46:52,190 p=29242 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-07 15:46:52,190 p=29242 u=smiller |  localhost                  : ok=5    changed=0    unreachable=1    failed=0   
+2014-10-07 15:49:56,148 p=29387 u=smiller |   
+2014-10-07 15:49:56,148 p=29387 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost
+2014-10-07 15:49:56,148 p=29387 u=smiller |   
+2014-10-07 15:49:56,299 p=29387 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 15:49:56,304 p=29387 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 15:49:56,646 p=29387 u=smiller |  ok: [localhost]
+2014-10-07 15:49:56,646 p=29387 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 15:49:56,655 p=29387 u=smiller |  skipping: [localhost]
+2014-10-07 15:49:56,655 p=29387 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 15:49:59,653 p=29387 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-07 15:49:59,654 p=29387 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 15:49:59,713 p=29387 u=smiller |  ok: [localhost]
+2014-10-07 15:49:59,713 p=29387 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 15:49:59,787 p=29387 u=smiller |  ok: [localhost] => (item=awscreds.conf)
+2014-10-07 15:49:59,861 p=29387 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 15:49:59,935 p=29387 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 15:49:59,936 p=29387 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 15:49:59,939 p=29387 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 15:49:59,941 p=29387 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 15:49:59,941 p=29387 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 15:50:00,007 p=29387 u=smiller |  ok: [localhost]
+2014-10-07 15:50:00,007 p=29387 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-07 15:50:00,010 p=29387 u=smiller |  skipping: [localhost]
+2014-10-07 15:50:00,010 p=29387 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-07 15:50:00,129 p=29387 u=smiller |  ok: [localhost]
+2014-10-07 15:50:00,130 p=29387 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-07 15:50:00,238 p=29387 u=smiller |  failed: [localhost -> 127.0.0.1] => {"failed": true}
+2014-10-07 15:50:00,238 p=29387 u=smiller |  msg: value of namespace must be one of: AWS/AutoScaling,AWS/Billing,AWS/DynamoDB,AWS/ElastiCache,AWS/EBS,AWS/EC2,AWS/ELB,AWS/ElasticMapReduce,AWS/OpsWorks,AWS/Redshift,AWS/RDS,AWS/Route53,AWS/SNS,AWS/SQS,AWS/StorageGateway, got: Linux System
+2014-10-07 15:50:00,239 p=29387 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-07 15:50:00,239 p=29387 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 15:50:00,240 p=29387 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-07 15:50:00,240 p=29387 u=smiller |  localhost                  : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-07 15:51:36,604 p=29567 u=smiller |   
+2014-10-07 15:51:36,604 p=29567 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost
+2014-10-07 15:51:36,604 p=29567 u=smiller |   
+2014-10-07 15:51:36,760 p=29567 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 15:51:36,765 p=29567 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 15:51:37,098 p=29567 u=smiller |  ok: [localhost]
+2014-10-07 15:51:37,099 p=29567 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 15:51:37,108 p=29567 u=smiller |  skipping: [localhost]
+2014-10-07 15:51:37,108 p=29567 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 15:51:39,985 p=29567 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-07 15:51:39,985 p=29567 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 15:51:40,044 p=29567 u=smiller |  ok: [localhost]
+2014-10-07 15:51:40,044 p=29567 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 15:51:40,117 p=29567 u=smiller |  ok: [localhost] => (item=awscreds.conf)
+2014-10-07 15:51:40,191 p=29567 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 15:51:40,264 p=29567 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 15:51:40,265 p=29567 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 15:51:40,268 p=29567 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 15:51:40,270 p=29567 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 15:51:40,270 p=29567 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 15:51:40,338 p=29567 u=smiller |  ok: [localhost]
+2014-10-07 15:51:40,339 p=29567 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-07 15:51:40,342 p=29567 u=smiller |  skipping: [localhost]
+2014-10-07 15:51:40,342 p=29567 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-07 15:51:40,458 p=29567 u=smiller |  ok: [localhost]
+2014-10-07 15:51:40,459 p=29567 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-07 15:51:40,557 p=29567 u=smiller |  failed: [localhost -> 127.0.0.1] => {"failed": true, "parsed": false}
+2014-10-07 15:51:40,557 p=29567 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "/tmp/ansible/tmp/ansible-tmp-1412697100.46-104216555810611/ec2_metric_alarm", line 1818, in <module>
+    main()
+  File "/tmp/ansible/tmp/ansible-tmp-1412697100.46-104216555810611/ec2_metric_alarm", line 1814, in main
+    create_metric_alarm(connection, module)
+  File "/tmp/ansible/tmp/ansible-tmp-1412697100.46-104216555810611/ec2_metric_alarm", line 1683, in create_metric_alarm
+    alarms = connection.describe_alarms(alarm_names=[name])
+AttributeError: 'NoneType' object has no attribute 'describe_alarms'
+
+2014-10-07 15:51:40,558 p=29567 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-07 15:51:40,558 p=29567 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 15:51:40,559 p=29567 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-07 15:51:40,559 p=29567 u=smiller |  localhost                  : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-07 15:55:17,057 p=29738 u=smiller |   
+2014-10-07 15:55:17,057 p=29738 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost
+2014-10-07 15:55:17,057 p=29738 u=smiller |   
+2014-10-07 15:55:27,387 p=29738 u=smiller |  ERROR: Syntax Error while loading YAML script, /home/smiller/ansible/Ansible-CloudWatch/roles/alarm/tasks/add-alarm.yaml
+Note: The error may actually appear before this position: line 5, column 9
+
+    state:present
+    name: "{{ec2_facts.ansible_facts.ansible_ec2_instance_id}}""-disk-low"
+        ^
+We could be wrong, but this one looks like it might be an issue with
+missing quotes.  Always quote template expression brackets when they 
+start a value. For instance:            
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"      
+
+
+2014-10-07 15:56:04,798 p=29747 u=smiller |   
+2014-10-07 15:56:04,798 p=29747 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost
+2014-10-07 15:56:04,798 p=29747 u=smiller |   
+2014-10-07 15:56:04,949 p=29747 u=smiller |  ERROR: Syntax Error while loading YAML script, /home/smiller/ansible/Ansible-CloudWatch/roles/alarm/tasks/add-alarm.yaml
+Note: The error may actually appear before this position: line 4, column 10
+
+  local_action: ec2_metric_alarm
+    state: present
+         ^
+2014-10-07 15:57:17,556 p=29756 u=smiller |   
+2014-10-07 15:57:17,556 p=29756 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost
+2014-10-07 15:57:17,556 p=29756 u=smiller |   
+2014-10-07 15:57:17,706 p=29756 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 15:57:17,711 p=29756 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 15:57:18,075 p=29756 u=smiller |  ok: [localhost]
+2014-10-07 15:57:18,075 p=29756 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 15:57:18,084 p=29756 u=smiller |  skipping: [localhost]
+2014-10-07 15:57:18,084 p=29756 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 15:57:24,394 p=29756 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-07 15:57:24,395 p=29756 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 15:57:24,455 p=29756 u=smiller |  ok: [localhost]
+2014-10-07 15:57:24,456 p=29756 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 15:57:24,532 p=29756 u=smiller |  ok: [localhost] => (item=awscreds.conf)
+2014-10-07 15:57:24,606 p=29756 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 15:57:24,680 p=29756 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 15:57:24,681 p=29756 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 15:57:24,684 p=29756 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 15:57:24,686 p=29756 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 15:57:24,686 p=29756 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 15:57:24,753 p=29756 u=smiller |  ok: [localhost]
+2014-10-07 15:57:24,754 p=29756 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-07 15:57:24,757 p=29756 u=smiller |  skipping: [localhost]
+2014-10-07 15:57:24,757 p=29756 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-07 15:57:24,879 p=29756 u=smiller |  ok: [localhost]
+2014-10-07 15:57:24,880 p=29756 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-07 15:57:24,977 p=29756 u=smiller |  failed: [localhost -> 127.0.0.1] => {"failed": true}
+2014-10-07 15:57:24,977 p=29756 u=smiller |  msg: this module requires key=value arguments (['state=', 'present', 'name=', 'i-a5137c88-disk-low', 'metric=', 'DiskSpaceAvailable', 'namespace=', 'AWS/EC2', 'statistic=', 'Average', 'comparison=', '<=', 'threshold=', '25.0', 'unit=', 'Percent', 'period=', '300', 'evaluation_periods=', '1', 'description=', 'It will be triggered when available disk space is less than 25%', 'dimensions=', '{InstanceId:i-a5137c88}', 'alarm_actions=', 'arn:aws:sns:us-east-1:406822941806:infrastructure_alarms', 'ok_actions=', 'arn:aws:sns:us-east-1:406822941806:infrastructure_alarms'])
+2014-10-07 15:57:24,977 p=29756 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-07 15:57:24,978 p=29756 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 15:57:24,979 p=29756 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-07 15:57:24,979 p=29756 u=smiller |  localhost                  : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-07 15:58:52,941 p=29915 u=smiller |   
+2014-10-07 15:58:52,941 p=29915 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost
+2014-10-07 15:58:52,941 p=29915 u=smiller |   
+2014-10-07 15:58:53,096 p=29915 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 15:58:53,101 p=29915 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 15:58:53,446 p=29915 u=smiller |  ok: [localhost]
+2014-10-07 15:58:53,447 p=29915 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 15:58:53,456 p=29915 u=smiller |  skipping: [localhost]
+2014-10-07 15:58:53,456 p=29915 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 15:58:56,672 p=29915 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-07 15:58:56,673 p=29915 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 15:58:56,732 p=29915 u=smiller |  ok: [localhost]
+2014-10-07 15:58:56,732 p=29915 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 15:58:56,809 p=29915 u=smiller |  ok: [localhost] => (item=awscreds.conf)
+2014-10-07 15:58:56,881 p=29915 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 15:58:56,955 p=29915 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 15:58:56,956 p=29915 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 15:58:56,959 p=29915 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 15:58:56,961 p=29915 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 15:58:56,961 p=29915 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 15:58:57,028 p=29915 u=smiller |  ok: [localhost]
+2014-10-07 15:58:57,029 p=29915 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-07 15:58:57,031 p=29915 u=smiller |  skipping: [localhost]
+2014-10-07 15:58:57,032 p=29915 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-07 15:58:57,152 p=29915 u=smiller |  ok: [localhost]
+2014-10-07 15:58:57,152 p=29915 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-07 15:58:57,248 p=29915 u=smiller |  failed: [localhost -> 127.0.0.1] => {"failed": true}
+2014-10-07 15:58:57,249 p=29915 u=smiller |  msg: this module requires key=value arguments (['state=', 'present', 'name=', 'i-a5137c88-disk-low', 'metric=', 'DiskSpaceAvailable', 'namespace=', 'AWS/EC2', 'statistic=', 'Average', 'comparison=', '<=', 'threshold=', '25.0', 'unit=', 'Percent', 'period=', '300', 'evaluation_periods=', '1', 'description=', 'It will be triggered when available disk space is less than 25%', 'dimensions=', 'InstanceId:i-a5137c88', 'alarm_actions=', 'arn:aws:sns:us-east-1:406822941806:infrastructure_alarms', 'ok_actions=', 'arn:aws:sns:us-east-1:406822941806:infrastructure_alarms'])
+2014-10-07 15:58:57,249 p=29915 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-07 15:58:57,249 p=29915 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 15:58:57,250 p=29915 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-07 15:58:57,250 p=29915 u=smiller |  localhost                  : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-07 16:00:09,131 p=30073 u=smiller |   
+2014-10-07 16:00:09,132 p=30073 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost
+2014-10-07 16:00:09,132 p=30073 u=smiller |   
+2014-10-07 16:00:09,287 p=30073 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 16:00:09,292 p=30073 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 16:00:09,648 p=30073 u=smiller |  ok: [localhost]
+2014-10-07 16:00:09,649 p=30073 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 16:00:09,658 p=30073 u=smiller |  skipping: [localhost]
+2014-10-07 16:00:09,658 p=30073 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 16:00:12,214 p=30073 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-07 16:00:12,215 p=30073 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 16:00:12,276 p=30073 u=smiller |  ok: [localhost]
+2014-10-07 16:00:12,276 p=30073 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 16:00:12,352 p=30073 u=smiller |  ok: [localhost] => (item=awscreds.conf)
+2014-10-07 16:00:12,428 p=30073 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 16:00:12,504 p=30073 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 16:00:12,504 p=30073 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 16:00:12,507 p=30073 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 16:00:12,509 p=30073 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 16:00:12,509 p=30073 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 16:00:12,577 p=30073 u=smiller |  ok: [localhost]
+2014-10-07 16:00:12,577 p=30073 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-07 16:00:12,580 p=30073 u=smiller |  skipping: [localhost]
+2014-10-07 16:00:12,581 p=30073 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-07 16:00:12,703 p=30073 u=smiller |  ok: [localhost]
+2014-10-07 16:00:12,704 p=30073 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-07 16:00:12,803 p=30073 u=smiller |  failed: [localhost -> 127.0.0.1] => {"failed": true}
+2014-10-07 16:00:12,803 p=30073 u=smiller |  msg: dictionary requested, could not parse JSON or key=value
+2014-10-07 16:00:12,803 p=30073 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-07 16:00:12,804 p=30073 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 16:00:12,805 p=30073 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-07 16:00:12,805 p=30073 u=smiller |  localhost                  : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-07 16:01:00,835 p=30230 u=smiller |   
+2014-10-07 16:01:00,835 p=30230 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost
+2014-10-07 16:01:00,835 p=30230 u=smiller |   
+2014-10-07 16:01:11,287 p=30230 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 16:01:11,293 p=30230 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 16:01:11,648 p=30230 u=smiller |  ok: [localhost]
+2014-10-07 16:01:11,648 p=30230 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 16:01:11,658 p=30230 u=smiller |  skipping: [localhost]
+2014-10-07 16:01:11,658 p=30230 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 16:01:14,112 p=30230 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-07 16:01:14,112 p=30230 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 16:01:14,171 p=30230 u=smiller |  ok: [localhost]
+2014-10-07 16:01:14,172 p=30230 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 16:01:14,246 p=30230 u=smiller |  ok: [localhost] => (item=awscreds.conf)
+2014-10-07 16:01:14,319 p=30230 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 16:01:14,392 p=30230 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 16:01:14,392 p=30230 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 16:01:14,396 p=30230 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 16:01:14,398 p=30230 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 16:01:14,398 p=30230 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 16:01:14,463 p=30230 u=smiller |  ok: [localhost]
+2014-10-07 16:01:14,464 p=30230 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-07 16:01:14,467 p=30230 u=smiller |  skipping: [localhost]
+2014-10-07 16:01:14,467 p=30230 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-07 16:01:14,581 p=30230 u=smiller |  ok: [localhost]
+2014-10-07 16:01:14,581 p=30230 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-07 16:01:14,676 p=30230 u=smiller |  failed: [localhost -> 127.0.0.1] => {"failed": true}
+2014-10-07 16:01:14,677 p=30230 u=smiller |  msg: unable to evaluate dictionary for dimensions
+2014-10-07 16:01:14,677 p=30230 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-07 16:01:14,678 p=30230 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 16:01:14,678 p=30230 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-07 16:01:14,679 p=30230 u=smiller |  localhost                  : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-07 16:02:29,632 p=30385 u=smiller |   
+2014-10-07 16:02:29,632 p=30385 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost
+2014-10-07 16:02:29,632 p=30385 u=smiller |   
+2014-10-07 16:02:29,783 p=30385 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 16:02:29,788 p=30385 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 16:02:30,139 p=30385 u=smiller |  ok: [localhost]
+2014-10-07 16:02:30,140 p=30385 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 16:02:30,149 p=30385 u=smiller |  skipping: [localhost]
+2014-10-07 16:02:30,149 p=30385 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 16:02:32,824 p=30385 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-07 16:02:32,824 p=30385 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 16:02:32,882 p=30385 u=smiller |  ok: [localhost]
+2014-10-07 16:02:32,882 p=30385 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 16:02:32,954 p=30385 u=smiller |  ok: [localhost] => (item=awscreds.conf)
+2014-10-07 16:02:33,028 p=30385 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 16:02:33,100 p=30385 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 16:02:33,100 p=30385 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 16:02:33,103 p=30385 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 16:02:33,105 p=30385 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 16:02:33,105 p=30385 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 16:02:33,170 p=30385 u=smiller |  ok: [localhost]
+2014-10-07 16:02:33,170 p=30385 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-07 16:02:33,173 p=30385 u=smiller |  skipping: [localhost]
+2014-10-07 16:02:33,174 p=30385 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-07 16:02:33,287 p=30385 u=smiller |  ok: [localhost]
+2014-10-07 16:02:33,287 p=30385 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-07 16:02:33,383 p=30385 u=smiller |  failed: [localhost -> 127.0.0.1] => {"failed": true}
+2014-10-07 16:02:33,383 p=30385 u=smiller |  msg: unable to evaluate dictionary for dimensions
+2014-10-07 16:02:33,384 p=30385 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-07 16:02:33,384 p=30385 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 16:02:33,385 p=30385 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-07 16:02:33,385 p=30385 u=smiller |  localhost                  : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-07 16:02:39,848 p=30539 u=smiller |   
+2014-10-07 16:02:39,849 p=30539 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost -vv
+2014-10-07 16:02:39,849 p=30539 u=smiller |   
+2014-10-07 16:02:40,002 p=30539 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 16:02:40,007 p=30539 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 16:02:40,012 p=30539 u=smiller |  <localhost> REMOTE_MODULE setup
+2014-10-07 16:02:40,350 p=30539 u=smiller |  ok: [localhost]
+2014-10-07 16:02:40,350 p=30539 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 16:02:40,359 p=30539 u=smiller |  skipping: [localhost]
+2014-10-07 16:02:40,360 p=30539 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 16:02:40,370 p=30539 u=smiller |  <localhost> REMOTE_MODULE apt update_cache=yes name=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron state=latest
+2014-10-07 16:02:43,274 p=30539 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron) => {"changed": false, "item": "unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron"}
+2014-10-07 16:02:43,275 p=30539 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 16:02:43,278 p=30539 u=smiller |  <localhost> REMOTE_MODULE file path=/var/local/cloudwatch/ state=directory
+2014-10-07 16:02:43,335 p=30539 u=smiller |  ok: [localhost] => {"changed": false, "gid": 50, "group": "staff", "mode": "02755", "owner": "root", "path": "/var/local/cloudwatch/", "size": 4096, "state": "directory", "uid": 0}
+2014-10-07 16:02:43,335 p=30539 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 16:02:43,410 p=30539 u=smiller |  ok: [localhost] => (item=awscreds.conf) => {"changed": false, "dest": "/var/local/cloudwatch/awscreds.conf", "gid": 1001, "group": "smiller", "item": "awscreds.conf", "md5sum": "ee053d21ab9d559fb40e4f7da3ce48f0", "mode": "0774", "owner": "smiller", "path": "/var/local/cloudwatch/awscreds.conf", "size": 91, "state": "file", "uid": 1001}
+2014-10-07 16:02:43,483 p=30539 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm) => {"changed": false, "dest": "/var/local/cloudwatch/CloudWatchClient.pm", "gid": 1001, "group": "smiller", "item": "CloudWatchClient.pm", "md5sum": "dcb414488fbb4a158b7b2a39a91ce5ca", "mode": "0774", "owner": "smiller", "path": "/var/local/cloudwatch/CloudWatchClient.pm", "size": 16726, "state": "file", "uid": 1001}
+2014-10-07 16:02:43,556 p=30539 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl) => {"changed": false, "dest": "/var/local/cloudwatch/mon-put-instance-data.pl", "gid": 1001, "group": "smiller", "item": "mon-put-instance-data.pl", "md5sum": "47c4146f1b3f5a6cd8c71d81cb551932", "mode": "0774", "owner": "smiller", "path": "/var/local/cloudwatch/mon-put-instance-data.pl", "size": 17822, "state": "file", "uid": 1001}
+2014-10-07 16:02:43,557 p=30539 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 16:02:43,559 p=30539 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 16:02:43,561 p=30539 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 16:02:43,562 p=30539 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 16:02:43,566 p=30539 u=smiller |  <localhost> REMOTE_MODULE cron name="CloudWatch" minute=*/5 job="/var/local/cloudwatch/""mon-put-instance-data.pl --mem-util --mem-avail --disk-space-util --disk-space-avail --memory-units=megabytes --disk-space-units=gigabytes --disk-path=/ --from-cron --aws-credential-file=""/var/local/cloudwatch/""awscreds.conf" state=present
+2014-10-07 16:02:43,626 p=30539 u=smiller |  ok: [localhost] => {"changed": false, "jobs": ["CloudWatch"]}
+2014-10-07 16:02:43,626 p=30539 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-07 16:02:43,629 p=30539 u=smiller |  skipping: [localhost]
+2014-10-07 16:02:43,630 p=30539 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-07 16:02:43,631 p=30539 u=smiller |  <localhost> REMOTE_MODULE ec2_facts
+2014-10-07 16:02:43,744 p=30539 u=smiller |  ok: [localhost] => {"ansible_facts": {"ansible_ec2_ami_id": "ami-864d84ee", "ansible_ec2_ami_launch_index": "0", "ansible_ec2_ami_manifest_path": "(unknown)", "ansible_ec2_block_device_mapping_ami": "/dev/sda1", "ansible_ec2_block_device_mapping_root": "/dev/sda1", "ansible_ec2_hostname": "ip-10-1-0-15.ec2.internal", "ansible_ec2_instance_action": "none", "ansible_ec2_instance_id": "i-a5137c88", "ansible_ec2_instance_type": "t2.small", "ansible_ec2_local_hostname": "ip-10-1-0-15.ec2.internal", "ansible_ec2_local_ipv4": "10.1.0.15", "ansible_ec2_mac": "0e:0c:5f:99:86:3e", "ansible_ec2_metrics_vhostmd": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_device_number": "0", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_interface_id": "eni-4940b311", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_local_hostname": "ip-10-1-0-15.ec2.internal", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_local_ipv4s": "10.1.0.15", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_mac": "0e:0c:5f:99:86:3e", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_owner_id": "406822941806", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_security_group_ids": "sg-f7290192", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_security_groups": "VPN Server", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_subnet_id": "subnet-4022dd19", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_subnet_ipv4_cidr_block": "10.1.0.0/24", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_vpc_id": "vpc-5da81738", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_vpc_ipv4_cidr_block": "10.1.0.0/16", "ansible_ec2_placement_availability_zone": "us-east-1a", "ansible_ec2_placement_region": "us-east-1", "ansible_ec2_profile": "default-hvm", "ansible_ec2_public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAlPYybp3CWDzRPo0uF/woyqkfhpZK2T7zn16z+fGYlRQl6gXATIUB4JYfr9pfD+SOW2T4X78P+/h1o4QPCwoesLacaFEFGwUb+SzhVVm6B6q4WMAiJWD6OVXh+SVVvD9rdcz5RMVLqQngrRqBlj4kBIMQ3S8h1cCESbR2P6jszgFj0I6p3tQCpo9yjcVwLqvWFKJgzEm2E2wV/gmrc0PhVRP2guIRN4p6M2ZyIPprdZ6PA8m7Rs4yN3jQ/0alrQ23ECCU4lHoVG9fwvLIq1vh4ikPcUrdA8sSHTE1pkpzvrTv7FtkuUcBrDMedFE7E8dB9pPS+vXIBWVUYJhp9WzVkQ== scott\n", "ansible_ec2_reservation_id": "r-8662e2ac", "ansible_ec2_security_groups": "VPN Server", "ansible_ec2_services_domain": "amazonaws.com", "ansible_ec2_user_data": null}, "changed": false}
+2014-10-07 16:02:43,745 p=30539 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-07 16:02:43,749 p=30539 u=smiller |  <127.0.0.1> REMOTE_MODULE ec2_metric_alarm state=present name="i-a5137c88""-disk-low" metric="DiskSpaceAvailable" namespace="AWS/EC2" statistic=Average comparison="<=" threshold=25.0 unit="Percent" period=300 evaluation_periods=1 description="It will be triggered when available disk space is less than 25%" dimensions={"InstanceId":"i-a5137c88"} alarm_actions=["arn:aws:sns:us-east-1:406822941806:infrastructure_alarms"] ok_actions=]"arn:aws:sns:us-east-1:406822941806:infrastructure_alarms"]
+2014-10-07 16:02:43,840 p=30539 u=smiller |  failed: [localhost -> 127.0.0.1] => {"failed": true}
+2014-10-07 16:02:43,841 p=30539 u=smiller |  msg: unable to evaluate dictionary for dimensions
+2014-10-07 16:02:43,841 p=30539 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-07 16:02:43,841 p=30539 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 16:02:43,842 p=30539 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-07 16:02:43,843 p=30539 u=smiller |  localhost                  : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-07 16:02:56,255 p=30693 u=smiller |   
+2014-10-07 16:02:56,256 p=30693 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost -vvv
+2014-10-07 16:02:56,256 p=30693 u=smiller |   
+2014-10-07 16:02:56,407 p=30693 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 16:02:56,412 p=30693 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 16:02:56,417 p=30693 u=smiller |  <localhost> REMOTE_MODULE setup
+2014-10-07 16:02:56,419 p=30693 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412697776.42-76996648901504 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412697776.42-76996648901504 && echo /tmp/ansible/tmp/ansible-tmp-1412697776.42-76996648901504']
+2014-10-07 16:02:56,423 p=30693 u=smiller |  <localhost> PUT /tmp/tmpVp068q TO /tmp/ansible/tmp/ansible-tmp-1412697776.42-76996648901504/setup
+2014-10-07 16:02:56,424 p=30693 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', u'LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412697776.42-76996648901504/setup; rm -rf /tmp/ansible/tmp/ansible-tmp-1412697776.42-76996648901504/ >/dev/null 2>&1']
+2014-10-07 16:02:56,750 p=30693 u=smiller |  ok: [localhost]
+2014-10-07 16:02:56,750 p=30693 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 16:02:56,759 p=30693 u=smiller |  skipping: [localhost]
+2014-10-07 16:02:56,759 p=30693 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 16:02:56,770 p=30693 u=smiller |  <localhost> REMOTE_MODULE apt update_cache=yes name=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron state=latest
+2014-10-07 16:02:56,771 p=30693 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412697776.77-261241651664983 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412697776.77-261241651664983 && echo /tmp/ansible/tmp/ansible-tmp-1412697776.77-261241651664983']
+2014-10-07 16:02:56,776 p=30693 u=smiller |  <localhost> PUT /tmp/tmpFspF0L TO /tmp/ansible/tmp/ansible-tmp-1412697776.77-261241651664983/apt
+2014-10-07 16:02:56,776 p=30693 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=cvgjxubokgiichfddbgtughppdafzvfj] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-cvgjxubokgiichfddbgtughppdafzvfj; LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412697776.77-261241651664983/apt; rm -rf /tmp/ansible/tmp/ansible-tmp-1412697776.77-261241651664983/ >/dev/null 2>&1'"'"''
+2014-10-07 16:02:59,676 p=30693 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron) => {"changed": false, "item": "unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron"}
+2014-10-07 16:02:59,676 p=30693 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 16:02:59,679 p=30693 u=smiller |  <localhost> REMOTE_MODULE file path=/var/local/cloudwatch/ state=directory
+2014-10-07 16:02:59,681 p=30693 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412697779.68-234578201525005 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412697779.68-234578201525005 && echo /tmp/ansible/tmp/ansible-tmp-1412697779.68-234578201525005']
+2014-10-07 16:02:59,684 p=30693 u=smiller |  <localhost> PUT /tmp/tmpzN5_dU TO /tmp/ansible/tmp/ansible-tmp-1412697779.68-234578201525005/file
+2014-10-07 16:02:59,685 p=30693 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=oywwlividhemaspmokihmbkgeafjqdec] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-oywwlividhemaspmokihmbkgeafjqdec; LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412697779.68-234578201525005/file; rm -rf /tmp/ansible/tmp/ansible-tmp-1412697779.68-234578201525005/ >/dev/null 2>&1'"'"''
+2014-10-07 16:02:59,735 p=30693 u=smiller |  ok: [localhost] => {"changed": false, "gid": 50, "group": "staff", "mode": "02755", "owner": "root", "path": "/var/local/cloudwatch/", "size": 4096, "state": "directory", "uid": 0}
+2014-10-07 16:02:59,736 p=30693 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 16:02:59,742 p=30693 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=uwwzdiajxlodupdxeelkvmheepbhpozo] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-uwwzdiajxlodupdxeelkvmheepbhpozo; rc=0; [ -r "/var/local/cloudwatch/awscreds.conf" ] || rc=2; [ -f "/var/local/cloudwatch/awscreds.conf" ] || rc=1; [ -d "/var/local/cloudwatch/awscreds.conf" ] && echo 3 && exit 0; (/usr/bin/md5sum /var/local/cloudwatch/awscreds.conf 2>/dev/null) || (/sbin/md5sum -q /var/local/cloudwatch/awscreds.conf 2>/dev/null) || (/usr/bin/digest -a md5 /var/local/cloudwatch/awscreds.conf 2>/dev/null) || (/sbin/md5 -q /var/local/cloudwatch/awscreds.conf 2>/dev/null) || (/usr/bin/md5 -n /var/local/cloudwatch/awscreds.conf 2>/dev/null) || (/bin/md5 -q /var/local/cloudwatch/awscreds.conf 2>/dev/null) || (/usr/bin/csum -h MD5 /var/local/cloudwatch/awscreds.conf 2>/dev/null) || (/bin/csum -h MD5 /var/local/cloudwatch/awscreds.conf 2>/dev/null) || (echo "${rc} /var/local/cloudwatch/awscreds.conf")'"'"''
+2014-10-07 16:02:59,756 p=30693 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412697779.76-55251349984515 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412697779.76-55251349984515 && echo /tmp/ansible/tmp/ansible-tmp-1412697779.76-55251349984515']
+2014-10-07 16:02:59,759 p=30693 u=smiller |  <localhost> PUT /tmp/tmpttOESz TO /tmp/ansible/tmp/ansible-tmp-1412697779.76-55251349984515/file
+2014-10-07 16:02:59,760 p=30693 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=quzltvpprfnqrxswvrmonrzieeejbfyl] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-quzltvpprfnqrxswvrmonrzieeejbfyl; LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412697779.76-55251349984515/file; rm -rf /tmp/ansible/tmp/ansible-tmp-1412697779.76-55251349984515/ >/dev/null 2>&1'"'"''
+2014-10-07 16:02:59,811 p=30693 u=smiller |  ok: [localhost] => (item=awscreds.conf) => {"changed": false, "dest": "/var/local/cloudwatch/awscreds.conf", "gid": 1001, "group": "smiller", "item": "awscreds.conf", "md5sum": "ee053d21ab9d559fb40e4f7da3ce48f0", "mode": "0774", "owner": "smiller", "path": "/var/local/cloudwatch/awscreds.conf", "size": 91, "state": "file", "uid": 1001}
+2014-10-07 16:02:59,817 p=30693 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=leotehusnoaovphjbtcphygvhmzclypx] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-leotehusnoaovphjbtcphygvhmzclypx; rc=0; [ -r "/var/local/cloudwatch/CloudWatchClient.pm" ] || rc=2; [ -f "/var/local/cloudwatch/CloudWatchClient.pm" ] || rc=1; [ -d "/var/local/cloudwatch/CloudWatchClient.pm" ] && echo 3 && exit 0; (/usr/bin/md5sum /var/local/cloudwatch/CloudWatchClient.pm 2>/dev/null) || (/sbin/md5sum -q /var/local/cloudwatch/CloudWatchClient.pm 2>/dev/null) || (/usr/bin/digest -a md5 /var/local/cloudwatch/CloudWatchClient.pm 2>/dev/null) || (/sbin/md5 -q /var/local/cloudwatch/CloudWatchClient.pm 2>/dev/null) || (/usr/bin/md5 -n /var/local/cloudwatch/CloudWatchClient.pm 2>/dev/null) || (/bin/md5 -q /var/local/cloudwatch/CloudWatchClient.pm 2>/dev/null) || (/usr/bin/csum -h MD5 /var/local/cloudwatch/CloudWatchClient.pm 2>/dev/null) || (/bin/csum -h MD5 /var/local/cloudwatch/CloudWatchClient.pm 2>/dev/null) || (echo "${rc} /var/local/cloudwatch/CloudWatchClient.pm")'"'"''
+2014-10-07 16:02:59,831 p=30693 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412697779.83-145379532885107 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412697779.83-145379532885107 && echo /tmp/ansible/tmp/ansible-tmp-1412697779.83-145379532885107']
+2014-10-07 16:02:59,835 p=30693 u=smiller |  <localhost> PUT /tmp/tmp4OUH9H TO /tmp/ansible/tmp/ansible-tmp-1412697779.83-145379532885107/file
+2014-10-07 16:02:59,835 p=30693 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=fablocwiqglpjnowweqbknhtzwdhjlun] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-fablocwiqglpjnowweqbknhtzwdhjlun; LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412697779.83-145379532885107/file; rm -rf /tmp/ansible/tmp/ansible-tmp-1412697779.83-145379532885107/ >/dev/null 2>&1'"'"''
+2014-10-07 16:02:59,887 p=30693 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm) => {"changed": false, "dest": "/var/local/cloudwatch/CloudWatchClient.pm", "gid": 1001, "group": "smiller", "item": "CloudWatchClient.pm", "md5sum": "dcb414488fbb4a158b7b2a39a91ce5ca", "mode": "0774", "owner": "smiller", "path": "/var/local/cloudwatch/CloudWatchClient.pm", "size": 16726, "state": "file", "uid": 1001}
+2014-10-07 16:02:59,894 p=30693 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=aqghparmvrjtydkqllsuabwslqdyebjo] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-aqghparmvrjtydkqllsuabwslqdyebjo; rc=0; [ -r "/var/local/cloudwatch/mon-put-instance-data.pl" ] || rc=2; [ -f "/var/local/cloudwatch/mon-put-instance-data.pl" ] || rc=1; [ -d "/var/local/cloudwatch/mon-put-instance-data.pl" ] && echo 3 && exit 0; (/usr/bin/md5sum /var/local/cloudwatch/mon-put-instance-data.pl 2>/dev/null) || (/sbin/md5sum -q /var/local/cloudwatch/mon-put-instance-data.pl 2>/dev/null) || (/usr/bin/digest -a md5 /var/local/cloudwatch/mon-put-instance-data.pl 2>/dev/null) || (/sbin/md5 -q /var/local/cloudwatch/mon-put-instance-data.pl 2>/dev/null) || (/usr/bin/md5 -n /var/local/cloudwatch/mon-put-instance-data.pl 2>/dev/null) || (/bin/md5 -q /var/local/cloudwatch/mon-put-instance-data.pl 2>/dev/null) || (/usr/bin/csum -h MD5 /var/local/cloudwatch/mon-put-instance-data.pl 2>/dev/null) || (/bin/csum -h MD5 /var/local/cloudwatch/mon-put-instance-data.pl 2>/dev/null) || (echo "${rc} /var/local/cloudwatch/mon-put-instance-data.pl")'"'"''
+2014-10-07 16:02:59,907 p=30693 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412697779.91-165952816734467 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412697779.91-165952816734467 && echo /tmp/ansible/tmp/ansible-tmp-1412697779.91-165952816734467']
+2014-10-07 16:02:59,911 p=30693 u=smiller |  <localhost> PUT /tmp/tmpLfiFBi TO /tmp/ansible/tmp/ansible-tmp-1412697779.91-165952816734467/file
+2014-10-07 16:02:59,912 p=30693 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=pznitcsqhtmcqfmxbzeedeszmuxsseoi] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-pznitcsqhtmcqfmxbzeedeszmuxsseoi; LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412697779.91-165952816734467/file; rm -rf /tmp/ansible/tmp/ansible-tmp-1412697779.91-165952816734467/ >/dev/null 2>&1'"'"''
+2014-10-07 16:02:59,967 p=30693 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl) => {"changed": false, "dest": "/var/local/cloudwatch/mon-put-instance-data.pl", "gid": 1001, "group": "smiller", "item": "mon-put-instance-data.pl", "md5sum": "47c4146f1b3f5a6cd8c71d81cb551932", "mode": "0774", "owner": "smiller", "path": "/var/local/cloudwatch/mon-put-instance-data.pl", "size": 17822, "state": "file", "uid": 1001}
+2014-10-07 16:02:59,968 p=30693 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 16:02:59,971 p=30693 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 16:02:59,973 p=30693 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 16:02:59,973 p=30693 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 16:02:59,978 p=30693 u=smiller |  <localhost> REMOTE_MODULE cron name="CloudWatch" minute=*/5 job="/var/local/cloudwatch/""mon-put-instance-data.pl --mem-util --mem-avail --disk-space-util --disk-space-avail --memory-units=megabytes --disk-space-units=gigabytes --disk-path=/ --from-cron --aws-credential-file=""/var/local/cloudwatch/""awscreds.conf" state=present
+2014-10-07 16:02:59,980 p=30693 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412697779.98-270379110435068 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412697779.98-270379110435068 && echo /tmp/ansible/tmp/ansible-tmp-1412697779.98-270379110435068']
+2014-10-07 16:02:59,984 p=30693 u=smiller |  <localhost> PUT /tmp/tmpabeE5G TO /tmp/ansible/tmp/ansible-tmp-1412697779.98-270379110435068/cron
+2014-10-07 16:02:59,985 p=30693 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=coxudrcvpxnsxrenytaufxipgdzurawv] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-coxudrcvpxnsxrenytaufxipgdzurawv; LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412697779.98-270379110435068/cron; rm -rf /tmp/ansible/tmp/ansible-tmp-1412697779.98-270379110435068/ >/dev/null 2>&1'"'"''
+2014-10-07 16:03:00,041 p=30693 u=smiller |  ok: [localhost] => {"changed": false, "jobs": ["CloudWatch"]}
+2014-10-07 16:03:00,042 p=30693 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-07 16:03:00,045 p=30693 u=smiller |  skipping: [localhost]
+2014-10-07 16:03:00,045 p=30693 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-07 16:03:00,047 p=30693 u=smiller |  <localhost> REMOTE_MODULE ec2_facts
+2014-10-07 16:03:00,049 p=30693 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412697780.05-86084340630525 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412697780.05-86084340630525 && echo /tmp/ansible/tmp/ansible-tmp-1412697780.05-86084340630525']
+2014-10-07 16:03:00,053 p=30693 u=smiller |  <localhost> PUT /tmp/tmpmdPVgU TO /tmp/ansible/tmp/ansible-tmp-1412697780.05-86084340630525/ec2_facts
+2014-10-07 16:03:00,053 p=30693 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', u'LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412697780.05-86084340630525/ec2_facts; rm -rf /tmp/ansible/tmp/ansible-tmp-1412697780.05-86084340630525/ >/dev/null 2>&1']
+2014-10-07 16:03:00,167 p=30693 u=smiller |  ok: [localhost] => {"ansible_facts": {"ansible_ec2_ami_id": "ami-864d84ee", "ansible_ec2_ami_launch_index": "0", "ansible_ec2_ami_manifest_path": "(unknown)", "ansible_ec2_block_device_mapping_ami": "/dev/sda1", "ansible_ec2_block_device_mapping_root": "/dev/sda1", "ansible_ec2_hostname": "ip-10-1-0-15.ec2.internal", "ansible_ec2_instance_action": "none", "ansible_ec2_instance_id": "i-a5137c88", "ansible_ec2_instance_type": "t2.small", "ansible_ec2_local_hostname": "ip-10-1-0-15.ec2.internal", "ansible_ec2_local_ipv4": "10.1.0.15", "ansible_ec2_mac": "0e:0c:5f:99:86:3e", "ansible_ec2_metrics_vhostmd": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_device_number": "0", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_interface_id": "eni-4940b311", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_local_hostname": "ip-10-1-0-15.ec2.internal", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_local_ipv4s": "10.1.0.15", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_mac": "0e:0c:5f:99:86:3e", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_owner_id": "406822941806", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_security_group_ids": "sg-f7290192", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_security_groups": "VPN Server", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_subnet_id": "subnet-4022dd19", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_subnet_ipv4_cidr_block": "10.1.0.0/24", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_vpc_id": "vpc-5da81738", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_vpc_ipv4_cidr_block": "10.1.0.0/16", "ansible_ec2_placement_availability_zone": "us-east-1a", "ansible_ec2_placement_region": "us-east-1", "ansible_ec2_profile": "default-hvm", "ansible_ec2_public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAlPYybp3CWDzRPo0uF/woyqkfhpZK2T7zn16z+fGYlRQl6gXATIUB4JYfr9pfD+SOW2T4X78P+/h1o4QPCwoesLacaFEFGwUb+SzhVVm6B6q4WMAiJWD6OVXh+SVVvD9rdcz5RMVLqQngrRqBlj4kBIMQ3S8h1cCESbR2P6jszgFj0I6p3tQCpo9yjcVwLqvWFKJgzEm2E2wV/gmrc0PhVRP2guIRN4p6M2ZyIPprdZ6PA8m7Rs4yN3jQ/0alrQ23ECCU4lHoVG9fwvLIq1vh4ikPcUrdA8sSHTE1pkpzvrTv7FtkuUcBrDMedFE7E8dB9pPS+vXIBWVUYJhp9WzVkQ== scott\n", "ansible_ec2_reservation_id": "r-8662e2ac", "ansible_ec2_security_groups": "VPN Server", "ansible_ec2_services_domain": "amazonaws.com", "ansible_ec2_user_data": null}, "changed": false}
+2014-10-07 16:03:00,168 p=30693 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-07 16:03:00,173 p=30693 u=smiller |  <127.0.0.1> REMOTE_MODULE ec2_metric_alarm state=present name="i-a5137c88""-disk-low" metric="DiskSpaceAvailable" namespace="AWS/EC2" statistic=Average comparison="<=" threshold=25.0 unit="Percent" period=300 evaluation_periods=1 description="It will be triggered when available disk space is less than 25%" dimensions={"InstanceId":"i-a5137c88"} alarm_actions=["arn:aws:sns:us-east-1:406822941806:infrastructure_alarms"] ok_actions=]"arn:aws:sns:us-east-1:406822941806:infrastructure_alarms"]
+2014-10-07 16:03:00,174 p=30693 u=smiller |  <127.0.0.1> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412697780.17-43548103300535 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412697780.17-43548103300535 && echo /tmp/ansible/tmp/ansible-tmp-1412697780.17-43548103300535']
+2014-10-07 16:03:00,178 p=30693 u=smiller |  <127.0.0.1> PUT /tmp/tmpagExlx TO /tmp/ansible/tmp/ansible-tmp-1412697780.17-43548103300535/ec2_metric_alarm
+2014-10-07 16:03:00,179 p=30693 u=smiller |  <127.0.0.1> EXEC ['/bin/sh', '-c', u'LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412697780.17-43548103300535/ec2_metric_alarm; rm -rf /tmp/ansible/tmp/ansible-tmp-1412697780.17-43548103300535/ >/dev/null 2>&1']
+2014-10-07 16:03:00,266 p=30693 u=smiller |  failed: [localhost -> 127.0.0.1] => {"failed": true}
+2014-10-07 16:03:00,266 p=30693 u=smiller |  msg: unable to evaluate dictionary for dimensions
+2014-10-07 16:03:00,266 p=30693 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-07 16:03:00,267 p=30693 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 16:03:00,268 p=30693 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-07 16:03:00,268 p=30693 u=smiller |  localhost                  : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-07 16:05:23,350 p=30853 u=smiller |   
+2014-10-07 16:05:23,350 p=30853 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost -vvv
+2014-10-07 16:05:23,350 p=30853 u=smiller |   
+2014-10-07 16:05:23,502 p=30853 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 16:05:23,508 p=30853 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 16:05:23,512 p=30853 u=smiller |  <localhost> REMOTE_MODULE setup
+2014-10-07 16:05:23,514 p=30853 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412697923.51-237027985155201 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412697923.51-237027985155201 && echo /tmp/ansible/tmp/ansible-tmp-1412697923.51-237027985155201']
+2014-10-07 16:05:23,519 p=30853 u=smiller |  <localhost> PUT /tmp/tmpiAZkR0 TO /tmp/ansible/tmp/ansible-tmp-1412697923.51-237027985155201/setup
+2014-10-07 16:05:23,519 p=30853 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', u'LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412697923.51-237027985155201/setup; rm -rf /tmp/ansible/tmp/ansible-tmp-1412697923.51-237027985155201/ >/dev/null 2>&1']
+2014-10-07 16:05:23,850 p=30853 u=smiller |  ok: [localhost]
+2014-10-07 16:05:23,851 p=30853 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 16:05:23,860 p=30853 u=smiller |  skipping: [localhost]
+2014-10-07 16:05:23,860 p=30853 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 16:05:23,871 p=30853 u=smiller |  <localhost> REMOTE_MODULE apt update_cache=yes name=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron state=latest
+2014-10-07 16:05:23,873 p=30853 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412697923.87-215228052007428 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412697923.87-215228052007428 && echo /tmp/ansible/tmp/ansible-tmp-1412697923.87-215228052007428']
+2014-10-07 16:05:23,877 p=30853 u=smiller |  <localhost> PUT /tmp/tmpdHJZBJ TO /tmp/ansible/tmp/ansible-tmp-1412697923.87-215228052007428/apt
+2014-10-07 16:05:23,877 p=30853 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=jhpkdtmyvqumjeaidpzpgloypyqemmgc] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-jhpkdtmyvqumjeaidpzpgloypyqemmgc; LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412697923.87-215228052007428/apt; rm -rf /tmp/ansible/tmp/ansible-tmp-1412697923.87-215228052007428/ >/dev/null 2>&1'"'"''
+2014-10-07 16:05:27,550 p=30853 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron) => {"changed": false, "item": "unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron"}
+2014-10-07 16:05:27,550 p=30853 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 16:05:27,553 p=30853 u=smiller |  <localhost> REMOTE_MODULE file path=/var/local/cloudwatch/ state=directory
+2014-10-07 16:05:27,555 p=30853 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412697927.55-43147401880806 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412697927.55-43147401880806 && echo /tmp/ansible/tmp/ansible-tmp-1412697927.55-43147401880806']
+2014-10-07 16:05:27,559 p=30853 u=smiller |  <localhost> PUT /tmp/tmp3FGDAR TO /tmp/ansible/tmp/ansible-tmp-1412697927.55-43147401880806/file
+2014-10-07 16:05:27,560 p=30853 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=wholahaqehvhllhvcxntwydvuzfhnprq] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-wholahaqehvhllhvcxntwydvuzfhnprq; LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412697927.55-43147401880806/file; rm -rf /tmp/ansible/tmp/ansible-tmp-1412697927.55-43147401880806/ >/dev/null 2>&1'"'"''
+2014-10-07 16:05:27,611 p=30853 u=smiller |  ok: [localhost] => {"changed": false, "gid": 50, "group": "staff", "mode": "02755", "owner": "root", "path": "/var/local/cloudwatch/", "size": 4096, "state": "directory", "uid": 0}
+2014-10-07 16:05:27,612 p=30853 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 16:05:27,619 p=30853 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=veyvnmwuwwapqvbahkiyixrkkibmatqf] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-veyvnmwuwwapqvbahkiyixrkkibmatqf; rc=0; [ -r "/var/local/cloudwatch/awscreds.conf" ] || rc=2; [ -f "/var/local/cloudwatch/awscreds.conf" ] || rc=1; [ -d "/var/local/cloudwatch/awscreds.conf" ] && echo 3 && exit 0; (/usr/bin/md5sum /var/local/cloudwatch/awscreds.conf 2>/dev/null) || (/sbin/md5sum -q /var/local/cloudwatch/awscreds.conf 2>/dev/null) || (/usr/bin/digest -a md5 /var/local/cloudwatch/awscreds.conf 2>/dev/null) || (/sbin/md5 -q /var/local/cloudwatch/awscreds.conf 2>/dev/null) || (/usr/bin/md5 -n /var/local/cloudwatch/awscreds.conf 2>/dev/null) || (/bin/md5 -q /var/local/cloudwatch/awscreds.conf 2>/dev/null) || (/usr/bin/csum -h MD5 /var/local/cloudwatch/awscreds.conf 2>/dev/null) || (/bin/csum -h MD5 /var/local/cloudwatch/awscreds.conf 2>/dev/null) || (echo "${rc} /var/local/cloudwatch/awscreds.conf")'"'"''
+2014-10-07 16:05:27,632 p=30853 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412697927.63-36510770312011 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412697927.63-36510770312011 && echo /tmp/ansible/tmp/ansible-tmp-1412697927.63-36510770312011']
+2014-10-07 16:05:27,636 p=30853 u=smiller |  <localhost> PUT /tmp/tmphbGhTY TO /tmp/ansible/tmp/ansible-tmp-1412697927.63-36510770312011/file
+2014-10-07 16:05:27,637 p=30853 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=rcpsqhvyoblsbzrrwiqihrohiquosmlx] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-rcpsqhvyoblsbzrrwiqihrohiquosmlx; LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412697927.63-36510770312011/file; rm -rf /tmp/ansible/tmp/ansible-tmp-1412697927.63-36510770312011/ >/dev/null 2>&1'"'"''
+2014-10-07 16:05:27,688 p=30853 u=smiller |  ok: [localhost] => (item=awscreds.conf) => {"changed": false, "dest": "/var/local/cloudwatch/awscreds.conf", "gid": 1001, "group": "smiller", "item": "awscreds.conf", "md5sum": "ee053d21ab9d559fb40e4f7da3ce48f0", "mode": "0774", "owner": "smiller", "path": "/var/local/cloudwatch/awscreds.conf", "size": 91, "state": "file", "uid": 1001}
+2014-10-07 16:05:27,694 p=30853 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=mqpbtvqvkesagzkpmnwpacwhluiocspv] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-mqpbtvqvkesagzkpmnwpacwhluiocspv; rc=0; [ -r "/var/local/cloudwatch/CloudWatchClient.pm" ] || rc=2; [ -f "/var/local/cloudwatch/CloudWatchClient.pm" ] || rc=1; [ -d "/var/local/cloudwatch/CloudWatchClient.pm" ] && echo 3 && exit 0; (/usr/bin/md5sum /var/local/cloudwatch/CloudWatchClient.pm 2>/dev/null) || (/sbin/md5sum -q /var/local/cloudwatch/CloudWatchClient.pm 2>/dev/null) || (/usr/bin/digest -a md5 /var/local/cloudwatch/CloudWatchClient.pm 2>/dev/null) || (/sbin/md5 -q /var/local/cloudwatch/CloudWatchClient.pm 2>/dev/null) || (/usr/bin/md5 -n /var/local/cloudwatch/CloudWatchClient.pm 2>/dev/null) || (/bin/md5 -q /var/local/cloudwatch/CloudWatchClient.pm 2>/dev/null) || (/usr/bin/csum -h MD5 /var/local/cloudwatch/CloudWatchClient.pm 2>/dev/null) || (/bin/csum -h MD5 /var/local/cloudwatch/CloudWatchClient.pm 2>/dev/null) || (echo "${rc} /var/local/cloudwatch/CloudWatchClient.pm")'"'"''
+2014-10-07 16:05:27,708 p=30853 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412697927.71-225840788246716 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412697927.71-225840788246716 && echo /tmp/ansible/tmp/ansible-tmp-1412697927.71-225840788246716']
+2014-10-07 16:05:27,712 p=30853 u=smiller |  <localhost> PUT /tmp/tmpj0_IpU TO /tmp/ansible/tmp/ansible-tmp-1412697927.71-225840788246716/file
+2014-10-07 16:05:27,713 p=30853 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=rittnyzmdiicjbpsrpzpvwlnkljbnwbb] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-rittnyzmdiicjbpsrpzpvwlnkljbnwbb; LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412697927.71-225840788246716/file; rm -rf /tmp/ansible/tmp/ansible-tmp-1412697927.71-225840788246716/ >/dev/null 2>&1'"'"''
+2014-10-07 16:05:27,763 p=30853 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm) => {"changed": false, "dest": "/var/local/cloudwatch/CloudWatchClient.pm", "gid": 1001, "group": "smiller", "item": "CloudWatchClient.pm", "md5sum": "dcb414488fbb4a158b7b2a39a91ce5ca", "mode": "0774", "owner": "smiller", "path": "/var/local/cloudwatch/CloudWatchClient.pm", "size": 16726, "state": "file", "uid": 1001}
+2014-10-07 16:05:27,769 p=30853 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=qxkbitnobgpqiknhiabvhqtmnueybzho] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-qxkbitnobgpqiknhiabvhqtmnueybzho; rc=0; [ -r "/var/local/cloudwatch/mon-put-instance-data.pl" ] || rc=2; [ -f "/var/local/cloudwatch/mon-put-instance-data.pl" ] || rc=1; [ -d "/var/local/cloudwatch/mon-put-instance-data.pl" ] && echo 3 && exit 0; (/usr/bin/md5sum /var/local/cloudwatch/mon-put-instance-data.pl 2>/dev/null) || (/sbin/md5sum -q /var/local/cloudwatch/mon-put-instance-data.pl 2>/dev/null) || (/usr/bin/digest -a md5 /var/local/cloudwatch/mon-put-instance-data.pl 2>/dev/null) || (/sbin/md5 -q /var/local/cloudwatch/mon-put-instance-data.pl 2>/dev/null) || (/usr/bin/md5 -n /var/local/cloudwatch/mon-put-instance-data.pl 2>/dev/null) || (/bin/md5 -q /var/local/cloudwatch/mon-put-instance-data.pl 2>/dev/null) || (/usr/bin/csum -h MD5 /var/local/cloudwatch/mon-put-instance-data.pl 2>/dev/null) || (/bin/csum -h MD5 /var/local/cloudwatch/mon-put-instance-data.pl 2>/dev/null) || (echo "${rc} /var/local/cloudwatch/mon-put-instance-data.pl")'"'"''
+2014-10-07 16:05:27,782 p=30853 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412697927.78-152105801448075 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412697927.78-152105801448075 && echo /tmp/ansible/tmp/ansible-tmp-1412697927.78-152105801448075']
+2014-10-07 16:05:27,786 p=30853 u=smiller |  <localhost> PUT /tmp/tmpLta94H TO /tmp/ansible/tmp/ansible-tmp-1412697927.78-152105801448075/file
+2014-10-07 16:05:27,787 p=30853 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=pcnvbypgaffhcgewnmyaukotfabolaod] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-pcnvbypgaffhcgewnmyaukotfabolaod; LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412697927.78-152105801448075/file; rm -rf /tmp/ansible/tmp/ansible-tmp-1412697927.78-152105801448075/ >/dev/null 2>&1'"'"''
+2014-10-07 16:05:27,836 p=30853 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl) => {"changed": false, "dest": "/var/local/cloudwatch/mon-put-instance-data.pl", "gid": 1001, "group": "smiller", "item": "mon-put-instance-data.pl", "md5sum": "47c4146f1b3f5a6cd8c71d81cb551932", "mode": "0774", "owner": "smiller", "path": "/var/local/cloudwatch/mon-put-instance-data.pl", "size": 17822, "state": "file", "uid": 1001}
+2014-10-07 16:05:27,836 p=30853 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 16:05:27,839 p=30853 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 16:05:27,841 p=30853 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 16:05:27,842 p=30853 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 16:05:27,846 p=30853 u=smiller |  <localhost> REMOTE_MODULE cron name="CloudWatch" minute=*/5 job="/var/local/cloudwatch/""mon-put-instance-data.pl --mem-util --mem-avail --disk-space-util --disk-space-avail --memory-units=megabytes --disk-space-units=gigabytes --disk-path=/ --from-cron --aws-credential-file=""/var/local/cloudwatch/""awscreds.conf" state=present
+2014-10-07 16:05:27,848 p=30853 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412697927.85-197675473591653 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412697927.85-197675473591653 && echo /tmp/ansible/tmp/ansible-tmp-1412697927.85-197675473591653']
+2014-10-07 16:05:27,852 p=30853 u=smiller |  <localhost> PUT /tmp/tmphLtrjH TO /tmp/ansible/tmp/ansible-tmp-1412697927.85-197675473591653/cron
+2014-10-07 16:05:27,853 p=30853 u=smiller |  <localhost> EXEC /bin/sh -c 'sudo -k && sudo -H -S -p "[sudo via ansible, key=qqanlnqfacyyhetersojtedzpcmbnrgz] password: " -u root /bin/sh -c '"'"'echo SUDO-SUCCESS-qqanlnqfacyyhetersojtedzpcmbnrgz; LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412697927.85-197675473591653/cron; rm -rf /tmp/ansible/tmp/ansible-tmp-1412697927.85-197675473591653/ >/dev/null 2>&1'"'"''
+2014-10-07 16:05:27,909 p=30853 u=smiller |  ok: [localhost] => {"changed": false, "jobs": ["CloudWatch"]}
+2014-10-07 16:05:27,910 p=30853 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-07 16:05:27,913 p=30853 u=smiller |  skipping: [localhost]
+2014-10-07 16:05:27,913 p=30853 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-07 16:05:27,915 p=30853 u=smiller |  <localhost> REMOTE_MODULE ec2_facts
+2014-10-07 16:05:27,916 p=30853 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412697927.92-104295061745786 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412697927.92-104295061745786 && echo /tmp/ansible/tmp/ansible-tmp-1412697927.92-104295061745786']
+2014-10-07 16:05:27,920 p=30853 u=smiller |  <localhost> PUT /tmp/tmpbc8tUa TO /tmp/ansible/tmp/ansible-tmp-1412697927.92-104295061745786/ec2_facts
+2014-10-07 16:05:27,921 p=30853 u=smiller |  <localhost> EXEC ['/bin/sh', '-c', u'LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412697927.92-104295061745786/ec2_facts; rm -rf /tmp/ansible/tmp/ansible-tmp-1412697927.92-104295061745786/ >/dev/null 2>&1']
+2014-10-07 16:05:28,033 p=30853 u=smiller |  ok: [localhost] => {"ansible_facts": {"ansible_ec2_ami_id": "ami-864d84ee", "ansible_ec2_ami_launch_index": "0", "ansible_ec2_ami_manifest_path": "(unknown)", "ansible_ec2_block_device_mapping_ami": "/dev/sda1", "ansible_ec2_block_device_mapping_root": "/dev/sda1", "ansible_ec2_hostname": "ip-10-1-0-15.ec2.internal", "ansible_ec2_instance_action": "none", "ansible_ec2_instance_id": "i-a5137c88", "ansible_ec2_instance_type": "t2.small", "ansible_ec2_local_hostname": "ip-10-1-0-15.ec2.internal", "ansible_ec2_local_ipv4": "10.1.0.15", "ansible_ec2_mac": "0e:0c:5f:99:86:3e", "ansible_ec2_metrics_vhostmd": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_device_number": "0", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_interface_id": "eni-4940b311", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_local_hostname": "ip-10-1-0-15.ec2.internal", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_local_ipv4s": "10.1.0.15", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_mac": "0e:0c:5f:99:86:3e", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_owner_id": "406822941806", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_security_group_ids": "sg-f7290192", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_security_groups": "VPN Server", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_subnet_id": "subnet-4022dd19", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_subnet_ipv4_cidr_block": "10.1.0.0/24", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_vpc_id": "vpc-5da81738", "ansible_ec2_network_interfaces_macs_0e_0c_5f_99_86_3e_vpc_ipv4_cidr_block": "10.1.0.0/16", "ansible_ec2_placement_availability_zone": "us-east-1a", "ansible_ec2_placement_region": "us-east-1", "ansible_ec2_profile": "default-hvm", "ansible_ec2_public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAlPYybp3CWDzRPo0uF/woyqkfhpZK2T7zn16z+fGYlRQl6gXATIUB4JYfr9pfD+SOW2T4X78P+/h1o4QPCwoesLacaFEFGwUb+SzhVVm6B6q4WMAiJWD6OVXh+SVVvD9rdcz5RMVLqQngrRqBlj4kBIMQ3S8h1cCESbR2P6jszgFj0I6p3tQCpo9yjcVwLqvWFKJgzEm2E2wV/gmrc0PhVRP2guIRN4p6M2ZyIPprdZ6PA8m7Rs4yN3jQ/0alrQ23ECCU4lHoVG9fwvLIq1vh4ikPcUrdA8sSHTE1pkpzvrTv7FtkuUcBrDMedFE7E8dB9pPS+vXIBWVUYJhp9WzVkQ== scott\n", "ansible_ec2_reservation_id": "r-8662e2ac", "ansible_ec2_security_groups": "VPN Server", "ansible_ec2_services_domain": "amazonaws.com", "ansible_ec2_user_data": null}, "changed": false}
+2014-10-07 16:05:28,034 p=30853 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-07 16:05:28,038 p=30853 u=smiller |  <127.0.0.1> REMOTE_MODULE ec2_metric_alarm state=present name=i-a5137c88"-disk-low" metric="DiskSpaceAvailable" namespace="AWS/EC2" statistic=Average comparison="<=" threshold=25.0 unit="Percent" period=300 evaluation_periods=1 description="It will be triggered when available disk space is less than 25%" dimensions={"InstanceId":"i-a5137c88"} alarm_actions=["arn:aws:sns:us-east-1:406822941806:infrastructure_alarms"] ok_actions=]"arn:aws:sns:us-east-1:406822941806:infrastructure_alarms"]
+2014-10-07 16:05:28,039 p=30853 u=smiller |  <127.0.0.1> EXEC ['/bin/sh', '-c', 'mkdir -p /tmp/ansible/tmp/ansible-tmp-1412697928.04-145324448013226 && chmod a+rx /tmp/ansible/tmp/ansible-tmp-1412697928.04-145324448013226 && echo /tmp/ansible/tmp/ansible-tmp-1412697928.04-145324448013226']
+2014-10-07 16:05:28,044 p=30853 u=smiller |  <127.0.0.1> PUT /tmp/tmpIdVbAp TO /tmp/ansible/tmp/ansible-tmp-1412697928.04-145324448013226/ec2_metric_alarm
+2014-10-07 16:05:28,044 p=30853 u=smiller |  <127.0.0.1> EXEC ['/bin/sh', '-c', u'LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 /usr/bin/python /tmp/ansible/tmp/ansible-tmp-1412697928.04-145324448013226/ec2_metric_alarm; rm -rf /tmp/ansible/tmp/ansible-tmp-1412697928.04-145324448013226/ >/dev/null 2>&1']
+2014-10-07 16:05:28,130 p=30853 u=smiller |  failed: [localhost -> 127.0.0.1] => {"failed": true}
+2014-10-07 16:05:28,130 p=30853 u=smiller |  msg: unable to evaluate dictionary for dimensions
+2014-10-07 16:05:28,130 p=30853 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-07 16:05:28,131 p=30853 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 16:05:28,132 p=30853 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-07 16:05:28,132 p=30853 u=smiller |  localhost                  : ok=7    changed=0    unreachable=0    failed=1   
