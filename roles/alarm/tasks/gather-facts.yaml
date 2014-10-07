@@ -2,12 +2,3 @@
 - name: Get instance ec2 facts
   action: ec2_facts
   register: ec2_facts
-
-- name: Get resource tags from ec2 facts
-  sudo: false
-  local_action:
-    ec2_tag resource={{ec2_facts.ansible_facts.ansible_ec2_instance_id}}
- #   region=us-east-1
-    state=list
-  register: result
-  

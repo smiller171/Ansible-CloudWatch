@@ -1,9 +1,8 @@
 ---
 - name: Create CPU utilization metric alarm
-  sudo: false
   local_action: ec2_metric_alarm
     state=present
-    name="{{result.Name}}-disk-low"
+    name="{{ec2_facts.ansible_facts.ansible_ec2_instance_id}}-disk-low"
     metric="DiskSpaceAvailable"
     namespace="Linux System"
     statistic=Average
