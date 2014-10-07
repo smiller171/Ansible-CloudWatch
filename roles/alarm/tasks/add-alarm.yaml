@@ -8,7 +8,7 @@
     namespace="AWS/EC2"
     statistic=Average
     comparison=">="
-    threshold=25.0
+    threshold=75.0
     unit="Percent"
     period=300
     evaluation_periods=1
