@@ -14,5 +14,6 @@
     evaluation_periods=1
     description="It will be triggered when available disk space is less than 25%"
     dimensions="InstanceId"="{{ec2_facts.ansible_facts.ansible_ec2_instance_id}}"
-    alarm_actions=arn:aws:sns:us-east-1:123412341234:My_SNS_Notification
-    ok_actions=arn:aws:sns:us-east-1:123412341234:My_SNS_Notification
+    alarm_actions=arn:aws:sns:us-east-1:406822941806:infrastructure_alarms
+    ok_actions=arn:aws:sns:us-east-1:406822941806:infrastructure_alarms
+    
