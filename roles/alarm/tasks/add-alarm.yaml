@@ -1,8 +1,8 @@
 ---
 - name: Create CPU utilization metric alarm
-  local_action: ec2_metric_alarm
+  ec2_metric_alarm:
     state=present
-    name="{{ec2_facts.ansible_facts.ansible_ec2_instance_id}}""-disk-low"
+    name="{{ec2_facts.ansible_facts.ansible_ec2_instance_id}}-disk-low"
     metric="DiskSpaceAvailable"
     namespace="AWS/EC2"
     statistic=Average
