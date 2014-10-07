@@ -1,4 +1,0 @@
----
-- name: Get instance ec2 facts
-  action: ec2_facts
-  register: ec2_facts
