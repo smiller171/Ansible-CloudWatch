@@ -1,3 +1,3 @@
 ---
-- include: gather-facts
-- include: create-alarm
+- include: gather-facts.yaml
+- include: create-alarm.yaml
