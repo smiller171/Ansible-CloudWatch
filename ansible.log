@@ -2565,3 +2565,129 @@ AttributeError: 'NoneType' object has no attribute 'describe_alarms'
 2014-10-07 16:33:47,343 p=961 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
 
 2014-10-07 16:33:47,343 p=961 u=smiller |  localhost                  : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-07 16:57:55,529 p=1432 u=smiller |   
+2014-10-07 16:57:55,529 p=1432 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost
+2014-10-07 16:57:55,529 p=1432 u=smiller |   
+2014-10-07 16:57:55,682 p=1432 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 16:57:55,687 p=1432 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 16:57:56,033 p=1432 u=smiller |  ok: [localhost]
+2014-10-07 16:57:56,033 p=1432 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 16:57:56,042 p=1432 u=smiller |  skipping: [localhost]
+2014-10-07 16:57:56,042 p=1432 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 16:57:58,987 p=1432 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-07 16:57:58,987 p=1432 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 16:57:59,046 p=1432 u=smiller |  ok: [localhost]
+2014-10-07 16:57:59,047 p=1432 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 16:57:59,123 p=1432 u=smiller |  ok: [localhost] => (item=awscreds.conf)
+2014-10-07 16:57:59,198 p=1432 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 16:57:59,273 p=1432 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 16:57:59,274 p=1432 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 16:57:59,276 p=1432 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 16:57:59,278 p=1432 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 16:57:59,279 p=1432 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 16:57:59,347 p=1432 u=smiller |  ok: [localhost]
+2014-10-07 16:57:59,347 p=1432 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-07 16:57:59,350 p=1432 u=smiller |  skipping: [localhost]
+2014-10-07 16:57:59,351 p=1432 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-07 16:57:59,470 p=1432 u=smiller |  ok: [localhost]
+2014-10-07 16:57:59,470 p=1432 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-07 16:57:59,693 p=1432 u=smiller |  failed: [localhost -> localhost] => {"failed": true}
+2014-10-07 16:57:59,693 p=1432 u=smiller |  msg: BotoServerError: 403 Forbidden
+<ErrorResponse xmlns="http://monitoring.amazonaws.com/doc/2010-08-01/">
+  <Error>
+    <Type>Sender</Type>
+    <Code>AccessDenied</Code>
+    <Message>User: arn:aws:iam::406822941806:user/Ansible is not authorized to perform: cloudwatch:PutMetricAlarm</Message>
+  </Error>
+  <RequestId>1a01ac3f-4e43-11e4-9e5a-77cceec2cf10</RequestId>
+</ErrorResponse>
+
+2014-10-07 16:57:59,694 p=1432 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-07 16:57:59,694 p=1432 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 16:57:59,695 p=1432 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-07 16:57:59,695 p=1432 u=smiller |  localhost                  : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-07 17:00:31,890 p=1592 u=smiller |   
+2014-10-07 17:00:31,890 p=1592 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost
+2014-10-07 17:00:31,891 p=1592 u=smiller |   
+2014-10-07 17:00:32,047 p=1592 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 17:00:32,053 p=1592 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 17:00:32,396 p=1592 u=smiller |  ok: [localhost]
+2014-10-07 17:00:32,396 p=1592 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 17:00:32,405 p=1592 u=smiller |  skipping: [localhost]
+2014-10-07 17:00:32,406 p=1592 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 17:00:34,974 p=1592 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-07 17:00:34,974 p=1592 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 17:00:35,033 p=1592 u=smiller |  ok: [localhost]
+2014-10-07 17:00:35,033 p=1592 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 17:00:35,107 p=1592 u=smiller |  ok: [localhost] => (item=awscreds.conf)
+2014-10-07 17:00:35,182 p=1592 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 17:00:35,256 p=1592 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 17:00:35,257 p=1592 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 17:00:35,260 p=1592 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 17:00:35,261 p=1592 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 17:00:35,262 p=1592 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 17:00:35,327 p=1592 u=smiller |  ok: [localhost]
+2014-10-07 17:00:35,328 p=1592 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-07 17:00:35,331 p=1592 u=smiller |  skipping: [localhost]
+2014-10-07 17:00:35,331 p=1592 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-07 17:00:35,451 p=1592 u=smiller |  ok: [localhost]
+2014-10-07 17:00:35,452 p=1592 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-07 17:00:35,754 p=1592 u=smiller |  failed: [localhost] => {"failed": true}
+2014-10-07 17:00:35,755 p=1592 u=smiller |  msg: BotoServerError: 403 Forbidden
+<ErrorResponse xmlns="http://monitoring.amazonaws.com/doc/2010-08-01/">
+  <Error>
+    <Type>Sender</Type>
+    <Code>AccessDenied</Code>
+    <Message>User: arn:aws:iam::406822941806:user/Ansible is not authorized to perform: cloudwatch:PutMetricAlarm</Message>
+  </Error>
+  <RequestId>77072628-4e43-11e4-9b92-ed5cca7f1578</RequestId>
+</ErrorResponse>
+
+2014-10-07 17:00:35,755 p=1592 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-07 17:00:35,756 p=1592 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 17:00:35,757 p=1592 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-07 17:00:35,757 p=1592 u=smiller |  localhost                  : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-07 17:01:09,583 p=1747 u=smiller |   
+2014-10-07 17:01:09,583 p=1747 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost
+2014-10-07 17:01:09,583 p=1747 u=smiller |   
+2014-10-07 17:01:09,736 p=1747 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 17:01:09,741 p=1747 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 17:01:10,075 p=1747 u=smiller |  ok: [localhost]
+2014-10-07 17:01:10,075 p=1747 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 17:01:10,084 p=1747 u=smiller |  skipping: [localhost]
+2014-10-07 17:01:10,084 p=1747 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 17:01:12,588 p=1747 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-07 17:01:12,589 p=1747 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 17:01:12,648 p=1747 u=smiller |  ok: [localhost]
+2014-10-07 17:01:12,649 p=1747 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 17:01:12,721 p=1747 u=smiller |  ok: [localhost] => (item=awscreds.conf)
+2014-10-07 17:01:12,796 p=1747 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 17:01:12,869 p=1747 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 17:01:12,869 p=1747 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 17:01:12,872 p=1747 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 17:01:12,874 p=1747 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 17:01:12,874 p=1747 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 17:01:12,943 p=1747 u=smiller |  ok: [localhost]
+2014-10-07 17:01:12,943 p=1747 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-07 17:01:12,946 p=1747 u=smiller |  skipping: [localhost]
+2014-10-07 17:01:12,947 p=1747 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-07 17:01:13,071 p=1747 u=smiller |  ok: [localhost]
+2014-10-07 17:01:13,072 p=1747 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-07 17:01:13,249 p=1747 u=smiller |  failed: [localhost] => {"failed": true}
+2014-10-07 17:01:13,249 p=1747 u=smiller |  msg: BotoServerError: 400 Bad Request
+<ErrorResponse xmlns="http://monitoring.amazonaws.com/doc/2010-08-01/">
+  <Error>
+    <Type>Sender</Type>
+    <Code>ValidationError</Code>
+    <Message>Invalid arn syntax: [arn:aws:sns:us-east-1:406822941806:infrastructure_alarms]</Message>
+  </Error>
+  <RequestId>8d5f0f3b-4e43-11e4-886e-e13e57308f23</RequestId>
+</ErrorResponse>
+
+2014-10-07 17:01:13,250 p=1747 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-07 17:01:13,250 p=1747 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 17:01:13,251 p=1747 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-07 17:01:13,251 p=1747 u=smiller |  localhost                  : ok=7    changed=0    unreachable=0    failed=1   

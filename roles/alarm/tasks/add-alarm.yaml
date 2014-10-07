@@ -2,6 +2,7 @@
 - name: Create CPU utilization metric alarm
   ec2_metric_alarm:
     state=present
+    region=us-east-1
     name="{{ec2_facts.ansible_facts.ansible_ec2_instance_id}}-disk-low"
     metric="DiskSpaceAvailable"
     namespace="AWS/EC2"
@@ -15,4 +16,3 @@
     dimensions="{'InstanceId':'{{ec2_facts.ansible_facts.ansible_ec2_instance_id}}'}"
     alarm_actions=["arn:aws:sns:us-east-1:406822941806:infrastructure_alarms"]
     ok_actions=["arn:aws:sns:us-east-1:406822941806:infrastructure_alarms"]
-  delegate_to: localhost
