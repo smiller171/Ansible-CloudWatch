@@ -1262,3 +1262,67 @@ Note: The error may actually appear before this position: line 11, column 5
 2014-10-07 15:20:09,808 p=21729 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
 
 2014-10-07 15:20:09,808 p=21729 u=smiller |  localhost                  : ok=7    changed=0    unreachable=1    failed=0   
+2014-10-07 15:29:53,733 p=21940 u=smiller |   
+2014-10-07 15:29:53,733 p=21940 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost
+2014-10-07 15:29:53,733 p=21940 u=smiller |   
+2014-10-07 15:30:04,057 p=21940 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 15:30:04,060 p=21940 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 15:30:04,412 p=21940 u=smiller |  ok: [localhost]
+2014-10-07 15:30:04,413 p=21940 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 15:30:04,421 p=21940 u=smiller |  skipping: [localhost]
+2014-10-07 15:30:04,422 p=21940 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 15:30:07,389 p=21940 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-07 15:30:07,389 p=21940 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 15:30:07,442 p=21940 u=smiller |  ok: [localhost]
+2014-10-07 15:30:07,442 p=21940 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 15:30:07,510 p=21940 u=smiller |  ok: [localhost] => (item=awscreds.conf)
+2014-10-07 15:30:07,575 p=21940 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 15:30:07,642 p=21940 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 15:30:07,642 p=21940 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 15:30:07,645 p=21940 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 15:30:07,647 p=21940 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 15:30:07,647 p=21940 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 15:30:07,705 p=21940 u=smiller |  ok: [localhost]
+2014-10-07 15:30:07,706 p=21940 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-07 15:30:07,709 p=21940 u=smiller |  skipping: [localhost]
+2014-10-07 15:30:07,709 p=21940 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-07 15:30:07,821 p=21940 u=smiller |  ok: [localhost]
+2014-10-07 15:30:07,821 p=21940 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-07 15:30:07,826 p=21940 u=smiller |  fatal: [localhost] => module ec2_metric_alarm not found in /usr/share/ansible/packaging:/usr/share/ansible/inventory:/usr/share/ansible/commands:/usr/share/ansible/utilities:/usr/share/ansible/files:/usr/share/ansible/internal:/usr/share/ansible/cloud:/usr/share/ansible/source_control:/usr/share/ansible/network:/usr/share/ansible/notification:/usr/share/ansible/system:/usr/share/ansible/net_infrastructure:/usr/share/ansible/database:/usr/share/ansible/messaging:/usr/share/ansible/monitoring:/usr/share/ansible/web_infrastructure:/usr/share/ansible
+2014-10-07 15:30:07,827 p=21940 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-07 15:30:07,827 p=21940 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 15:30:07,828 p=21940 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-07 15:30:07,828 p=21940 u=smiller |  localhost                  : ok=7    changed=0    unreachable=1    failed=0   
+2014-10-07 15:30:59,327 p=28155 u=smiller |   
+2014-10-07 15:30:59,328 p=28155 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost
+2014-10-07 15:30:59,328 p=28155 u=smiller |   
+2014-10-07 15:30:59,445 p=28155 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 15:30:59,448 p=28155 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 15:30:59,770 p=28155 u=smiller |  ok: [localhost]
+2014-10-07 15:30:59,770 p=28155 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 15:30:59,779 p=28155 u=smiller |  skipping: [localhost]
+2014-10-07 15:30:59,779 p=28155 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 15:31:02,226 p=28155 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-07 15:31:02,226 p=28155 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 15:31:02,278 p=28155 u=smiller |  ok: [localhost]
+2014-10-07 15:31:02,279 p=28155 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 15:31:02,346 p=28155 u=smiller |  ok: [localhost] => (item=awscreds.conf)
+2014-10-07 15:31:02,412 p=28155 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 15:31:02,480 p=28155 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 15:31:02,481 p=28155 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 15:31:02,483 p=28155 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 15:31:02,485 p=28155 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 15:31:02,486 p=28155 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 15:31:02,544 p=28155 u=smiller |  ok: [localhost]
+2014-10-07 15:31:02,545 p=28155 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-07 15:31:02,548 p=28155 u=smiller |  skipping: [localhost]
+2014-10-07 15:31:02,548 p=28155 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-07 15:31:02,658 p=28155 u=smiller |  ok: [localhost]
+2014-10-07 15:31:02,659 p=28155 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-07 15:31:02,664 p=28155 u=smiller |  fatal: [localhost] => module ec2_metric_alarm not found in /usr/share/ansible/packaging:/usr/share/ansible/inventory:/usr/share/ansible/commands:/usr/share/ansible/utilities:/usr/share/ansible/files:/usr/share/ansible/internal:/usr/share/ansible/cloud:/usr/share/ansible/source_control:/usr/share/ansible/network:/usr/share/ansible/notification:/usr/share/ansible/system:/usr/share/ansible/net_infrastructure:/usr/share/ansible/database:/usr/share/ansible/messaging:/usr/share/ansible/monitoring:/usr/share/ansible/web_infrastructure:/usr/share/ansible
+2014-10-07 15:31:02,664 p=28155 u=smiller |  FATAL: all hosts have already failed -- aborting
+2014-10-07 15:31:02,664 p=28155 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 15:31:02,665 p=28155 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-07 15:31:02,665 p=28155 u=smiller |  localhost                  : ok=7    changed=0    unreachable=1    failed=0   
