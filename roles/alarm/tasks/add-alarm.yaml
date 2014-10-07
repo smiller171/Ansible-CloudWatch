@@ -4,15 +4,15 @@
     state=present
     region=us-east-1
     name="{{ec2_facts.ansible_facts.ansible_ec2_instance_id}}-disk-low"
-    metric="DiskSpaceAvailable"
+    metric="DiskSpaceUtilization"
     namespace="AWS/EC2"
     statistic=Average
-    comparison="<="
+    comparison=">="
     threshold=25.0
     unit="Percent"
     period=300
     evaluation_periods=1
     description="It will be triggered when available disk space is less than 25%"
     dimensions="{'InstanceId':'{{ec2_facts.ansible_facts.ansible_ec2_instance_id}}'}"
-    alarm_actions=["arn:aws:sns:us-east-1:406822941806:infrastructure_alarms"]
-    ok_actions=["arn:aws:sns:us-east-1:406822941806:infrastructure_alarms"]
+    alarm_actions="arn:aws:sns:us-east-1:406822941806:infrastructure_alarms"
+    ok_actions="arn:aws:sns:us-east-1:406822941806:infrastructure_alarms"

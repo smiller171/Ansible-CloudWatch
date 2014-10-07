@@ -2691,3 +2691,61 @@ AttributeError: 'NoneType' object has no attribute 'describe_alarms'
 2014-10-07 17:01:13,251 p=1747 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
 
 2014-10-07 17:01:13,251 p=1747 u=smiller |  localhost                  : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-07 17:05:28,082 p=1913 u=smiller |   
+2014-10-07 17:05:28,082 p=1913 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost
+2014-10-07 17:05:28,082 p=1913 u=smiller |   
+2014-10-07 17:05:38,046 p=1913 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 17:05:38,051 p=1913 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 17:05:38,402 p=1913 u=smiller |  ok: [localhost]
+2014-10-07 17:05:38,403 p=1913 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 17:05:38,412 p=1913 u=smiller |  skipping: [localhost]
+2014-10-07 17:05:38,412 p=1913 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 17:05:40,895 p=1913 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-07 17:05:40,896 p=1913 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 17:05:40,956 p=1913 u=smiller |  ok: [localhost]
+2014-10-07 17:05:40,957 p=1913 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 17:05:41,030 p=1913 u=smiller |  ok: [localhost] => (item=awscreds.conf)
+2014-10-07 17:05:41,104 p=1913 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 17:05:41,178 p=1913 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 17:05:41,179 p=1913 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 17:05:41,182 p=1913 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 17:05:41,184 p=1913 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 17:05:41,184 p=1913 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 17:05:41,250 p=1913 u=smiller |  ok: [localhost]
+2014-10-07 17:05:41,250 p=1913 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-07 17:05:41,253 p=1913 u=smiller |  skipping: [localhost]
+2014-10-07 17:05:41,253 p=1913 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-07 17:05:41,375 p=1913 u=smiller |  ok: [localhost]
+2014-10-07 17:05:41,375 p=1913 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-07 17:05:41,715 p=1913 u=smiller |  changed: [localhost]
+2014-10-07 17:05:41,715 p=1913 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 17:05:41,716 p=1913 u=smiller |  localhost                  : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-07 17:25:44,481 p=2102 u=smiller |   
+2014-10-07 17:25:44,481 p=2102 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=localhost
+2014-10-07 17:25:44,482 p=2102 u=smiller |   
+2014-10-07 17:25:54,436 p=2102 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-07 17:25:54,442 p=2102 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-07 17:25:54,812 p=2102 u=smiller |  ok: [localhost]
+2014-10-07 17:25:54,812 p=2102 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-07 17:25:54,821 p=2102 u=smiller |  skipping: [localhost]
+2014-10-07 17:25:54,822 p=2102 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-07 17:25:59,992 p=2102 u=smiller |  ok: [localhost] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-07 17:25:59,993 p=2102 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-07 17:26:00,051 p=2102 u=smiller |  ok: [localhost]
+2014-10-07 17:26:00,052 p=2102 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-07 17:26:00,128 p=2102 u=smiller |  ok: [localhost] => (item=awscreds.conf)
+2014-10-07 17:26:00,202 p=2102 u=smiller |  ok: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 17:26:00,278 p=2102 u=smiller |  ok: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 17:26:00,279 p=2102 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-07 17:26:00,282 p=2102 u=smiller |  skipping: [localhost] => (item=CloudWatchClient.pm)
+2014-10-07 17:26:00,284 p=2102 u=smiller |  skipping: [localhost] => (item=mon-put-instance-data.pl)
+2014-10-07 17:26:00,285 p=2102 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-07 17:26:00,352 p=2102 u=smiller |  ok: [localhost]
+2014-10-07 17:26:00,353 p=2102 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-07 17:26:00,355 p=2102 u=smiller |  skipping: [localhost]
+2014-10-07 17:26:00,356 p=2102 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-07 17:26:00,477 p=2102 u=smiller |  ok: [localhost]
+2014-10-07 17:26:00,478 p=2102 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-07 17:26:00,781 p=2102 u=smiller |  changed: [localhost]
+2014-10-07 17:26:00,782 p=2102 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-07 17:26:00,782 p=2102 u=smiller |  localhost                  : ok=8    changed=1    unreachable=0    failed=0   
