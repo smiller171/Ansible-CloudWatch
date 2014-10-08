@@ -5,7 +5,7 @@
     region=us-east-1
     name="{{ec2_facts.ansible_facts.ansible_ec2_instance_id}}-disk-low"
     metric="DiskSpaceUtilization"
-    namespace="AWS/EC2"
+    namespace="System/Linux"
     statistic=Average
     comparison=">="
     threshold="{{disk_threshold}}"
@@ -13,7 +13,7 @@
     period=300
     evaluation_periods=1
     description="It will be triggered when available disk space is less than 25%"
-    dimensions="{'InstanceId':'{{ec2_facts.ansible_facts.ansible_ec2_instance_id}}'}"
+    dimensions="{'InstanceId':'{{ec2_facts.ansible_facts.ansible_ec2_instance_id}}','Filesystem':'/dev/xvda1','MountPath':'/'}"
     alarm_actions="{{topic}}"
     ok_actions="{{topic}}"
   delegate_to: localhost
