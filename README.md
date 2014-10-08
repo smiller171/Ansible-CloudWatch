@@ -9,12 +9,15 @@ The format for awscreds.conf is:
 >AWSSecretKey= //enter secret key here
 
 
+Run deploy.yaml to only push the metrics, and run create-alarm.yaml to push the metrics and create alarms based on them. create-alarm.yaml is currently configured to create alarms that alert when a disk is beyond 75% full.
+
 The following variables are included and can be overwritten by passing them with -e
 
 >hosts: ec2  
->remote_user: smiller  
+>user: smiller  
 >script_dir: /var/local/cloudwatch/  
->iam_role: false with -e  
+>iam_role: false
+>topic: arn:aws:sns:us-east-1:406822941806:infrastructure_alarms  
 
 Available arguments are listed below. These can be added or removed in roles/common/tasks/cron.yaml
 

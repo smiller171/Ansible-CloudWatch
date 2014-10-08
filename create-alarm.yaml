@@ -1,12 +1,14 @@
 ---
-- name: deploy CloudWatch Scripts
+- name: deploy CloudWatch Scripts and create alarm
   hosts: "{{hosts}}"
   remote_user: "{{user}}"
   roles:
   - common
   - alarm
   vars:
-    script_dir: /var/local/cloudwatch/
-    iam_role: false
     hosts: ec2
     user: smiller
+    script_dir: /var/local/cloudwatch/
+    iam_role: false
+    topic: "arn:aws:sns:us-east-1:406822941806:infrastructure_alarms"
+    disk_threshold: 75.0
