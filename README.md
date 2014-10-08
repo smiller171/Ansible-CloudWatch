@@ -9,11 +9,12 @@ The format for awscreds.conf is:
 >AWSSecretKey= //enter secret key here
 
 
-You can also pass variables for "hosts", "user", "script_dir", and iam_role with -e  
-These variables control the hosts that are being deployed to, the user that is used for the deployment, the directory that the CloudWatch scripts will be stored in, and whether or not an IAM role will be used
+The following variables are included and can be overwritten by passing them with -e
 
-The defaults for these are "ec2", "smiller", "/var/local/cloudwatch/", and "false"
-
+>hosts: ec2  
+>remote_user: smiller  
+>script_dir: /var/local/cloudwatch/  
+>iam_role: false with -e  
 
 Available arguments are listed below. These can be added or removed in roles/common/tasks/cron.yaml
 

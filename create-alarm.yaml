@@ -1,7 +1,7 @@
 ---
 - name: deploy CloudWatch Scripts
-  hosts: "{{ hosts | default(ec2) }}"
-  remote_user: "{{ user | default(smiller)}}"
+  hosts: ec2
+  remote_user: smiller
   roles:
   - common
   - alarm
