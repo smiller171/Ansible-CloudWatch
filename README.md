@@ -16,7 +16,7 @@ The following variables are included and can be overwritten by passing them with
 >hosts: ec2  
 >user: smiller  
 >serial: 10  
->max_fail: 20%  
+>max_fail: 20  
 >script_dir: /var/local/cloudwatch/  
 >iam_role: false  
 >topic: arn:aws:sns:us-east-1:406822941806:infrastructure_alarms  

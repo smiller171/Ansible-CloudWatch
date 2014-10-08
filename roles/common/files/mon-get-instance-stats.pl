@@ -270,7 +270,7 @@ sub print_metric_stats
 #
 sub print_filesystem_stats
 {
-  my $namespace = 'System/Linux';
+  my $namespace = 'AWS/EC2';
   my $metric_name = 'DiskSpaceUtilization';
 
   my %params = ();
