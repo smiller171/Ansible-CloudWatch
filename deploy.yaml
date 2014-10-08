@@ -2,11 +2,15 @@
 - name: deploy CloudWatch Scripts
   hosts: "{{hosts}}"
   remote_user: "{{user}}"
+  serial: "{{serial}}"
+  max_fail_percentage: "{{max_fail}}"
   roles:
   - common
   vars:
     hosts: ec2
     user: smiller
+    serial: 10
+    max_fail: 20%
     script_dir: /var/local/cloudwatch/
     iam_role: false
     topic: "arn:aws:sns:us-east-1:406822941806:infrastructure_alarms"
