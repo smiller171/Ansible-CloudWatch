@@ -1,10 +1,12 @@
 ---
 - name: deploy CloudWatch Scripts
-  hosts: ec2
-  remote_user: smiller
+  hosts: "{{hosts}}"
+  remote_user: "{{user}}"
   roles:
   - common
   - alarm
   vars:
     script_dir: /var/local/cloudwatch/
     iam_role: false
+    hosts: ec2
+    user: smiller
