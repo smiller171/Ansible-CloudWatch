@@ -361,7 +361,7 @@ if ($auto_scaling)
 
 my %params = ();
 $params{'Action'} = 'PutMetricData';
-$params{'Namespace'} = 'AWS/EC2';
+$params{'Namespace'} = 'System/Linux';
 
 # avoid a storm of calls at the beginning of a minute
 if ($from_cron) {
