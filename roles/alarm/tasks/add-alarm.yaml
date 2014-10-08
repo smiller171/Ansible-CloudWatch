@@ -5,7 +5,7 @@
     region=us-east-1
     name="{{ec2_facts.ansible_facts.ansible_ec2_instance_id}}-disk-low"
     metric="DiskSpaceUtilization"
-    namespace="AWS/EC2"
+    namespace="System/Linux"
     statistic=Average
     comparison=">="
     threshold="{{disk_threshold}}"
