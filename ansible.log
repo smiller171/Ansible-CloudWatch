@@ -2749,3 +2749,1697 @@ AttributeError: 'NoneType' object has no attribute 'describe_alarms'
 2014-10-07 17:26:00,781 p=2102 u=smiller |  changed: [localhost]
 2014-10-07 17:26:00,782 p=2102 u=smiller |  PLAY RECAP ******************************************************************** 
 2014-10-07 17:26:00,782 p=2102 u=smiller |  localhost                  : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:25:35,730 p=9388 u=smiller |   
+2014-10-08 13:25:35,730 p=9388 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml
+2014-10-08 13:25:35,730 p=9388 u=smiller |   
+2014-10-08 13:25:46,111 p=9388 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-08 13:25:46,114 p=9388 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-08 13:25:47,906 p=9388 u=smiller |  ok: [172.31.1.166]
+2014-10-08 13:25:47,907 p=9388 u=smiller |  ok: [172.31.16.167]
+2014-10-08 13:25:48,000 p=9388 u=smiller |  ok: [10.0.16.66]
+2014-10-08 13:25:48,031 p=9388 u=smiller |  ok: [10.0.32.7]
+2014-10-08 13:25:48,913 p=9388 u=smiller |  ok: [172.31.6.242]
+2014-10-08 13:25:49,923 p=9388 u=smiller |  ok: [10.0.32.94]
+2014-10-08 13:25:49,963 p=9388 u=smiller |  ok: [172.31.19.67]
+2014-10-08 13:25:50,101 p=9388 u=smiller |  ok: [10.0.16.47]
+2014-10-08 13:25:50,886 p=9388 u=smiller |  ok: [10.0.0.128]
+2014-10-08 13:25:50,940 p=9388 u=smiller |  ok: [172.31.6.84]
+2014-10-08 13:25:51,550 p=9388 u=smiller |  ok: [172.31.1.195]
+2014-10-08 13:25:51,739 p=9388 u=smiller |  ok: [172.31.7.17]
+2014-10-08 13:25:52,183 p=9388 u=smiller |  ok: [172.31.14.124]
+2014-10-08 13:25:53,971 p=9388 u=smiller |  ok: [10.0.16.61]
+2014-10-08 13:25:54,200 p=9388 u=smiller |  ok: [172.31.45.1]
+2014-10-08 13:25:54,637 p=9388 u=smiller |  ok: [10.0.32.219]
+2014-10-08 13:25:55,601 p=9388 u=smiller |  ok: [172.31.6.163]
+2014-10-08 13:25:55,819 p=9388 u=smiller |  ok: [10.0.32.19]
+2014-10-08 13:25:56,221 p=9388 u=smiller |  ok: [10.0.32.254]
+2014-10-08 13:25:56,483 p=9388 u=smiller |  ok: [10.0.32.241]
+2014-10-08 13:25:57,857 p=9388 u=smiller |  ok: [10.0.32.135]
+2014-10-08 13:25:58,057 p=9388 u=smiller |  ok: [10.0.0.102]
+2014-10-08 13:25:58,335 p=9388 u=smiller |  ok: [10.1.0.15]
+2014-10-08 13:25:59,375 p=9388 u=smiller |  ok: [172.31.1.216]
+2014-10-08 13:25:59,731 p=9388 u=smiller |  ok: [10.0.16.199]
+2014-10-08 13:26:00,878 p=9388 u=smiller |  ok: [10.0.32.6]
+2014-10-08 13:26:01,096 p=9388 u=smiller |  ok: [172.31.2.179]
+2014-10-08 13:26:01,765 p=9388 u=smiller |  ok: [172.31.36.195]
+2014-10-08 13:26:02,668 p=9388 u=smiller |  ok: [172.31.15.246]
+2014-10-08 13:26:02,926 p=9388 u=smiller |  ok: [10.0.0.237]
+2014-10-08 13:26:03,051 p=9388 u=smiller |  ok: [10.1.10.72]
+2014-10-08 13:26:03,140 p=9388 u=smiller |  ok: [172.31.14.227]
+2014-10-08 13:26:04,701 p=9388 u=smiller |  ok: [10.0.0.251]
+2014-10-08 13:26:04,959 p=9388 u=smiller |  ok: [172.31.12.165]
+2014-10-08 13:26:05,033 p=9388 u=smiller |  ok: [172.31.41.153]
+2014-10-08 13:26:05,606 p=9388 u=smiller |  ok: [172.31.27.24]
+2014-10-08 13:26:06,729 p=9388 u=smiller |  ok: [172.31.11.230]
+2014-10-08 13:26:07,417 p=9388 u=smiller |  ok: [172.31.15.38]
+2014-10-08 13:26:09,415 p=9388 u=smiller |  ok: [172.31.7.62]
+2014-10-08 13:26:09,784 p=9388 u=smiller |  ok: [172.31.11.100]
+2014-10-08 13:26:09,811 p=9388 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-08 13:26:09,904 p=9388 u=smiller |  skipping: [10.0.16.66]
+2014-10-08 13:26:09,916 p=9388 u=smiller |  skipping: [172.31.6.242]
+2014-10-08 13:26:09,928 p=9388 u=smiller |  skipping: [172.31.16.167]
+2014-10-08 13:26:09,928 p=9388 u=smiller |  skipping: [10.0.32.7]
+2014-10-08 13:26:09,936 p=9388 u=smiller |  skipping: [172.31.1.166]
+2014-10-08 13:26:09,948 p=9388 u=smiller |  skipping: [10.0.32.94]
+2014-10-08 13:26:09,962 p=9388 u=smiller |  skipping: [172.31.19.67]
+2014-10-08 13:26:09,968 p=9388 u=smiller |  skipping: [10.0.0.128]
+2014-10-08 13:26:09,978 p=9388 u=smiller |  skipping: [172.31.6.84]
+2014-10-08 13:26:09,978 p=9388 u=smiller |  skipping: [10.0.16.47]
+2014-10-08 13:26:09,988 p=9388 u=smiller |  skipping: [172.31.1.195]
+2014-10-08 13:26:10,002 p=9388 u=smiller |  skipping: [172.31.14.124]
+2014-10-08 13:26:10,014 p=9388 u=smiller |  skipping: [172.31.1.216]
+2014-10-08 13:26:10,014 p=9388 u=smiller |  skipping: [172.31.7.17]
+2014-10-08 13:26:10,015 p=9388 u=smiller |  skipping: [10.0.16.61]
+2014-10-08 13:26:10,024 p=9388 u=smiller |  skipping: [10.0.32.19]
+2014-10-08 13:26:10,044 p=9388 u=smiller |  skipping: [10.0.32.219]
+2014-10-08 13:26:10,058 p=9388 u=smiller |  skipping: [10.0.32.241]
+2014-10-08 13:26:10,058 p=9388 u=smiller |  skipping: [172.31.6.163]
+2014-10-08 13:26:10,059 p=9388 u=smiller |  skipping: [172.31.45.1]
+2014-10-08 13:26:10,068 p=9388 u=smiller |  skipping: [10.0.32.254]
+2014-10-08 13:26:10,084 p=9388 u=smiller |  skipping: [10.0.0.102]
+2014-10-08 13:26:10,096 p=9388 u=smiller |  skipping: [10.0.16.199]
+2014-10-08 13:26:10,096 p=9388 u=smiller |  skipping: [10.0.32.135]
+2014-10-08 13:26:10,104 p=9388 u=smiller |  skipping: [10.1.0.15]
+2014-10-08 13:26:10,124 p=9388 u=smiller |  skipping: [10.0.32.6]
+2014-10-08 13:26:10,124 p=9388 u=smiller |  skipping: [172.31.2.179]
+2014-10-08 13:26:10,136 p=9388 u=smiller |  skipping: [172.31.14.227]
+2014-10-08 13:26:10,136 p=9388 u=smiller |  skipping: [10.0.0.237]
+2014-10-08 13:26:10,148 p=9388 u=smiller |  skipping: [172.31.36.195]
+2014-10-08 13:26:10,152 p=9388 u=smiller |  skipping: [172.31.7.62]
+2014-10-08 13:26:10,172 p=9388 u=smiller |  skipping: [10.0.0.251]
+2014-10-08 13:26:10,172 p=9388 u=smiller |  skipping: [172.31.15.246]
+2014-10-08 13:26:10,184 p=9388 u=smiller |  skipping: [172.31.12.165]
+2014-10-08 13:26:10,194 p=9388 u=smiller |  skipping: [172.31.41.153]
+2014-10-08 13:26:10,216 p=9388 u=smiller |  skipping: [172.31.11.230]
+2014-10-08 13:26:10,217 p=9388 u=smiller |  skipping: [172.31.27.24]
+2014-10-08 13:26:10,220 p=9388 u=smiller |  skipping: [172.31.15.38]
+2014-10-08 13:26:10,228 p=9388 u=smiller |  skipping: [172.31.11.100]
+2014-10-08 13:26:13,643 p=9388 u=smiller |  ok: [10.1.10.72] => (item=perl-Switch,perl-Sys-Syslog,perl-LWP-Protocol-https,cronie)
+2014-10-08 13:26:13,655 p=9388 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-08 13:26:23,472 p=9388 u=smiller |  ok: [172.31.6.242] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:26:24,305 p=9388 u=smiller |  ok: [10.0.32.7] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:26:25,881 p=9388 u=smiller |  ok: [172.31.16.167] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:26:26,379 p=9388 u=smiller |  ok: [10.0.16.66] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:26:28,173 p=9388 u=smiller |  ok: [172.31.1.166] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:26:34,768 p=9388 u=smiller |  ok: [10.0.32.94] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:26:36,945 p=9388 u=smiller |  ok: [172.31.6.84] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:26:37,400 p=9388 u=smiller |  ok: [10.0.0.128] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:26:37,580 p=9388 u=smiller |  ok: [172.31.19.67] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:26:40,572 p=9388 u=smiller |  ok: [10.0.16.47] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:26:46,915 p=9388 u=smiller |  ok: [172.31.1.195] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:26:47,242 p=9388 u=smiller |  ok: [172.31.14.124] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:26:48,248 p=9388 u=smiller |  ok: [172.31.7.17] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:26:49,359 p=9388 u=smiller |  ok: [10.0.16.61] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:26:50,862 p=9388 u=smiller |  ok: [10.0.32.19] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:26:59,663 p=9388 u=smiller |  ok: [10.0.32.219] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:27:00,552 p=9388 u=smiller |  ok: [172.31.6.163] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:27:02,089 p=9388 u=smiller |  ok: [172.31.45.1] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:27:03,701 p=9388 u=smiller |  ok: [10.0.32.254] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:27:13,832 p=9388 u=smiller |  ok: [10.0.32.241] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:27:15,111 p=9388 u=smiller |  ok: [10.0.0.102] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:27:17,413 p=9388 u=smiller |  ok: [10.0.16.199] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:27:18,897 p=9388 u=smiller |  ok: [10.0.32.135] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:27:20,148 p=9388 u=smiller |  ok: [10.1.0.15] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:27:30,043 p=9388 u=smiller |  ok: [172.31.2.179] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:27:31,217 p=9388 u=smiller |  ok: [10.0.32.6] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:27:33,841 p=9388 u=smiller |  ok: [172.31.1.216] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:27:35,228 p=9388 u=smiller |  ok: [10.0.0.237] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:27:35,241 p=9388 u=smiller |  skipping: [10.1.10.72]
+2014-10-08 13:27:40,526 p=9388 u=smiller |  ok: [172.31.36.195] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:27:42,547 p=9388 u=smiller |  ok: [172.31.14.227] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:27:42,981 p=9388 u=smiller |  ok: [172.31.15.246] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:27:45,283 p=9388 u=smiller |  ok: [10.0.0.251] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:27:46,939 p=9388 u=smiller |  ok: [172.31.27.24] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:27:52,401 p=9388 u=smiller |  ok: [172.31.41.153] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:27:57,083 p=9388 u=smiller |  ok: [172.31.12.165] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:27:59,705 p=9388 u=smiller |  ok: [172.31.11.230] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:28:01,327 p=9388 u=smiller |  ok: [172.31.15.38] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:28:17,231 p=9388 u=smiller |  ok: [172.31.11.100] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:28:20,251 p=9388 u=smiller |  ok: [172.31.7.62] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:28:20,262 p=9388 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-08 13:28:22,607 p=9388 u=smiller |  ok: [10.0.32.7]
+2014-10-08 13:28:22,613 p=9388 u=smiller |  ok: [10.0.16.66]
+2014-10-08 13:28:22,650 p=9388 u=smiller |  ok: [172.31.16.167]
+2014-10-08 13:28:22,697 p=9388 u=smiller |  ok: [172.31.1.166]
+2014-10-08 13:28:22,930 p=9388 u=smiller |  ok: [172.31.6.242]
+2014-10-08 13:28:24,814 p=9388 u=smiller |  ok: [10.0.32.94]
+2014-10-08 13:28:24,826 p=9388 u=smiller |  ok: [172.31.19.67]
+2014-10-08 13:28:25,026 p=9388 u=smiller |  ok: [10.0.0.128]
+2014-10-08 13:28:25,162 p=9388 u=smiller |  ok: [10.0.16.47]
+2014-10-08 13:28:25,205 p=9388 u=smiller |  ok: [172.31.6.84]
+2014-10-08 13:28:27,008 p=9388 u=smiller |  ok: [172.31.14.124]
+2014-10-08 13:28:27,081 p=9388 u=smiller |  ok: [172.31.1.195]
+2014-10-08 13:28:27,157 p=9388 u=smiller |  ok: [172.31.7.17]
+2014-10-08 13:28:27,325 p=9388 u=smiller |  ok: [172.31.1.216]
+2014-10-08 13:28:27,427 p=9388 u=smiller |  ok: [10.0.32.19]
+2014-10-08 13:28:27,530 p=9388 u=smiller |  ok: [10.0.16.61]
+2014-10-08 13:28:29,393 p=9388 u=smiller |  ok: [172.31.45.1]
+2014-10-08 13:28:29,489 p=9388 u=smiller |  ok: [10.0.32.219]
+2014-10-08 13:28:29,521 p=9388 u=smiller |  ok: [172.31.6.163]
+2014-10-08 13:28:29,575 p=9388 u=smiller |  ok: [10.0.32.254]
+2014-10-08 13:28:29,668 p=9388 u=smiller |  ok: [10.0.32.241]
+2014-10-08 13:28:31,594 p=9388 u=smiller |  ok: [10.0.0.102]
+2014-10-08 13:28:31,665 p=9388 u=smiller |  ok: [10.1.0.15]
+2014-10-08 13:28:31,731 p=9388 u=smiller |  ok: [10.0.32.135]
+2014-10-08 13:28:31,817 p=9388 u=smiller |  ok: [10.0.0.237]
+2014-10-08 13:28:31,829 p=9388 u=smiller |  ok: [172.31.14.227]
+2014-10-08 13:28:31,836 p=9388 u=smiller |  ok: [172.31.2.179]
+2014-10-08 13:28:31,880 p=9388 u=smiller |  ok: [172.31.36.195]
+2014-10-08 13:28:31,899 p=9388 u=smiller |  ok: [172.31.15.246]
+2014-10-08 13:28:31,965 p=9388 u=smiller |  ok: [10.0.0.251]
+2014-10-08 13:28:32,004 p=9388 u=smiller |  ok: [10.0.16.199]
+2014-10-08 13:28:32,028 p=9388 u=smiller |  ok: [172.31.12.165]
+2014-10-08 13:28:32,063 p=9388 u=smiller |  ok: [172.31.41.153]
+2014-10-08 13:28:32,088 p=9388 u=smiller |  ok: [172.31.27.24]
+2014-10-08 13:28:32,129 p=9388 u=smiller |  ok: [172.31.11.230]
+2014-10-08 13:28:32,151 p=9388 u=smiller |  ok: [172.31.15.38]
+2014-10-08 13:28:32,152 p=9388 u=smiller |  ok: [172.31.7.62]
+2014-10-08 13:28:32,302 p=9388 u=smiller |  ok: [172.31.11.100]
+2014-10-08 13:28:33,112 p=9388 u=smiller |  ok: [10.1.10.72]
+2014-10-08 13:28:33,858 p=9388 u=smiller |  ok: [10.0.32.6]
+2014-10-08 13:28:33,870 p=9388 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-08 13:28:34,082 p=9388 u=smiller |  ok: [10.0.32.7] => (item=awscreds.conf)
+2014-10-08 13:28:34,084 p=9388 u=smiller |  ok: [10.0.16.66] => (item=awscreds.conf)
+2014-10-08 13:28:34,096 p=9388 u=smiller |  ok: [172.31.1.166] => (item=awscreds.conf)
+2014-10-08 13:28:34,100 p=9388 u=smiller |  ok: [172.31.16.167] => (item=awscreds.conf)
+2014-10-08 13:28:34,113 p=9388 u=smiller |  ok: [172.31.6.242] => (item=awscreds.conf)
+2014-10-08 13:28:34,227 p=9388 u=smiller |  ok: [10.0.32.7] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:34,229 p=9388 u=smiller |  ok: [10.0.16.66] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:34,233 p=9388 u=smiller |  ok: [172.31.16.167] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:34,240 p=9388 u=smiller |  ok: [172.31.1.166] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:34,273 p=9388 u=smiller |  ok: [172.31.6.242] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:34,364 p=9388 u=smiller |  ok: [10.0.32.7] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:34,369 p=9388 u=smiller |  ok: [10.0.16.66] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:34,369 p=9388 u=smiller |  ok: [172.31.1.166] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:34,370 p=9388 u=smiller |  ok: [172.31.16.167] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:34,411 p=9388 u=smiller |  ok: [172.31.6.242] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:34,518 p=9388 u=smiller |  ok: [10.0.32.94] => (item=awscreds.conf)
+2014-10-08 13:28:34,521 p=9388 u=smiller |  ok: [172.31.6.84] => (item=awscreds.conf)
+2014-10-08 13:28:34,525 p=9388 u=smiller |  ok: [172.31.19.67] => (item=awscreds.conf)
+2014-10-08 13:28:34,529 p=9388 u=smiller |  ok: [10.0.16.47] => (item=awscreds.conf)
+2014-10-08 13:28:34,540 p=9388 u=smiller |  ok: [10.0.0.128] => (item=awscreds.conf)
+2014-10-08 13:28:34,671 p=9388 u=smiller |  ok: [10.0.32.94] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:34,676 p=9388 u=smiller |  ok: [172.31.19.67] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:34,681 p=9388 u=smiller |  ok: [172.31.6.84] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:34,685 p=9388 u=smiller |  ok: [10.0.16.47] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:34,688 p=9388 u=smiller |  ok: [10.0.0.128] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:34,825 p=9388 u=smiller |  ok: [10.0.32.94] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:34,829 p=9388 u=smiller |  ok: [172.31.19.67] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:34,833 p=9388 u=smiller |  ok: [10.0.16.47] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:34,837 p=9388 u=smiller |  ok: [172.31.6.84] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:34,847 p=9388 u=smiller |  ok: [10.0.0.128] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:34,985 p=9388 u=smiller |  ok: [172.31.1.195] => (item=awscreds.conf)
+2014-10-08 13:28:34,990 p=9388 u=smiller |  ok: [10.0.32.19] => (item=awscreds.conf)
+2014-10-08 13:28:34,992 p=9388 u=smiller |  ok: [172.31.14.124] => (item=awscreds.conf)
+2014-10-08 13:28:34,993 p=9388 u=smiller |  ok: [172.31.7.17] => (item=awscreds.conf)
+2014-10-08 13:28:35,005 p=9388 u=smiller |  ok: [10.0.16.61] => (item=awscreds.conf)
+2014-10-08 13:28:35,139 p=9388 u=smiller |  ok: [172.31.1.195] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:35,142 p=9388 u=smiller |  ok: [172.31.14.124] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:35,145 p=9388 u=smiller |  ok: [172.31.7.17] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:35,153 p=9388 u=smiller |  ok: [10.0.32.19] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:35,169 p=9388 u=smiller |  ok: [10.0.16.61] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:35,290 p=9388 u=smiller |  ok: [172.31.14.124] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:35,294 p=9388 u=smiller |  ok: [10.0.32.19] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:35,301 p=9388 u=smiller |  ok: [172.31.1.195] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:35,305 p=9388 u=smiller |  ok: [172.31.7.17] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:35,314 p=9388 u=smiller |  ok: [10.0.16.61] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:35,444 p=9388 u=smiller |  ok: [10.0.32.254] => (item=awscreds.conf)
+2014-10-08 13:28:35,450 p=9388 u=smiller |  ok: [172.31.45.1] => (item=awscreds.conf)
+2014-10-08 13:28:35,452 p=9388 u=smiller |  ok: [172.31.6.163] => (item=awscreds.conf)
+2014-10-08 13:28:35,462 p=9388 u=smiller |  ok: [10.0.32.219] => (item=awscreds.conf)
+2014-10-08 13:28:35,582 p=9388 u=smiller |  ok: [10.0.32.254] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:35,586 p=9388 u=smiller |  ok: [172.31.6.163] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:35,589 p=9388 u=smiller |  ok: [172.31.45.1] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:35,601 p=9388 u=smiller |  ok: [10.0.32.219] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:35,718 p=9388 u=smiller |  ok: [10.0.32.254] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:35,721 p=9388 u=smiller |  ok: [172.31.45.1] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:35,726 p=9388 u=smiller |  ok: [172.31.6.163] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:35,736 p=9388 u=smiller |  ok: [10.0.32.219] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:35,768 p=9388 u=smiller |  ok: [172.31.1.216] => (item=awscreds.conf)
+2014-10-08 13:28:35,860 p=9388 u=smiller |  ok: [10.0.32.241] => (item=awscreds.conf)
+2014-10-08 13:28:35,867 p=9388 u=smiller |  ok: [10.0.32.135] => (item=awscreds.conf)
+2014-10-08 13:28:35,877 p=9388 u=smiller |  ok: [10.0.0.102] => (item=awscreds.conf)
+2014-10-08 13:28:35,884 p=9388 u=smiller |  ok: [10.0.16.199] => (item=awscreds.conf)
+2014-10-08 13:28:35,999 p=9388 u=smiller |  ok: [10.0.32.241] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:36,009 p=9388 u=smiller |  ok: [10.0.32.135] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:36,012 p=9388 u=smiller |  ok: [10.0.0.102] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:36,036 p=9388 u=smiller |  ok: [10.0.16.199] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:36,119 p=9388 u=smiller |  ok: [10.0.32.135] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:36,121 p=9388 u=smiller |  ok: [10.0.32.241] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:36,122 p=9388 u=smiller |  ok: [10.0.0.102] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:36,182 p=9388 u=smiller |  ok: [10.0.16.199] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:36,243 p=9388 u=smiller |  ok: [172.31.2.179] => (item=awscreds.conf)
+2014-10-08 13:28:36,245 p=9388 u=smiller |  ok: [172.31.1.216] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:36,276 p=9388 u=smiller |  ok: [10.0.32.6] => (item=awscreds.conf)
+2014-10-08 13:28:36,295 p=9388 u=smiller |  ok: [10.1.0.15] => (item=awscreds.conf)
+2014-10-08 13:28:36,404 p=9388 u=smiller |  ok: [172.31.2.179] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:36,456 p=9388 u=smiller |  ok: [172.31.14.227] => (item=awscreds.conf)
+2014-10-08 13:28:36,462 p=9388 u=smiller |  ok: [10.1.0.15] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:36,476 p=9388 u=smiller |  ok: [10.0.32.6] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:36,542 p=9388 u=smiller |  ok: [172.31.2.179] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:36,613 p=9388 u=smiller |  ok: [10.1.0.15] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:36,649 p=9388 u=smiller |  ok: [10.0.32.6] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:36,692 p=9388 u=smiller |  ok: [172.31.1.216] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:36,708 p=9388 u=smiller |  ok: [10.0.0.237] => (item=awscreds.conf)
+2014-10-08 13:28:36,716 p=9388 u=smiller |  ok: [172.31.36.195] => (item=awscreds.conf)
+2014-10-08 13:28:36,724 p=9388 u=smiller |  ok: [172.31.14.227] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:36,802 p=9388 u=smiller |  ok: [172.31.15.246] => (item=awscreds.conf)
+2014-10-08 13:28:36,842 p=9388 u=smiller |  ok: [172.31.36.195] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:36,861 p=9388 u=smiller |  ok: [10.0.0.237] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:36,894 p=9388 u=smiller |  ok: [172.31.15.246] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:36,931 p=9388 u=smiller |  ok: [172.31.36.195] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:36,959 p=9388 u=smiller |  ok: [172.31.14.227] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:36,977 p=9388 u=smiller |  ok: [172.31.15.246] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:36,987 p=9388 u=smiller |  ok: [10.0.0.237] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:37,053 p=9388 u=smiller |  ok: [10.1.10.72] => (item=awscreds.conf)
+2014-10-08 13:28:37,090 p=9388 u=smiller |  ok: [172.31.41.153] => (item=awscreds.conf)
+2014-10-08 13:28:37,093 p=9388 u=smiller |  ok: [172.31.12.165] => (item=awscreds.conf)
+2014-10-08 13:28:37,095 p=9388 u=smiller |  ok: [172.31.7.62] => (item=awscreds.conf)
+2014-10-08 13:28:37,107 p=9388 u=smiller |  ok: [10.0.0.251] => (item=awscreds.conf)
+2014-10-08 13:28:37,189 p=9388 u=smiller |  ok: [10.1.10.72] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:37,225 p=9388 u=smiller |  ok: [172.31.41.153] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:37,229 p=9388 u=smiller |  ok: [172.31.12.165] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:37,232 p=9388 u=smiller |  ok: [10.0.0.251] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:37,314 p=9388 u=smiller |  ok: [10.1.10.72] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:37,352 p=9388 u=smiller |  ok: [172.31.41.153] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:37,365 p=9388 u=smiller |  ok: [172.31.12.165] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:37,369 p=9388 u=smiller |  ok: [10.0.0.251] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:37,434 p=9388 u=smiller |  ok: [172.31.27.24] => (item=awscreds.conf)
+2014-10-08 13:28:37,475 p=9388 u=smiller |  ok: [172.31.11.230] => (item=awscreds.conf)
+2014-10-08 13:28:37,476 p=9388 u=smiller |  ok: [172.31.15.38] => (item=awscreds.conf)
+2014-10-08 13:28:37,549 p=9388 u=smiller |  ok: [172.31.27.24] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:37,584 p=9388 u=smiller |  ok: [172.31.15.38] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:37,588 p=9388 u=smiller |  ok: [172.31.11.230] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:37,594 p=9388 u=smiller |  ok: [172.31.11.100] => (item=awscreds.conf)
+2014-10-08 13:28:37,602 p=9388 u=smiller |  ok: [172.31.7.62] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:37,642 p=9388 u=smiller |  ok: [172.31.27.24] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:37,712 p=9388 u=smiller |  ok: [172.31.11.230] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:37,714 p=9388 u=smiller |  ok: [172.31.15.38] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:37,822 p=9388 u=smiller |  ok: [172.31.11.100] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,015 p=9388 u=smiller |  ok: [172.31.11.100] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,229 p=9388 u=smiller |  ok: [172.31.7.62] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,243 p=9388 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-08 13:28:38,288 p=9388 u=smiller |  skipping: [10.0.16.66] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,300 p=9388 u=smiller |  skipping: [10.0.16.66] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,319 p=9388 u=smiller |  skipping: [172.31.16.167] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,319 p=9388 u=smiller |  skipping: [172.31.6.242] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,321 p=9388 u=smiller |  skipping: [172.31.6.242] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,322 p=9388 u=smiller |  skipping: [172.31.1.166] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,328 p=9388 u=smiller |  skipping: [172.31.1.166] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,328 p=9388 u=smiller |  skipping: [10.0.32.7] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,333 p=9388 u=smiller |  skipping: [10.0.32.7] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,333 p=9388 u=smiller |  skipping: [10.0.32.94] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,338 p=9388 u=smiller |  skipping: [10.0.32.94] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,338 p=9388 u=smiller |  skipping: [172.31.16.167] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,339 p=9388 u=smiller |  skipping: [172.31.19.67] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,346 p=9388 u=smiller |  skipping: [172.31.19.67] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,346 p=9388 u=smiller |  skipping: [10.0.0.128] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,348 p=9388 u=smiller |  skipping: [10.0.16.47] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,352 p=9388 u=smiller |  skipping: [10.0.16.47] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,352 p=9388 u=smiller |  skipping: [172.31.6.84] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,357 p=9388 u=smiller |  skipping: [172.31.6.84] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,357 p=9388 u=smiller |  skipping: [10.0.0.128] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,360 p=9388 u=smiller |  skipping: [172.31.1.195] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,365 p=9388 u=smiller |  skipping: [172.31.1.195] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,365 p=9388 u=smiller |  skipping: [172.31.14.124] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,369 p=9388 u=smiller |  skipping: [172.31.14.124] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,370 p=9388 u=smiller |  skipping: [10.0.16.61] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,374 p=9388 u=smiller |  skipping: [10.0.16.61] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,375 p=9388 u=smiller |  skipping: [172.31.7.17] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,376 p=9388 u=smiller |  skipping: [10.0.32.19] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,381 p=9388 u=smiller |  skipping: [10.0.32.19] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,381 p=9388 u=smiller |  skipping: [172.31.7.17] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,386 p=9388 u=smiller |  skipping: [172.31.6.163] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,387 p=9388 u=smiller |  skipping: [172.31.1.216] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,388 p=9388 u=smiller |  skipping: [10.0.32.219] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,393 p=9388 u=smiller |  skipping: [10.0.32.219] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,393 p=9388 u=smiller |  skipping: [172.31.45.1] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,397 p=9388 u=smiller |  skipping: [172.31.45.1] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,398 p=9388 u=smiller |  skipping: [172.31.1.216] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,400 p=9388 u=smiller |  skipping: [10.0.32.254] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,404 p=9388 u=smiller |  skipping: [10.0.32.254] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,404 p=9388 u=smiller |  skipping: [172.31.6.163] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,410 p=9388 u=smiller |  skipping: [10.0.16.199] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,410 p=9388 u=smiller |  skipping: [10.0.0.102] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,412 p=9388 u=smiller |  skipping: [10.0.32.241] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,417 p=9388 u=smiller |  skipping: [10.0.32.241] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,417 p=9388 u=smiller |  skipping: [10.0.32.135] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,421 p=9388 u=smiller |  skipping: [10.0.32.135] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,421 p=9388 u=smiller |  skipping: [10.0.0.102] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,426 p=9388 u=smiller |  skipping: [10.0.32.6] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,427 p=9388 u=smiller |  skipping: [10.1.0.15] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,428 p=9388 u=smiller |  skipping: [10.0.16.199] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,434 p=9388 u=smiller |  skipping: [10.1.0.15] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,434 p=9388 u=smiller |  skipping: [172.31.2.179] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,438 p=9388 u=smiller |  skipping: [172.31.36.195] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,439 p=9388 u=smiller |  skipping: [172.31.14.227] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,440 p=9388 u=smiller |  skipping: [10.0.32.6] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,440 p=9388 u=smiller |  skipping: [10.0.0.237] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,446 p=9388 u=smiller |  skipping: [10.0.0.237] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,446 p=9388 u=smiller |  skipping: [172.31.2.179] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,448 p=9388 u=smiller |  skipping: [172.31.14.227] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,454 p=9388 u=smiller |  skipping: [10.1.10.72] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,455 p=9388 u=smiller |  skipping: [172.31.7.62] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,456 p=9388 u=smiller |  skipping: [172.31.15.246] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,460 p=9388 u=smiller |  skipping: [172.31.15.246] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,460 p=9388 u=smiller |  skipping: [172.31.36.195] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,465 p=9388 u=smiller |  skipping: [172.31.12.165] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,466 p=9388 u=smiller |  skipping: [10.0.0.251] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,469 p=9388 u=smiller |  skipping: [10.0.0.251] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,469 p=9388 u=smiller |  skipping: [172.31.7.62] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,474 p=9388 u=smiller |  skipping: [172.31.27.24] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,475 p=9388 u=smiller |  skipping: [10.1.10.72] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,479 p=9388 u=smiller |  skipping: [172.31.15.38] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,479 p=9388 u=smiller |  skipping: [172.31.41.153] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,482 p=9388 u=smiller |  skipping: [172.31.41.153] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,483 p=9388 u=smiller |  skipping: [172.31.12.165] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,486 p=9388 u=smiller |  skipping: [172.31.11.100] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,486 p=9388 u=smiller |  skipping: [172.31.11.230] => (item=CloudWatchClient.pm)
+2014-10-08 13:28:38,488 p=9388 u=smiller |  skipping: [172.31.27.24] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,489 p=9388 u=smiller |  skipping: [172.31.15.38] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,491 p=9388 u=smiller |  skipping: [172.31.11.100] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,492 p=9388 u=smiller |  skipping: [172.31.11.230] => (item=mon-put-instance-data.pl)
+2014-10-08 13:28:38,509 p=9388 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-08 13:28:38,675 p=9388 u=smiller |  ok: [10.0.16.66]
+2014-10-08 13:28:38,695 p=9388 u=smiller |  ok: [10.0.32.7]
+2014-10-08 13:28:38,708 p=9388 u=smiller |  ok: [172.31.1.166]
+2014-10-08 13:28:38,749 p=9388 u=smiller |  ok: [10.0.32.94]
+2014-10-08 13:28:38,751 p=9388 u=smiller |  ok: [172.31.6.242]
+2014-10-08 13:28:38,775 p=9388 u=smiller |  ok: [172.31.19.67]
+2014-10-08 13:28:38,833 p=9388 u=smiller |  ok: [10.0.0.128]
+2014-10-08 13:28:38,836 p=9388 u=smiller |  ok: [172.31.6.84]
+2014-10-08 13:28:38,838 p=9388 u=smiller |  ok: [10.0.16.47]
+2014-10-08 13:28:38,857 p=9388 u=smiller |  ok: [172.31.1.195]
+2014-10-08 13:28:38,898 p=9388 u=smiller |  ok: [172.31.16.167]
+2014-10-08 13:28:38,947 p=9388 u=smiller |  ok: [172.31.7.17]
+2014-10-08 13:28:38,948 p=9388 u=smiller |  ok: [172.31.14.124]
+2014-10-08 13:28:38,966 p=9388 u=smiller |  ok: [10.0.32.19]
+2014-10-08 13:28:39,004 p=9388 u=smiller |  ok: [10.0.16.61]
+2014-10-08 13:28:39,044 p=9388 u=smiller |  ok: [172.31.45.1]
+2014-10-08 13:28:39,054 p=9388 u=smiller |  ok: [172.31.6.163]
+2014-10-08 13:28:39,075 p=9388 u=smiller |  ok: [10.0.32.254]
+2014-10-08 13:28:39,085 p=9388 u=smiller |  ok: [10.0.32.219]
+2014-10-08 13:28:39,126 p=9388 u=smiller |  ok: [10.0.32.241]
+2014-10-08 13:28:39,136 p=9388 u=smiller |  ok: [10.0.0.102]
+2014-10-08 13:28:39,166 p=9388 u=smiller |  ok: [10.0.32.135]
+2014-10-08 13:28:39,222 p=9388 u=smiller |  ok: [10.0.16.199]
+2014-10-08 13:28:39,241 p=9388 u=smiller |  ok: [172.31.2.179]
+2014-10-08 13:28:39,246 p=9388 u=smiller |  ok: [10.1.0.15]
+2014-10-08 13:28:39,304 p=9388 u=smiller |  ok: [10.0.32.6]
+2014-10-08 13:28:39,337 p=9388 u=smiller |  ok: [172.31.36.195]
+2014-10-08 13:28:39,399 p=9388 u=smiller |  ok: [10.0.0.237]
+2014-10-08 13:28:39,405 p=9388 u=smiller |  ok: [172.31.15.246]
+2014-10-08 13:28:39,440 p=9388 u=smiller |  ok: [172.31.1.216]
+2014-10-08 13:28:39,491 p=9388 u=smiller |  ok: [10.1.10.72]
+2014-10-08 13:28:39,495 p=9388 u=smiller |  ok: [10.0.0.251]
+2014-10-08 13:28:39,507 p=9388 u=smiller |  ok: [172.31.14.227]
+2014-10-08 13:28:39,514 p=9388 u=smiller |  ok: [172.31.12.165]
+2014-10-08 13:28:39,597 p=9388 u=smiller |  ok: [172.31.41.153]
+2014-10-08 13:28:39,598 p=9388 u=smiller |  ok: [172.31.27.24]
+2014-10-08 13:28:39,604 p=9388 u=smiller |  ok: [172.31.11.230]
+2014-10-08 13:28:39,649 p=9388 u=smiller |  ok: [172.31.15.38]
+2014-10-08 13:28:39,843 p=9388 u=smiller |  ok: [172.31.11.100]
+2014-10-08 13:28:39,870 p=9388 u=smiller |  ok: [172.31.7.62]
+2014-10-08 13:28:39,882 p=9388 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-08 13:28:39,932 p=9388 u=smiller |  skipping: [10.0.16.66]
+2014-10-08 13:28:39,948 p=9388 u=smiller |  skipping: [10.0.32.7]
+2014-10-08 13:28:39,961 p=9388 u=smiller |  skipping: [172.31.19.67]
+2014-10-08 13:28:39,962 p=9388 u=smiller |  skipping: [172.31.6.242]
+2014-10-08 13:28:39,964 p=9388 u=smiller |  skipping: [172.31.16.167]
+2014-10-08 13:28:39,971 p=9388 u=smiller |  skipping: [10.0.16.47]
+2014-10-08 13:28:39,971 p=9388 u=smiller |  skipping: [172.31.1.166]
+2014-10-08 13:28:39,972 p=9388 u=smiller |  skipping: [10.0.0.128]
+2014-10-08 13:28:39,979 p=9388 u=smiller |  skipping: [172.31.1.195]
+2014-10-08 13:28:39,979 p=9388 u=smiller |  skipping: [10.0.32.94]
+2014-10-08 13:28:39,980 p=9388 u=smiller |  skipping: [172.31.6.84]
+2014-10-08 13:28:39,988 p=9388 u=smiller |  skipping: [10.0.16.61]
+2014-10-08 13:28:39,990 p=9388 u=smiller |  skipping: [172.31.14.124]
+2014-10-08 13:28:39,996 p=9388 u=smiller |  skipping: [10.0.32.219]
+2014-10-08 13:28:39,996 p=9388 u=smiller |  skipping: [172.31.7.17]
+2014-10-08 13:28:39,996 p=9388 u=smiller |  skipping: [10.0.32.19]
+2014-10-08 13:28:40,004 p=9388 u=smiller |  skipping: [172.31.6.163]
+2014-10-08 13:28:40,004 p=9388 u=smiller |  skipping: [172.31.1.216]
+2014-10-08 13:28:40,006 p=9388 u=smiller |  skipping: [172.31.45.1]
+2014-10-08 13:28:40,012 p=9388 u=smiller |  skipping: [10.0.0.102]
+2014-10-08 13:28:40,012 p=9388 u=smiller |  skipping: [10.0.32.254]
+2014-10-08 13:28:40,017 p=9388 u=smiller |  skipping: [10.1.0.15]
+2014-10-08 13:28:40,018 p=9388 u=smiller |  skipping: [10.0.32.241]
+2014-10-08 13:28:40,020 p=9388 u=smiller |  skipping: [10.0.16.199]
+2014-10-08 13:28:40,020 p=9388 u=smiller |  skipping: [10.0.32.135]
+2014-10-08 13:28:40,028 p=9388 u=smiller |  skipping: [172.31.14.227]
+2014-10-08 13:28:40,028 p=9388 u=smiller |  skipping: [10.0.32.6]
+2014-10-08 13:28:40,029 p=9388 u=smiller |  skipping: [172.31.2.179]
+2014-10-08 13:28:40,036 p=9388 u=smiller |  skipping: [172.31.7.62]
+2014-10-08 13:28:40,036 p=9388 u=smiller |  skipping: [10.0.0.237]
+2014-10-08 13:28:40,036 p=9388 u=smiller |  skipping: [172.31.36.195]
+2014-10-08 13:28:40,044 p=9388 u=smiller |  skipping: [172.31.12.165]
+2014-10-08 13:28:40,044 p=9388 u=smiller |  skipping: [172.31.15.246]
+2014-10-08 13:28:40,049 p=9388 u=smiller |  skipping: [172.31.27.24]
+2014-10-08 13:28:40,049 p=9388 u=smiller |  skipping: [10.1.10.72]
+2014-10-08 13:28:40,050 p=9388 u=smiller |  skipping: [10.0.0.251]
+2014-10-08 13:28:40,055 p=9388 u=smiller |  skipping: [172.31.11.100]
+2014-10-08 13:28:40,055 p=9388 u=smiller |  skipping: [172.31.41.153]
+2014-10-08 13:28:40,056 p=9388 u=smiller |  skipping: [172.31.15.38]
+2014-10-08 13:28:40,057 p=9388 u=smiller |  skipping: [172.31.11.230]
+2014-10-08 13:28:40,074 p=9388 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-08 13:28:40,294 p=9388 u=smiller |  ok: [172.31.16.167]
+2014-10-08 13:28:40,297 p=9388 u=smiller |  ok: [10.0.32.7]
+2014-10-08 13:28:40,298 p=9388 u=smiller |  ok: [10.0.16.66]
+2014-10-08 13:28:40,318 p=9388 u=smiller |  ok: [172.31.6.242]
+2014-10-08 13:28:40,327 p=9388 u=smiller |  ok: [172.31.1.166]
+2014-10-08 13:28:40,461 p=9388 u=smiller |  ok: [10.0.32.94]
+2014-10-08 13:28:40,481 p=9388 u=smiller |  ok: [172.31.19.67]
+2014-10-08 13:28:40,482 p=9388 u=smiller |  ok: [10.0.0.128]
+2014-10-08 13:28:40,486 p=9388 u=smiller |  ok: [172.31.6.84]
+2014-10-08 13:28:40,491 p=9388 u=smiller |  ok: [10.0.16.47]
+2014-10-08 13:28:40,602 p=9388 u=smiller |  ok: [172.31.1.195]
+2014-10-08 13:28:40,645 p=9388 u=smiller |  ok: [172.31.7.17]
+2014-10-08 13:28:40,646 p=9388 u=smiller |  ok: [10.0.32.19]
+2014-10-08 13:28:40,676 p=9388 u=smiller |  ok: [172.31.14.124]
+2014-10-08 13:28:40,677 p=9388 u=smiller |  ok: [10.0.16.61]
+2014-10-08 13:28:40,788 p=9388 u=smiller |  ok: [172.31.45.1]
+2014-10-08 13:28:40,806 p=9388 u=smiller |  ok: [10.0.32.219]
+2014-10-08 13:28:40,810 p=9388 u=smiller |  ok: [10.0.32.254]
+2014-10-08 13:28:40,819 p=9388 u=smiller |  ok: [172.31.6.163]
+2014-10-08 13:28:40,916 p=9388 u=smiller |  ok: [10.0.32.241]
+2014-10-08 13:28:40,965 p=9388 u=smiller |  ok: [10.0.32.135]
+2014-10-08 13:28:40,966 p=9388 u=smiller |  ok: [10.0.0.102]
+2014-10-08 13:28:40,996 p=9388 u=smiller |  ok: [10.0.16.199]
+2014-10-08 13:28:41,088 p=9388 u=smiller |  ok: [10.1.0.15]
+2014-10-08 13:28:41,135 p=9388 u=smiller |  ok: [172.31.2.179]
+2014-10-08 13:28:41,136 p=9388 u=smiller |  ok: [10.0.32.6]
+2014-10-08 13:28:41,182 p=9388 u=smiller |  ok: [172.31.1.216]
+2014-10-08 13:28:41,245 p=9388 u=smiller |  ok: [10.0.0.237]
+2014-10-08 13:28:41,261 p=9388 u=smiller |  ok: [172.31.14.227]
+2014-10-08 13:28:41,279 p=9388 u=smiller |  ok: [172.31.36.195]
+2014-10-08 13:28:41,302 p=9388 u=smiller |  ok: [172.31.15.246]
+2014-10-08 13:28:41,401 p=9388 u=smiller |  ok: [10.0.0.251]
+2014-10-08 13:28:41,414 p=9388 u=smiller |  ok: [172.31.12.165]
+2014-10-08 13:28:41,427 p=9388 u=smiller |  ok: [10.1.10.72]
+2014-10-08 13:28:41,449 p=9388 u=smiller |  ok: [172.31.41.153]
+2014-10-08 13:28:41,524 p=9388 u=smiller |  ok: [172.31.27.24]
+2014-10-08 13:28:41,570 p=9388 u=smiller |  ok: [172.31.11.230]
+2014-10-08 13:28:41,576 p=9388 u=smiller |  ok: [172.31.15.38]
+2014-10-08 13:28:41,707 p=9388 u=smiller |  ok: [172.31.11.100]
+2014-10-08 13:28:41,751 p=9388 u=smiller |  ok: [172.31.7.62]
+2014-10-08 13:28:41,770 p=9388 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-08 13:28:41,987 p=9388 u=smiller |  failed: [10.0.16.66] => {"failed": true, "parsed": false}
+2014-10-08 13:28:41,988 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:41,996 p=9388 u=smiller |  failed: [10.0.32.7] => {"failed": true, "parsed": false}
+2014-10-08 13:28:41,997 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,001 p=9388 u=smiller |  failed: [172.31.16.167] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,002 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,009 p=9388 u=smiller |  failed: [172.31.1.166] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,010 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,058 p=9388 u=smiller |  failed: [172.31.6.242] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,059 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,136 p=9388 u=smiller |  failed: [10.0.32.94] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,137 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,142 p=9388 u=smiller |  failed: [172.31.19.67] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,143 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,151 p=9388 u=smiller |  failed: [10.0.16.47] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,152 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,159 p=9388 u=smiller |  failed: [10.0.0.128] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,160 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,169 p=9388 u=smiller |  failed: [172.31.6.84] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,170 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,303 p=9388 u=smiller |  failed: [10.0.32.19] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,304 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,306 p=9388 u=smiller |  failed: [172.31.1.195] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,307 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,313 p=9388 u=smiller |  failed: [172.31.7.17] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,314 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,324 p=9388 u=smiller |  failed: [10.0.16.61] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,325 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,455 p=9388 u=smiller |  failed: [172.31.45.1] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,456 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,461 p=9388 u=smiller |  failed: [172.31.6.163] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,461 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,474 p=9388 u=smiller |  failed: [10.0.32.219] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,475 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,591 p=9388 u=smiller |  failed: [10.0.32.254] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,592 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,593 p=9388 u=smiller |  failed: [10.0.32.241] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,594 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,605 p=9388 u=smiller |  failed: [10.0.0.102] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,606 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,716 p=9388 u=smiller |  failed: [172.31.14.124] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,717 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,733 p=9388 u=smiller |  failed: [10.0.32.135] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,734 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,753 p=9388 u=smiller |  failed: [10.0.16.199] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,753 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,826 p=9388 u=smiller |  ok: [10.1.0.15]
+2014-10-08 13:28:42,869 p=9388 u=smiller |  failed: [172.31.2.179] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,870 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,890 p=9388 u=smiller |  failed: [10.0.32.6] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,891 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,896 p=9388 u=smiller |  failed: [172.31.1.216] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,897 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,958 p=9388 u=smiller |  failed: [172.31.15.246] => {"failed": true}
+2014-10-08 13:28:42,958 p=9388 u=smiller |  msg: boto required for this module
+2014-10-08 13:28:42,962 p=9388 u=smiller |  failed: [10.0.0.237] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,963 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:42,982 p=9388 u=smiller |  failed: [172.31.36.195] => {"failed": true, "parsed": false}
+2014-10-08 13:28:42,983 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:43,031 p=9388 u=smiller |  failed: [172.31.14.227] => {"failed": true, "parsed": false}
+2014-10-08 13:28:43,032 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:43,087 p=9388 u=smiller |  failed: [172.31.41.153] => {"failed": true}
+2014-10-08 13:28:43,087 p=9388 u=smiller |  msg: boto required for this module
+2014-10-08 13:28:43,095 p=9388 u=smiller |  failed: [10.0.0.251] => {"failed": true, "parsed": false}
+2014-10-08 13:28:43,096 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:43,102 p=9388 u=smiller |  failed: [10.1.10.72] => {"failed": true}
+2014-10-08 13:28:43,103 p=9388 u=smiller |  msg: No handler was ready to authenticate. 1 handlers were checked. ['HmacAuthV4Handler'] Check your credentials
+2014-10-08 13:28:43,108 p=9388 u=smiller |  failed: [172.31.12.165] => {"failed": true, "parsed": false}
+2014-10-08 13:28:43,109 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:43,180 p=9388 u=smiller |  failed: [172.31.27.24] => {"failed": true}
+2014-10-08 13:28:43,180 p=9388 u=smiller |  msg: boto required for this module
+2014-10-08 13:28:43,240 p=9388 u=smiller |  failed: [172.31.11.230] => {"failed": true, "parsed": false}
+2014-10-08 13:28:43,241 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:43,256 p=9388 u=smiller |  failed: [172.31.15.38] => {"failed": true, "parsed": false}
+2014-10-08 13:28:43,257 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:43,389 p=9388 u=smiller |  failed: [172.31.11.100] => {"failed": true, "parsed": false}
+2014-10-08 13:28:43,390 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:43,466 p=9388 u=smiller |  failed: [172.31.7.62] => {"failed": true, "parsed": false}
+2014-10-08 13:28:43,467 p=9388 u=smiller |  invalid output was: Traceback (most recent call last):
+  File "<stdin>", line 1818, in <module>
+  File "<stdin>", line 1809, in main
+  File "<stdin>", line 1628, in connect_to_aws
+  File "/usr/lib/python2.7/dist-packages/boto/ec2/cloudwatch/__init__.py", line 75, in connect_to_region
+    return region.connect(**kw_params)
+  File "/usr/lib/python2.7/dist-packages/boto/regioninfo.py", line 62, in connect
+    return self.connection_cls(region=self, **kw_params)
+TypeError: __init__() got an unexpected keyword argument 'security_token'
+
+2014-10-08 13:28:43,478 p=9388 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-08 13:28:43,479 p=9388 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-08 13:28:43,480 p=9388 u=smiller |  10.0.0.102                 : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,480 p=9388 u=smiller |  10.0.0.128                 : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,480 p=9388 u=smiller |  10.0.0.237                 : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,480 p=9388 u=smiller |  10.0.0.251                 : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,481 p=9388 u=smiller |  10.0.16.199                : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,481 p=9388 u=smiller |  10.0.16.47                 : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,481 p=9388 u=smiller |  10.0.16.61                 : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,481 p=9388 u=smiller |  10.0.16.66                 : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,482 p=9388 u=smiller |  10.0.32.135                : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,482 p=9388 u=smiller |  10.0.32.19                 : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,482 p=9388 u=smiller |  10.0.32.219                : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,482 p=9388 u=smiller |  10.0.32.241                : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,483 p=9388 u=smiller |  10.0.32.254                : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,483 p=9388 u=smiller |  10.0.32.6                  : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,483 p=9388 u=smiller |  10.0.32.7                  : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,483 p=9388 u=smiller |  10.0.32.94                 : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,484 p=9388 u=smiller |  10.1.0.15                  : ok=8    changed=0    unreachable=0    failed=0   
+2014-10-08 13:28:43,484 p=9388 u=smiller |  10.1.10.72                 : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,484 p=9388 u=smiller |  172.31.1.166               : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,484 p=9388 u=smiller |  172.31.1.195               : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,485 p=9388 u=smiller |  172.31.1.216               : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,485 p=9388 u=smiller |  172.31.11.100              : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,485 p=9388 u=smiller |  172.31.11.230              : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,485 p=9388 u=smiller |  172.31.12.165              : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,485 p=9388 u=smiller |  172.31.14.124              : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,486 p=9388 u=smiller |  172.31.14.227              : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,486 p=9388 u=smiller |  172.31.15.246              : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,486 p=9388 u=smiller |  172.31.15.38               : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,486 p=9388 u=smiller |  172.31.16.167              : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,487 p=9388 u=smiller |  172.31.19.67               : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,487 p=9388 u=smiller |  172.31.2.179               : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,487 p=9388 u=smiller |  172.31.27.24               : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,487 p=9388 u=smiller |  172.31.36.195              : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,488 p=9388 u=smiller |  172.31.41.153              : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,488 p=9388 u=smiller |  172.31.45.1                : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,488 p=9388 u=smiller |  172.31.6.163               : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,488 p=9388 u=smiller |  172.31.6.242               : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,488 p=9388 u=smiller |  172.31.6.84                : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,489 p=9388 u=smiller |  172.31.7.17                : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:28:43,489 p=9388 u=smiller |  172.31.7.62                : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:30:50,828 p=10834 u=smiller |   
+2014-10-08 13:30:50,828 p=10834 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml
+2014-10-08 13:30:50,828 p=10834 u=smiller |   
+2014-10-08 13:31:01,004 p=10834 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-08 13:31:01,007 p=10834 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-08 13:31:02,719 p=10834 u=smiller |  ok: [10.0.16.66]
+2014-10-08 13:31:02,789 p=10834 u=smiller |  ok: [10.0.32.7]
+2014-10-08 13:31:02,841 p=10834 u=smiller |  ok: [172.31.1.166]
+2014-10-08 13:31:02,842 p=10834 u=smiller |  ok: [172.31.16.167]
+2014-10-08 13:31:03,804 p=10834 u=smiller |  ok: [172.31.6.242]
+2014-10-08 13:31:04,308 p=10834 u=smiller |  ok: [10.0.32.94]
+2014-10-08 13:31:04,401 p=10834 u=smiller |  ok: [172.31.19.67]
+2014-10-08 13:31:04,503 p=10834 u=smiller |  ok: [10.0.16.47]
+2014-10-08 13:31:05,334 p=10834 u=smiller |  ok: [10.0.0.128]
+2014-10-08 13:31:05,428 p=10834 u=smiller |  ok: [172.31.6.84]
+2014-10-08 13:31:05,956 p=10834 u=smiller |  ok: [172.31.1.195]
+2014-10-08 13:31:05,968 p=10834 u=smiller |  ok: [172.31.14.124]
+2014-10-08 13:31:06,166 p=10834 u=smiller |  ok: [172.31.7.17]
+2014-10-08 13:31:07,021 p=10834 u=smiller |  ok: [10.0.32.19]
+2014-10-08 13:31:07,780 p=10834 u=smiller |  ok: [172.31.45.1]
+2014-10-08 13:31:08,017 p=10834 u=smiller |  ok: [10.0.16.61]
+2014-10-08 13:31:08,444 p=10834 u=smiller |  ok: [10.0.32.219]
+2014-10-08 13:31:08,629 p=10834 u=smiller |  ok: [172.31.6.163]
+2014-10-08 13:31:09,392 p=10834 u=smiller |  ok: [10.0.32.254]
+2014-10-08 13:31:09,631 p=10834 u=smiller |  ok: [10.0.32.241]
+2014-10-08 13:31:10,056 p=10834 u=smiller |  ok: [10.0.0.102]
+2014-10-08 13:31:10,251 p=10834 u=smiller |  ok: [10.0.32.135]
+2014-10-08 13:31:11,405 p=10834 u=smiller |  ok: [10.1.0.15]
+2014-10-08 13:31:11,701 p=10834 u=smiller |  ok: [172.31.2.179]
+2014-10-08 13:31:12,022 p=10834 u=smiller |  ok: [10.0.16.199]
+2014-10-08 13:31:12,748 p=10834 u=smiller |  ok: [10.0.32.6]
+2014-10-08 13:31:14,469 p=10834 u=smiller |  ok: [172.31.36.195]
+2014-10-08 13:31:15,321 p=10834 u=smiller |  ok: [10.0.0.237]
+2014-10-08 13:31:16,622 p=10834 u=smiller |  ok: [10.1.10.72]
+2014-10-08 13:31:16,786 p=10834 u=smiller |  ok: [172.31.15.246]
+2014-10-08 13:31:17,752 p=10834 u=smiller |  ok: [172.31.1.216]
+2014-10-08 13:31:17,764 p=10834 u=smiller |  ok: [172.31.14.227]
+2014-10-08 13:31:19,346 p=10834 u=smiller |  ok: [10.0.0.251]
+2014-10-08 13:31:19,544 p=10834 u=smiller |  ok: [172.31.12.165]
+2014-10-08 13:31:20,011 p=10834 u=smiller |  ok: [172.31.41.153]
+2014-10-08 13:31:20,072 p=10834 u=smiller |  ok: [172.31.27.24]
+2014-10-08 13:31:21,792 p=10834 u=smiller |  ok: [172.31.11.230]
+2014-10-08 13:31:22,218 p=10834 u=smiller |  ok: [172.31.15.38]
+2014-10-08 13:31:25,330 p=10834 u=smiller |  ok: [172.31.7.62]
+2014-10-08 13:31:26,281 p=10834 u=smiller |  ok: [172.31.11.100]
+2014-10-08 13:31:26,309 p=10834 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-08 13:31:26,406 p=10834 u=smiller |  skipping: [10.0.16.66]
+2014-10-08 13:31:26,414 p=10834 u=smiller |  skipping: [10.0.32.7]
+2014-10-08 13:31:26,415 p=10834 u=smiller |  skipping: [172.31.6.242]
+2014-10-08 13:31:26,428 p=10834 u=smiller |  skipping: [172.31.16.167]
+2014-10-08 13:31:26,436 p=10834 u=smiller |  skipping: [172.31.1.166]
+2014-10-08 13:31:26,452 p=10834 u=smiller |  skipping: [172.31.19.67]
+2014-10-08 13:31:26,452 p=10834 u=smiller |  skipping: [10.0.32.94]
+2014-10-08 13:31:26,464 p=10834 u=smiller |  skipping: [10.0.0.128]
+2014-10-08 13:31:26,472 p=10834 u=smiller |  skipping: [10.0.16.47]
+2014-10-08 13:31:26,476 p=10834 u=smiller |  skipping: [172.31.6.84]
+2014-10-08 13:31:26,496 p=10834 u=smiller |  skipping: [172.31.14.124]
+2014-10-08 13:31:26,496 p=10834 u=smiller |  skipping: [172.31.1.195]
+2014-10-08 13:31:26,504 p=10834 u=smiller |  skipping: [172.31.7.17]
+2014-10-08 13:31:26,512 p=10834 u=smiller |  skipping: [10.0.16.61]
+2014-10-08 13:31:26,516 p=10834 u=smiller |  skipping: [10.0.32.19]
+2014-10-08 13:31:26,536 p=10834 u=smiller |  skipping: [10.0.32.219]
+2014-10-08 13:31:26,536 p=10834 u=smiller |  skipping: [172.31.1.216]
+2014-10-08 13:31:26,544 p=10834 u=smiller |  skipping: [172.31.45.1]
+2014-10-08 13:31:26,553 p=10834 u=smiller |  skipping: [172.31.6.163]
+2014-10-08 13:31:26,556 p=10834 u=smiller |  skipping: [10.0.32.254]
+2014-10-08 13:31:26,575 p=10834 u=smiller |  skipping: [10.0.0.102]
+2014-10-08 13:31:26,576 p=10834 u=smiller |  skipping: [10.0.32.241]
+2014-10-08 13:31:26,589 p=10834 u=smiller |  skipping: [10.0.16.199]
+2014-10-08 13:31:26,589 p=10834 u=smiller |  skipping: [10.0.32.135]
+2014-10-08 13:31:26,607 p=10834 u=smiller |  skipping: [172.31.2.179]
+2014-10-08 13:31:26,607 p=10834 u=smiller |  skipping: [10.1.0.15]
+2014-10-08 13:31:26,620 p=10834 u=smiller |  skipping: [10.0.32.6]
+2014-10-08 13:31:26,631 p=10834 u=smiller |  skipping: [172.31.14.227]
+2014-10-08 13:31:26,644 p=10834 u=smiller |  skipping: [172.31.7.62]
+2014-10-08 13:31:26,644 p=10834 u=smiller |  skipping: [10.0.0.237]
+2014-10-08 13:31:26,647 p=10834 u=smiller |  skipping: [172.31.36.195]
+2014-10-08 13:31:26,660 p=10834 u=smiller |  skipping: [172.31.15.246]
+2014-10-08 13:31:26,683 p=10834 u=smiller |  skipping: [172.31.12.165]
+2014-10-08 13:31:26,683 p=10834 u=smiller |  skipping: [10.0.0.251]
+2014-10-08 13:31:26,695 p=10834 u=smiller |  skipping: [172.31.41.153]
+2014-10-08 13:31:26,700 p=10834 u=smiller |  skipping: [172.31.27.24]
+2014-10-08 13:31:26,717 p=10834 u=smiller |  skipping: [172.31.15.38]
+2014-10-08 13:31:26,718 p=10834 u=smiller |  skipping: [172.31.11.230]
+2014-10-08 13:31:26,722 p=10834 u=smiller |  skipping: [172.31.11.100]
+2014-10-08 13:31:30,188 p=10834 u=smiller |  ok: [10.1.10.72] => (item=perl-Switch,perl-Sys-Syslog,perl-LWP-Protocol-https,cronie)
+2014-10-08 13:31:30,200 p=10834 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-08 13:31:38,999 p=10834 u=smiller |  ok: [10.0.16.66] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:31:40,709 p=10834 u=smiller |  ok: [172.31.6.242] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:31:43,803 p=10834 u=smiller |  ok: [10.0.32.7] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:31:44,818 p=10834 u=smiller |  ok: [172.31.16.167] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:31:45,408 p=10834 u=smiller |  ok: [172.31.1.166] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:31:46,885 p=10834 u=smiller |  ok: [10.0.32.94] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:31:52,006 p=10834 u=smiller |  ok: [172.31.19.67] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:31:55,047 p=10834 u=smiller |  ok: [10.0.0.128] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:31:59,634 p=10834 u=smiller |  ok: [172.31.6.84] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:31:59,905 p=10834 u=smiller |  ok: [10.0.16.47] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:32:00,365 p=10834 u=smiller |  ok: [172.31.1.195] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:32:07,127 p=10834 u=smiller |  ok: [172.31.14.124] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:32:08,513 p=10834 u=smiller |  ok: [172.31.7.17] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:32:08,986 p=10834 u=smiller |  ok: [10.0.16.61] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:32:09,347 p=10834 u=smiller |  ok: [10.0.32.19] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:32:17,057 p=10834 u=smiller |  ok: [10.0.32.219] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:32:20,952 p=10834 u=smiller |  ok: [172.31.6.163] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:32:22,952 p=10834 u=smiller |  ok: [10.0.32.254] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:32:23,174 p=10834 u=smiller |  ok: [172.31.45.1] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:32:31,099 p=10834 u=smiller |  ok: [10.0.32.241] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:32:31,591 p=10834 u=smiller |  ok: [10.0.0.102] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:32:37,316 p=10834 u=smiller |  ok: [10.1.0.15] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:32:38,192 p=10834 u=smiller |  ok: [10.0.32.135] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:32:44,128 p=10834 u=smiller |  ok: [10.0.16.199] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:32:46,331 p=10834 u=smiller |  ok: [10.0.32.6] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:32:46,729 p=10834 u=smiller |  ok: [172.31.1.216] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:32:47,382 p=10834 u=smiller |  ok: [172.31.2.179] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:32:55,123 p=10834 u=smiller |  ok: [10.0.0.237] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:32:55,134 p=10834 u=smiller |  skipping: [10.1.10.72]
+2014-10-08 13:32:56,261 p=10834 u=smiller |  ok: [172.31.15.246] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:32:56,903 p=10834 u=smiller |  ok: [172.31.36.195] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:33:02,018 p=10834 u=smiller |  ok: [172.31.14.227] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:33:06,103 p=10834 u=smiller |  ok: [172.31.27.24] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:33:08,147 p=10834 u=smiller |  ok: [172.31.41.153] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:33:09,644 p=10834 u=smiller |  ok: [10.0.0.251] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:33:12,541 p=10834 u=smiller |  ok: [172.31.12.165] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:33:19,088 p=10834 u=smiller |  ok: [172.31.15.38] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:33:22,691 p=10834 u=smiller |  ok: [172.31.11.230] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:33:33,058 p=10834 u=smiller |  ok: [172.31.11.100] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:33:36,362 p=10834 u=smiller |  ok: [172.31.7.62] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:33:36,377 p=10834 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-08 13:33:37,821 p=10834 u=smiller |  ok: [10.0.32.7]
+2014-10-08 13:33:37,855 p=10834 u=smiller |  ok: [172.31.1.166]
+2014-10-08 13:33:37,919 p=10834 u=smiller |  ok: [172.31.16.167]
+2014-10-08 13:33:37,955 p=10834 u=smiller |  ok: [172.31.6.242]
+2014-10-08 13:33:38,108 p=10834 u=smiller |  ok: [10.0.16.66]
+2014-10-08 13:33:39,126 p=10834 u=smiller |  ok: [10.0.32.94]
+2014-10-08 13:33:39,180 p=10834 u=smiller |  ok: [172.31.19.67]
+2014-10-08 13:33:39,298 p=10834 u=smiller |  ok: [10.0.16.47]
+2014-10-08 13:33:39,393 p=10834 u=smiller |  ok: [172.31.6.84]
+2014-10-08 13:33:39,406 p=10834 u=smiller |  ok: [10.0.0.128]
+2014-10-08 13:33:40,405 p=10834 u=smiller |  ok: [172.31.1.195]
+2014-10-08 13:33:40,443 p=10834 u=smiller |  ok: [172.31.14.124]
+2014-10-08 13:33:40,569 p=10834 u=smiller |  ok: [172.31.7.17]
+2014-10-08 13:33:40,684 p=10834 u=smiller |  ok: [10.0.32.19]
+2014-10-08 13:33:40,731 p=10834 u=smiller |  ok: [172.31.1.216]
+2014-10-08 13:33:40,905 p=10834 u=smiller |  ok: [10.0.16.61]
+2014-10-08 13:33:41,875 p=10834 u=smiller |  ok: [172.31.45.1]
+2014-10-08 13:33:41,879 p=10834 u=smiller |  ok: [10.0.32.219]
+2014-10-08 13:33:41,986 p=10834 u=smiller |  ok: [172.31.6.163]
+2014-10-08 13:33:42,031 p=10834 u=smiller |  ok: [10.0.32.254]
+2014-10-08 13:33:42,071 p=10834 u=smiller |  ok: [10.0.16.199]
+2014-10-08 13:33:42,134 p=10834 u=smiller |  ok: [172.31.2.179]
+2014-10-08 13:33:42,195 p=10834 u=smiller |  ok: [10.0.32.241]
+2014-10-08 13:33:42,216 p=10834 u=smiller |  ok: [10.0.32.6]
+2014-10-08 13:33:42,319 p=10834 u=smiller |  ok: [10.0.0.237]
+2014-10-08 13:33:42,377 p=10834 u=smiller |  ok: [172.31.14.227]
+2014-10-08 13:33:42,396 p=10834 u=smiller |  ok: [172.31.36.195]
+2014-10-08 13:33:42,471 p=10834 u=smiller |  ok: [172.31.15.246]
+2014-10-08 13:33:42,696 p=10834 u=smiller |  ok: [172.31.7.62]
+2014-10-08 13:33:42,761 p=10834 u=smiller |  ok: [10.0.0.251]
+2014-10-08 13:33:42,827 p=10834 u=smiller |  ok: [172.31.12.165]
+2014-10-08 13:33:42,887 p=10834 u=smiller |  ok: [172.31.41.153]
+2014-10-08 13:33:42,948 p=10834 u=smiller |  ok: [172.31.27.24]
+2014-10-08 13:33:43,013 p=10834 u=smiller |  ok: [172.31.11.230]
+2014-10-08 13:33:43,078 p=10834 u=smiller |  ok: [172.31.15.38]
+2014-10-08 13:33:43,199 p=10834 u=smiller |  ok: [10.0.0.102]
+2014-10-08 13:33:43,227 p=10834 u=smiller |  ok: [172.31.11.100]
+2014-10-08 13:33:43,254 p=10834 u=smiller |  ok: [10.0.32.135]
+2014-10-08 13:33:43,565 p=10834 u=smiller |  ok: [10.1.0.15]
+2014-10-08 13:33:43,717 p=10834 u=smiller |  ok: [10.1.10.72]
+2014-10-08 13:33:43,729 p=10834 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-08 13:33:43,918 p=10834 u=smiller |  ok: [10.0.16.66] => (item=awscreds.conf)
+2014-10-08 13:33:43,957 p=10834 u=smiller |  ok: [10.0.32.7] => (item=awscreds.conf)
+2014-10-08 13:33:43,959 p=10834 u=smiller |  ok: [172.31.1.166] => (item=awscreds.conf)
+2014-10-08 13:33:43,960 p=10834 u=smiller |  ok: [172.31.16.167] => (item=awscreds.conf)
+2014-10-08 13:33:43,972 p=10834 u=smiller |  ok: [172.31.6.242] => (item=awscreds.conf)
+2014-10-08 13:33:44,000 p=10834 u=smiller |  ok: [10.0.16.66] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:44,105 p=10834 u=smiller |  ok: [10.0.32.7] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:44,108 p=10834 u=smiller |  ok: [172.31.16.167] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:44,113 p=10834 u=smiller |  ok: [172.31.1.166] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:44,121 p=10834 u=smiller |  ok: [10.0.16.66] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:44,125 p=10834 u=smiller |  ok: [172.31.6.242] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:44,257 p=10834 u=smiller |  ok: [172.31.16.167] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:44,261 p=10834 u=smiller |  ok: [10.0.32.94] => (item=awscreds.conf)
+2014-10-08 13:33:44,265 p=10834 u=smiller |  ok: [172.31.1.166] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:44,269 p=10834 u=smiller |  ok: [10.0.32.7] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:44,279 p=10834 u=smiller |  ok: [172.31.6.242] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:44,418 p=10834 u=smiller |  ok: [10.0.32.94] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:44,421 p=10834 u=smiller |  ok: [172.31.6.84] => (item=awscreds.conf)
+2014-10-08 13:33:44,426 p=10834 u=smiller |  ok: [172.31.19.67] => (item=awscreds.conf)
+2014-10-08 13:33:44,432 p=10834 u=smiller |  ok: [10.0.16.47] => (item=awscreds.conf)
+2014-10-08 13:33:44,436 p=10834 u=smiller |  ok: [10.0.0.128] => (item=awscreds.conf)
+2014-10-08 13:33:44,572 p=10834 u=smiller |  ok: [10.0.32.94] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:44,576 p=10834 u=smiller |  ok: [172.31.6.84] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:44,581 p=10834 u=smiller |  ok: [172.31.19.67] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:44,585 p=10834 u=smiller |  ok: [10.0.16.47] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:44,589 p=10834 u=smiller |  ok: [10.0.0.128] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:44,735 p=10834 u=smiller |  ok: [172.31.6.84] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:44,740 p=10834 u=smiller |  ok: [172.31.19.67] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:44,745 p=10834 u=smiller |  ok: [172.31.1.195] => (item=awscreds.conf)
+2014-10-08 13:33:44,748 p=10834 u=smiller |  ok: [10.0.0.128] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:44,752 p=10834 u=smiller |  ok: [10.0.16.47] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:44,889 p=10834 u=smiller |  ok: [172.31.14.124] => (item=awscreds.conf)
+2014-10-08 13:33:44,890 p=10834 u=smiller |  ok: [172.31.7.17] => (item=awscreds.conf)
+2014-10-08 13:33:44,893 p=10834 u=smiller |  ok: [172.31.1.195] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:44,912 p=10834 u=smiller |  ok: [10.0.16.61] => (item=awscreds.conf)
+2014-10-08 13:33:44,988 p=10834 u=smiller |  ok: [10.0.32.19] => (item=awscreds.conf)
+2014-10-08 13:33:45,026 p=10834 u=smiller |  ok: [172.31.7.17] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:45,028 p=10834 u=smiller |  ok: [172.31.14.124] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:45,034 p=10834 u=smiller |  ok: [172.31.1.195] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:45,068 p=10834 u=smiller |  ok: [10.0.16.61] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:45,103 p=10834 u=smiller |  ok: [10.0.32.19] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:45,146 p=10834 u=smiller |  ok: [172.31.7.17] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:45,147 p=10834 u=smiller |  ok: [172.31.14.124] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:45,188 p=10834 u=smiller |  ok: [10.0.32.19] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:45,194 p=10834 u=smiller |  ok: [10.0.16.61] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:45,280 p=10834 u=smiller |  ok: [172.31.45.1] => (item=awscreds.conf)
+2014-10-08 13:33:45,295 p=10834 u=smiller |  ok: [10.0.32.219] => (item=awscreds.conf)
+2014-10-08 13:33:45,316 p=10834 u=smiller |  ok: [172.31.6.163] => (item=awscreds.conf)
+2014-10-08 13:33:45,320 p=10834 u=smiller |  ok: [10.0.32.254] => (item=awscreds.conf)
+2014-10-08 13:33:45,366 p=10834 u=smiller |  ok: [172.31.45.1] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:45,414 p=10834 u=smiller |  ok: [10.0.32.219] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:45,435 p=10834 u=smiller |  ok: [10.0.32.254] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:45,436 p=10834 u=smiller |  ok: [172.31.6.163] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:45,459 p=10834 u=smiller |  ok: [172.31.45.1] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:45,541 p=10834 u=smiller |  ok: [10.0.32.219] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:45,554 p=10834 u=smiller |  ok: [172.31.6.163] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:45,555 p=10834 u=smiller |  ok: [10.0.32.254] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:45,562 p=10834 u=smiller |  ok: [10.0.32.241] => (item=awscreds.conf)
+2014-10-08 13:33:45,594 p=10834 u=smiller |  ok: [172.31.1.216] => (item=awscreds.conf)
+2014-10-08 13:33:45,660 p=10834 u=smiller |  ok: [10.0.0.102] => (item=awscreds.conf)
+2014-10-08 13:33:45,683 p=10834 u=smiller |  ok: [10.0.32.241] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:45,686 p=10834 u=smiller |  ok: [10.0.32.135] => (item=awscreds.conf)
+2014-10-08 13:33:45,715 p=10834 u=smiller |  ok: [10.0.16.199] => (item=awscreds.conf)
+2014-10-08 13:33:45,777 p=10834 u=smiller |  ok: [10.0.0.102] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:45,812 p=10834 u=smiller |  ok: [10.0.32.241] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:45,815 p=10834 u=smiller |  ok: [10.0.32.135] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:45,855 p=10834 u=smiller |  ok: [10.0.16.199] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:45,882 p=10834 u=smiller |  ok: [10.0.0.102] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:45,953 p=10834 u=smiller |  ok: [10.0.32.135] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:45,996 p=10834 u=smiller |  ok: [10.1.0.15] => (item=awscreds.conf)
+2014-10-08 13:33:46,027 p=10834 u=smiller |  ok: [172.31.2.179] => (item=awscreds.conf)
+2014-10-08 13:33:46,032 p=10834 u=smiller |  ok: [172.31.1.216] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:46,045 p=10834 u=smiller |  ok: [10.0.16.199] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:46,122 p=10834 u=smiller |  ok: [10.0.32.6] => (item=awscreds.conf)
+2014-10-08 13:33:46,168 p=10834 u=smiller |  ok: [172.31.2.179] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:46,177 p=10834 u=smiller |  ok: [10.1.0.15] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:46,275 p=10834 u=smiller |  ok: [10.0.32.6] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:46,297 p=10834 u=smiller |  ok: [172.31.2.179] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:46,300 p=10834 u=smiller |  ok: [172.31.14.227] => (item=awscreds.conf)
+2014-10-08 13:33:46,346 p=10834 u=smiller |  ok: [10.1.0.15] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:46,432 p=10834 u=smiller |  ok: [10.0.32.6] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:46,457 p=10834 u=smiller |  ok: [172.31.36.195] => (item=awscreds.conf)
+2014-10-08 13:33:46,477 p=10834 u=smiller |  ok: [10.0.0.237] => (item=awscreds.conf)
+2014-10-08 13:33:46,546 p=10834 u=smiller |  ok: [172.31.14.227] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:46,548 p=10834 u=smiller |  ok: [172.31.1.216] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:46,551 p=10834 u=smiller |  ok: [172.31.36.195] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:46,609 p=10834 u=smiller |  ok: [10.0.0.237] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:46,664 p=10834 u=smiller |  ok: [172.31.15.246] => (item=awscreds.conf)
+2014-10-08 13:33:46,676 p=10834 u=smiller |  ok: [172.31.36.195] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:46,760 p=10834 u=smiller |  ok: [10.0.0.237] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:46,770 p=10834 u=smiller |  ok: [172.31.15.246] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:46,774 p=10834 u=smiller |  ok: [172.31.14.227] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:46,789 p=10834 u=smiller |  ok: [10.1.10.72] => (item=awscreds.conf)
+2014-10-08 13:33:46,871 p=10834 u=smiller |  ok: [10.0.0.251] => (item=awscreds.conf)
+2014-10-08 13:33:46,890 p=10834 u=smiller |  ok: [172.31.15.246] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:46,893 p=10834 u=smiller |  ok: [172.31.7.62] => (item=awscreds.conf)
+2014-10-08 13:33:46,897 p=10834 u=smiller |  ok: [172.31.12.165] => (item=awscreds.conf)
+2014-10-08 13:33:46,914 p=10834 u=smiller |  ok: [10.1.10.72] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:46,993 p=10834 u=smiller |  ok: [10.0.0.251] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:47,026 p=10834 u=smiller |  ok: [172.31.12.165] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:47,033 p=10834 u=smiller |  ok: [172.31.41.153] => (item=awscreds.conf)
+2014-10-08 13:33:47,041 p=10834 u=smiller |  ok: [10.1.10.72] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:47,114 p=10834 u=smiller |  ok: [10.0.0.251] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:47,159 p=10834 u=smiller |  ok: [172.31.12.165] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:47,166 p=10834 u=smiller |  ok: [172.31.27.24] => (item=awscreds.conf)
+2014-10-08 13:33:47,168 p=10834 u=smiller |  ok: [172.31.41.153] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:47,210 p=10834 u=smiller |  ok: [172.31.11.230] => (item=awscreds.conf)
+2014-10-08 13:33:47,290 p=10834 u=smiller |  ok: [172.31.27.24] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:47,293 p=10834 u=smiller |  ok: [172.31.41.153] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:47,296 p=10834 u=smiller |  ok: [172.31.15.38] => (item=awscreds.conf)
+2014-10-08 13:33:47,322 p=10834 u=smiller |  ok: [172.31.11.230] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:47,348 p=10834 u=smiller |  ok: [172.31.7.62] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:47,433 p=10834 u=smiller |  ok: [172.31.27.24] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:47,439 p=10834 u=smiller |  ok: [172.31.15.38] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:47,440 p=10834 u=smiller |  ok: [172.31.11.230] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:47,530 p=10834 u=smiller |  ok: [172.31.11.100] => (item=awscreds.conf)
+2014-10-08 13:33:47,537 p=10834 u=smiller |  ok: [172.31.15.38] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:47,716 p=10834 u=smiller |  ok: [172.31.11.100] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:47,720 p=10834 u=smiller |  ok: [172.31.7.62] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:47,903 p=10834 u=smiller |  ok: [172.31.11.100] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:47,917 p=10834 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-08 13:33:47,964 p=10834 u=smiller |  skipping: [10.0.16.66] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:47,980 p=10834 u=smiller |  skipping: [10.0.16.66] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:47,991 p=10834 u=smiller |  skipping: [172.31.6.242] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:47,997 p=10834 u=smiller |  skipping: [10.0.32.94] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:47,997 p=10834 u=smiller |  skipping: [10.0.32.7] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:47,999 p=10834 u=smiller |  skipping: [10.0.32.7] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,000 p=10834 u=smiller |  skipping: [172.31.1.166] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,002 p=10834 u=smiller |  skipping: [172.31.1.166] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,002 p=10834 u=smiller |  skipping: [172.31.6.242] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,003 p=10834 u=smiller |  skipping: [172.31.16.167] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,014 p=10834 u=smiller |  skipping: [172.31.16.167] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,014 p=10834 u=smiller |  skipping: [172.31.19.67] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,018 p=10834 u=smiller |  skipping: [172.31.6.84] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,019 p=10834 u=smiller |  skipping: [10.0.32.94] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,019 p=10834 u=smiller |  skipping: [10.0.0.128] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,025 p=10834 u=smiller |  skipping: [10.0.0.128] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,025 p=10834 u=smiller |  skipping: [10.0.16.47] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,027 p=10834 u=smiller |  skipping: [10.0.16.47] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,028 p=10834 u=smiller |  skipping: [172.31.19.67] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,035 p=10834 u=smiller |  skipping: [172.31.14.124] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,036 p=10834 u=smiller |  skipping: [172.31.1.195] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,039 p=10834 u=smiller |  skipping: [172.31.1.195] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,040 p=10834 u=smiller |  skipping: [172.31.6.84] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,041 p=10834 u=smiller |  skipping: [172.31.7.17] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,047 p=10834 u=smiller |  skipping: [172.31.7.17] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,047 p=10834 u=smiller |  skipping: [10.0.16.61] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,052 p=10834 u=smiller |  skipping: [10.0.16.61] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,052 p=10834 u=smiller |  skipping: [172.31.14.124] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,057 p=10834 u=smiller |  skipping: [172.31.45.1] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,058 p=10834 u=smiller |  skipping: [10.0.32.19] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,060 p=10834 u=smiller |  skipping: [10.0.32.19] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,060 p=10834 u=smiller |  skipping: [172.31.1.216] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,066 p=10834 u=smiller |  skipping: [172.31.1.216] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,066 p=10834 u=smiller |  skipping: [10.0.32.219] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,068 p=10834 u=smiller |  skipping: [172.31.6.163] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,073 p=10834 u=smiller |  skipping: [10.0.32.254] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,076 p=10834 u=smiller |  skipping: [10.0.32.254] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,076 p=10834 u=smiller |  skipping: [172.31.45.1] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,079 p=10834 u=smiller |  skipping: [10.0.0.102] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,079 p=10834 u=smiller |  skipping: [10.0.32.219] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,080 p=10834 u=smiller |  skipping: [172.31.6.163] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,089 p=10834 u=smiller |  skipping: [10.0.16.199] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,089 p=10834 u=smiller |  skipping: [10.0.32.241] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,091 p=10834 u=smiller |  skipping: [10.0.32.241] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,096 p=10834 u=smiller |  skipping: [10.0.16.199] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,096 p=10834 u=smiller |  skipping: [10.1.0.15] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,098 p=10834 u=smiller |  skipping: [10.1.0.15] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,098 p=10834 u=smiller |  skipping: [10.0.0.102] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,099 p=10834 u=smiller |  skipping: [10.0.32.135] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,108 p=10834 u=smiller |  skipping: [10.0.32.135] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,109 p=10834 u=smiller |  skipping: [172.31.2.179] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,113 p=10834 u=smiller |  skipping: [172.31.2.179] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,114 p=10834 u=smiller |  skipping: [10.0.32.6] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,118 p=10834 u=smiller |  skipping: [10.0.32.6] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,118 p=10834 u=smiller |  skipping: [172.31.14.227] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,120 p=10834 u=smiller |  skipping: [10.0.0.237] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,124 p=10834 u=smiller |  skipping: [10.0.0.237] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,125 p=10834 u=smiller |  skipping: [172.31.36.195] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,130 p=10834 u=smiller |  skipping: [172.31.36.195] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,130 p=10834 u=smiller |  skipping: [172.31.14.227] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,132 p=10834 u=smiller |  skipping: [172.31.7.62] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,136 p=10834 u=smiller |  skipping: [172.31.7.62] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,137 p=10834 u=smiller |  skipping: [172.31.15.246] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,140 p=10834 u=smiller |  skipping: [172.31.15.246] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,140 p=10834 u=smiller |  skipping: [10.1.10.72] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,141 p=10834 u=smiller |  skipping: [10.0.0.251] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,147 p=10834 u=smiller |  skipping: [10.0.0.251] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,148 p=10834 u=smiller |  skipping: [172.31.12.165] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,152 p=10834 u=smiller |  skipping: [172.31.12.165] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,152 p=10834 u=smiller |  skipping: [10.1.10.72] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,157 p=10834 u=smiller |  skipping: [172.31.15.38] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,157 p=10834 u=smiller |  skipping: [172.31.41.153] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,159 p=10834 u=smiller |  skipping: [172.31.41.153] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,160 p=10834 u=smiller |  skipping: [172.31.27.24] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,164 p=10834 u=smiller |  skipping: [172.31.27.24] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,164 p=10834 u=smiller |  skipping: [172.31.11.230] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,167 p=10834 u=smiller |  skipping: [172.31.11.230] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,167 p=10834 u=smiller |  skipping: [172.31.11.100] => (item=CloudWatchClient.pm)
+2014-10-08 13:33:48,168 p=10834 u=smiller |  skipping: [172.31.15.38] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,170 p=10834 u=smiller |  skipping: [172.31.11.100] => (item=mon-put-instance-data.pl)
+2014-10-08 13:33:48,186 p=10834 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-08 13:33:48,364 p=10834 u=smiller |  ok: [10.0.16.66]
+2014-10-08 13:33:48,386 p=10834 u=smiller |  ok: [10.0.32.7]
+2014-10-08 13:33:48,386 p=10834 u=smiller |  ok: [172.31.16.167]
+2014-10-08 13:33:48,388 p=10834 u=smiller |  ok: [172.31.1.166]
+2014-10-08 13:33:48,436 p=10834 u=smiller |  ok: [172.31.6.242]
+2014-10-08 13:33:48,438 p=10834 u=smiller |  ok: [10.0.32.94]
+2014-10-08 13:33:48,486 p=10834 u=smiller |  ok: [10.0.16.47]
+2014-10-08 13:33:48,487 p=10834 u=smiller |  ok: [172.31.19.67]
+2014-10-08 13:33:48,525 p=10834 u=smiller |  ok: [172.31.6.84]
+2014-10-08 13:33:48,525 p=10834 u=smiller |  ok: [172.31.1.195]
+2014-10-08 13:33:48,531 p=10834 u=smiller |  ok: [10.0.0.128]
+2014-10-08 13:33:48,571 p=10834 u=smiller |  ok: [172.31.7.17]
+2014-10-08 13:33:48,572 p=10834 u=smiller |  ok: [172.31.14.124]
+2014-10-08 13:33:48,622 p=10834 u=smiller |  ok: [10.0.32.19]
+2014-10-08 13:33:48,661 p=10834 u=smiller |  ok: [172.31.45.1]
+2014-10-08 13:33:48,682 p=10834 u=smiller |  ok: [10.0.16.61]
+2014-10-08 13:33:48,695 p=10834 u=smiller |  ok: [172.31.6.163]
+2014-10-08 13:33:48,709 p=10834 u=smiller |  ok: [10.0.32.219]
+2014-10-08 13:33:48,736 p=10834 u=smiller |  ok: [10.0.32.254]
+2014-10-08 13:33:48,757 p=10834 u=smiller |  ok: [10.0.32.241]
+2014-10-08 13:33:48,782 p=10834 u=smiller |  ok: [10.0.0.102]
+2014-10-08 13:33:48,792 p=10834 u=smiller |  ok: [10.0.32.135]
+2014-10-08 13:33:48,862 p=10834 u=smiller |  ok: [10.1.0.15]
+2014-10-08 13:33:48,865 p=10834 u=smiller |  ok: [10.0.16.199]
+2014-10-08 13:33:48,897 p=10834 u=smiller |  ok: [172.31.2.179]
+2014-10-08 13:33:48,938 p=10834 u=smiller |  ok: [10.0.32.6]
+2014-10-08 13:33:48,970 p=10834 u=smiller |  ok: [172.31.36.195]
+2014-10-08 13:33:48,992 p=10834 u=smiller |  ok: [172.31.1.216]
+2014-10-08 13:33:49,009 p=10834 u=smiller |  ok: [10.0.0.237]
+2014-10-08 13:33:49,038 p=10834 u=smiller |  ok: [172.31.15.246]
+2014-10-08 13:33:49,069 p=10834 u=smiller |  ok: [10.1.10.72]
+2014-10-08 13:33:49,086 p=10834 u=smiller |  ok: [10.0.0.251]
+2014-10-08 13:33:49,112 p=10834 u=smiller |  ok: [172.31.12.165]
+2014-10-08 13:33:49,133 p=10834 u=smiller |  ok: [172.31.14.227]
+2014-10-08 13:33:49,139 p=10834 u=smiller |  ok: [172.31.41.153]
+2014-10-08 13:33:49,157 p=10834 u=smiller |  ok: [172.31.27.24]
+2014-10-08 13:33:49,188 p=10834 u=smiller |  ok: [172.31.11.230]
+2014-10-08 13:33:49,222 p=10834 u=smiller |  ok: [172.31.15.38]
+2014-10-08 13:33:49,390 p=10834 u=smiller |  ok: [172.31.11.100]
+2014-10-08 13:33:49,483 p=10834 u=smiller |  ok: [172.31.7.62]
+2014-10-08 13:33:49,495 p=10834 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-08 13:33:49,564 p=10834 u=smiller |  skipping: [172.31.6.242]
+2014-10-08 13:33:49,565 p=10834 u=smiller |  skipping: [10.0.16.66]
+2014-10-08 13:33:49,573 p=10834 u=smiller |  skipping: [10.0.32.94]
+2014-10-08 13:33:49,576 p=10834 u=smiller |  skipping: [10.0.32.7]
+2014-10-08 13:33:49,581 p=10834 u=smiller |  skipping: [10.0.16.47]
+2014-10-08 13:33:49,581 p=10834 u=smiller |  skipping: [172.31.16.167]
+2014-10-08 13:33:49,582 p=10834 u=smiller |  skipping: [172.31.19.67]
+2014-10-08 13:33:49,589 p=10834 u=smiller |  skipping: [172.31.1.195]
+2014-10-08 13:33:49,589 p=10834 u=smiller |  skipping: [10.0.0.128]
+2014-10-08 13:33:49,592 p=10834 u=smiller |  skipping: [172.31.1.166]
+2014-10-08 13:33:49,598 p=10834 u=smiller |  skipping: [10.0.16.61]
+2014-10-08 13:33:49,598 p=10834 u=smiller |  skipping: [172.31.6.84]
+2014-10-08 13:33:49,600 p=10834 u=smiller |  skipping: [172.31.7.17]
+2014-10-08 13:33:49,605 p=10834 u=smiller |  skipping: [10.0.32.219]
+2014-10-08 13:33:49,606 p=10834 u=smiller |  skipping: [172.31.14.124]
+2014-10-08 13:33:49,608 p=10834 u=smiller |  skipping: [10.0.32.19]
+2014-10-08 13:33:49,608 p=10834 u=smiller |  skipping: [172.31.1.216]
+2014-10-08 13:33:49,616 p=10834 u=smiller |  skipping: [10.0.32.254]
+2014-10-08 13:33:49,616 p=10834 u=smiller |  skipping: [172.31.6.163]
+2014-10-08 13:33:49,621 p=10834 u=smiller |  skipping: [10.0.32.135]
+2014-10-08 13:33:49,621 p=10834 u=smiller |  skipping: [172.31.45.1]
+2014-10-08 13:33:49,624 p=10834 u=smiller |  skipping: [10.0.32.241]
+2014-10-08 13:33:49,629 p=10834 u=smiller |  skipping: [172.31.2.179]
+2014-10-08 13:33:49,629 p=10834 u=smiller |  skipping: [10.0.0.102]
+2014-10-08 13:33:49,632 p=10834 u=smiller |  skipping: [10.1.0.15]
+2014-10-08 13:33:49,637 p=10834 u=smiller |  skipping: [10.0.0.237]
+2014-10-08 13:33:49,637 p=10834 u=smiller |  skipping: [10.0.16.199]
+2014-10-08 13:33:49,640 p=10834 u=smiller |  skipping: [172.31.14.227]
+2014-10-08 13:33:49,645 p=10834 u=smiller |  skipping: [172.31.15.246]
+2014-10-08 13:33:49,645 p=10834 u=smiller |  skipping: [10.0.32.6]
+2014-10-08 13:33:49,650 p=10834 u=smiller |  skipping: [10.0.0.251]
+2014-10-08 13:33:49,651 p=10834 u=smiller |  skipping: [172.31.36.195]
+2014-10-08 13:33:49,651 p=10834 u=smiller |  skipping: [172.31.7.62]
+2014-10-08 13:33:49,658 p=10834 u=smiller |  skipping: [172.31.41.153]
+2014-10-08 13:33:49,658 p=10834 u=smiller |  skipping: [10.1.10.72]
+2014-10-08 13:33:49,663 p=10834 u=smiller |  skipping: [172.31.15.38]
+2014-10-08 13:33:49,664 p=10834 u=smiller |  skipping: [172.31.27.24]
+2014-10-08 13:33:49,664 p=10834 u=smiller |  skipping: [172.31.12.165]
+2014-10-08 13:33:49,665 p=10834 u=smiller |  skipping: [172.31.11.230]
+2014-10-08 13:33:49,666 p=10834 u=smiller |  skipping: [172.31.11.100]
+2014-10-08 13:33:49,682 p=10834 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-08 13:33:49,881 p=10834 u=smiller |  ok: [10.0.16.66]
+2014-10-08 13:33:49,898 p=10834 u=smiller |  ok: [172.31.16.167]
+2014-10-08 13:33:49,908 p=10834 u=smiller |  ok: [10.0.32.7]
+2014-10-08 13:33:49,916 p=10834 u=smiller |  ok: [172.31.6.242]
+2014-10-08 13:33:49,935 p=10834 u=smiller |  ok: [172.31.1.166]
+2014-10-08 13:33:50,001 p=10834 u=smiller |  ok: [10.0.32.94]
+2014-10-08 13:33:50,059 p=10834 u=smiller |  ok: [172.31.19.67]
+2014-10-08 13:33:50,070 p=10834 u=smiller |  ok: [10.0.0.128]
+2014-10-08 13:33:50,071 p=10834 u=smiller |  ok: [10.0.16.47]
+2014-10-08 13:33:50,074 p=10834 u=smiller |  ok: [172.31.6.84]
+2014-10-08 13:33:50,135 p=10834 u=smiller |  ok: [172.31.1.195]
+2014-10-08 13:33:50,219 p=10834 u=smiller |  ok: [172.31.7.17]
+2014-10-08 13:33:50,219 p=10834 u=smiller |  ok: [10.0.32.19]
+2014-10-08 13:33:50,227 p=10834 u=smiller |  ok: [172.31.14.124]
+2014-10-08 13:33:50,239 p=10834 u=smiller |  ok: [10.0.16.61]
+2014-10-08 13:33:50,372 p=10834 u=smiller |  ok: [10.0.32.254]
+2014-10-08 13:33:50,373 p=10834 u=smiller |  ok: [172.31.6.163]
+2014-10-08 13:33:50,376 p=10834 u=smiller |  ok: [172.31.45.1]
+2014-10-08 13:33:50,387 p=10834 u=smiller |  ok: [10.0.32.219]
+2014-10-08 13:33:50,522 p=10834 u=smiller |  ok: [10.0.32.241]
+2014-10-08 13:33:50,525 p=10834 u=smiller |  ok: [10.0.32.135]
+2014-10-08 13:33:50,533 p=10834 u=smiller |  ok: [10.0.0.102]
+2014-10-08 13:33:50,551 p=10834 u=smiller |  ok: [10.0.16.199]
+2014-10-08 13:33:50,599 p=10834 u=smiller |  ok: [172.31.1.216]
+2014-10-08 13:33:50,673 p=10834 u=smiller |  ok: [172.31.2.179]
+2014-10-08 13:33:50,701 p=10834 u=smiller |  ok: [10.0.32.6]
+2014-10-08 13:33:50,723 p=10834 u=smiller |  ok: [10.1.0.15]
+2014-10-08 13:33:50,750 p=10834 u=smiller |  ok: [10.0.0.237]
+2014-10-08 13:33:50,802 p=10834 u=smiller |  ok: [172.31.36.195]
+2014-10-08 13:33:50,831 p=10834 u=smiller |  ok: [172.31.15.246]
+2014-10-08 13:33:50,837 p=10834 u=smiller |  ok: [172.31.14.227]
+2014-10-08 13:33:50,932 p=10834 u=smiller |  ok: [10.0.0.251]
+2014-10-08 13:33:50,932 p=10834 u=smiller |  ok: [10.1.10.72]
+2014-10-08 13:33:50,962 p=10834 u=smiller |  ok: [172.31.12.165]
+2014-10-08 13:33:50,991 p=10834 u=smiller |  ok: [172.31.41.153]
+2014-10-08 13:33:51,052 p=10834 u=smiller |  ok: [172.31.27.24]
+2014-10-08 13:33:51,078 p=10834 u=smiller |  ok: [172.31.11.230]
+2014-10-08 13:33:51,101 p=10834 u=smiller |  ok: [172.31.15.38]
+2014-10-08 13:33:51,226 p=10834 u=smiller |  ok: [172.31.11.100]
+2014-10-08 13:33:51,284 p=10834 u=smiller |  ok: [172.31.7.62]
+2014-10-08 13:33:51,303 p=10834 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-08 13:33:52,126 p=10834 u=smiller |  changed: [172.31.6.242 -> localhost]
+2014-10-08 13:33:52,170 p=10834 u=smiller |  changed: [10.0.16.66 -> localhost]
+2014-10-08 13:33:52,212 p=10834 u=smiller |  changed: [172.31.16.167 -> localhost]
+2014-10-08 13:33:52,254 p=10834 u=smiller |  changed: [172.31.1.166 -> localhost]
+2014-10-08 13:33:52,281 p=10834 u=smiller |  changed: [10.0.32.7 -> localhost]
+2014-10-08 13:33:52,760 p=10834 u=smiller |  changed: [10.0.32.94 -> localhost]
+2014-10-08 13:33:52,924 p=10834 u=smiller |  changed: [172.31.19.67 -> localhost]
+2014-10-08 13:33:52,970 p=10834 u=smiller |  changed: [10.0.0.128 -> localhost]
+2014-10-08 13:33:53,102 p=10834 u=smiller |  changed: [172.31.1.195 -> localhost]
+2014-10-08 13:33:53,202 p=10834 u=smiller |  changed: [172.31.6.84 -> localhost]
+2014-10-08 13:33:53,220 p=10834 u=smiller |  changed: [10.0.16.47 -> localhost]
+2014-10-08 13:33:53,342 p=10834 u=smiller |  changed: [172.31.14.124 -> localhost]
+2014-10-08 13:33:53,715 p=10834 u=smiller |  changed: [10.0.16.61 -> localhost]
+2014-10-08 13:33:53,736 p=10834 u=smiller |  changed: [172.31.7.17 -> localhost]
+2014-10-08 13:33:53,777 p=10834 u=smiller |  changed: [10.0.32.19 -> localhost]
+2014-10-08 13:33:53,865 p=10834 u=smiller |  changed: [10.0.32.219 -> localhost]
+2014-10-08 13:33:53,873 p=10834 u=smiller |  changed: [172.31.1.216 -> localhost]
+2014-10-08 13:33:54,352 p=10834 u=smiller |  changed: [172.31.45.1 -> localhost]
+2014-10-08 13:33:54,437 p=10834 u=smiller |  changed: [172.31.6.163 -> localhost]
+2014-10-08 13:33:54,530 p=10834 u=smiller |  changed: [10.0.0.102 -> localhost]
+2014-10-08 13:33:54,545 p=10834 u=smiller |  changed: [10.0.32.241 -> localhost]
+2014-10-08 13:33:54,553 p=10834 u=smiller |  changed: [10.0.32.254 -> localhost]
+2014-10-08 13:33:54,754 p=10834 u=smiller |  changed: [10.0.32.135 -> localhost]
+2014-10-08 13:33:55,076 p=10834 u=smiller |  ok: [10.1.0.15 -> localhost]
+2014-10-08 13:33:55,190 p=10834 u=smiller |  changed: [10.0.32.6 -> localhost]
+2014-10-08 13:33:55,217 p=10834 u=smiller |  changed: [172.31.2.179 -> localhost]
+2014-10-08 13:33:55,265 p=10834 u=smiller |  changed: [10.0.16.199 -> localhost]
+2014-10-08 13:33:55,338 p=10834 u=smiller |  changed: [172.31.14.227 -> localhost]
+2014-10-08 13:33:55,470 p=10834 u=smiller |  changed: [10.0.0.237 -> localhost]
+2014-10-08 13:33:55,861 p=10834 u=smiller |  changed: [172.31.36.195 -> localhost]
+2014-10-08 13:33:55,971 p=10834 u=smiller |  changed: [172.31.15.246 -> localhost]
+2014-10-08 13:33:56,002 p=10834 u=smiller |  changed: [10.1.10.72 -> localhost]
+2014-10-08 13:33:56,041 p=10834 u=smiller |  changed: [172.31.7.62 -> localhost]
+2014-10-08 13:33:56,061 p=10834 u=smiller |  changed: [10.0.0.251 -> localhost]
+2014-10-08 13:33:56,210 p=10834 u=smiller |  changed: [172.31.12.165 -> localhost]
+2014-10-08 13:33:56,577 p=10834 u=smiller |  failed: [172.31.27.24 -> localhost] => {"failed": true}
+2014-10-08 13:33:56,578 p=10834 u=smiller |  msg: BotoServerError: 400 Bad Request
+<ErrorResponse xmlns="http://monitoring.amazonaws.com/doc/2010-08-01/">
+  <Error>
+    <Type>Sender</Type>
+    <Code>Throttling</Code>
+    <Message>Rate exceeded</Message>
+  </Error>
+  <RequestId>c3762ea2-4eef-11e4-9fdf-8f64a6534636</RequestId>
+</ErrorResponse>
+
+2014-10-08 13:33:56,623 p=10834 u=smiller |  failed: [172.31.15.38 -> localhost] => {"failed": true}
+2014-10-08 13:33:56,624 p=10834 u=smiller |  msg: BotoServerError: 400 Bad Request
+<ErrorResponse xmlns="http://monitoring.amazonaws.com/doc/2010-08-01/">
+  <Error>
+    <Type>Sender</Type>
+    <Code>Throttling</Code>
+    <Message>Rate exceeded</Message>
+  </Error>
+  <RequestId>c37d815a-4eef-11e4-a04d-5fd17c07e9ca</RequestId>
+</ErrorResponse>
+
+2014-10-08 13:33:56,646 p=10834 u=smiller |  changed: [172.31.41.153 -> localhost]
+2014-10-08 13:33:56,677 p=10834 u=smiller |  failed: [172.31.11.100 -> localhost] => {"failed": true}
+2014-10-08 13:33:56,678 p=10834 u=smiller |  msg: BotoServerError: 400 Bad Request
+<ErrorResponse xmlns="http://monitoring.amazonaws.com/doc/2010-08-01/">
+  <Error>
+    <Type>Sender</Type>
+    <Code>Throttling</Code>
+    <Message>Rate exceeded</Message>
+  </Error>
+  <RequestId>c3871ebe-4eef-11e4-9933-8190f608f489</RequestId>
+</ErrorResponse>
+
+2014-10-08 13:33:56,708 p=10834 u=smiller |  changed: [172.31.11.230 -> localhost]
+2014-10-08 13:33:56,722 p=10834 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-08 13:33:56,723 p=10834 u=smiller |             to retry, use: --limit @/home/smiller/create-alarm.yaml.retry
+
+2014-10-08 13:33:56,723 p=10834 u=smiller |  10.0.0.102                 : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,723 p=10834 u=smiller |  10.0.0.128                 : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,723 p=10834 u=smiller |  10.0.0.237                 : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,724 p=10834 u=smiller |  10.0.0.251                 : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,724 p=10834 u=smiller |  10.0.16.199                : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,724 p=10834 u=smiller |  10.0.16.47                 : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,724 p=10834 u=smiller |  10.0.16.61                 : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,725 p=10834 u=smiller |  10.0.16.66                 : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,725 p=10834 u=smiller |  10.0.32.135                : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,725 p=10834 u=smiller |  10.0.32.19                 : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,726 p=10834 u=smiller |  10.0.32.219                : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,726 p=10834 u=smiller |  10.0.32.241                : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,726 p=10834 u=smiller |  10.0.32.254                : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,726 p=10834 u=smiller |  10.0.32.6                  : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,727 p=10834 u=smiller |  10.0.32.7                  : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,727 p=10834 u=smiller |  10.0.32.94                 : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,727 p=10834 u=smiller |  10.1.0.15                  : ok=8    changed=0    unreachable=0    failed=0   
+2014-10-08 13:33:56,727 p=10834 u=smiller |  10.1.10.72                 : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,728 p=10834 u=smiller |  172.31.1.166               : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,728 p=10834 u=smiller |  172.31.1.195               : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,728 p=10834 u=smiller |  172.31.1.216               : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,728 p=10834 u=smiller |  172.31.11.100              : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:33:56,729 p=10834 u=smiller |  172.31.11.230              : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,729 p=10834 u=smiller |  172.31.12.165              : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,729 p=10834 u=smiller |  172.31.14.124              : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,729 p=10834 u=smiller |  172.31.14.227              : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,730 p=10834 u=smiller |  172.31.15.246              : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,730 p=10834 u=smiller |  172.31.15.38               : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:33:56,730 p=10834 u=smiller |  172.31.16.167              : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,730 p=10834 u=smiller |  172.31.19.67               : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,731 p=10834 u=smiller |  172.31.2.179               : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,731 p=10834 u=smiller |  172.31.27.24               : ok=7    changed=0    unreachable=0    failed=1   
+2014-10-08 13:33:56,731 p=10834 u=smiller |  172.31.36.195              : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,731 p=10834 u=smiller |  172.31.41.153              : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,732 p=10834 u=smiller |  172.31.45.1                : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,732 p=10834 u=smiller |  172.31.6.163               : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,732 p=10834 u=smiller |  172.31.6.242               : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,733 p=10834 u=smiller |  172.31.6.84                : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,733 p=10834 u=smiller |  172.31.7.17                : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:33:56,733 p=10834 u=smiller |  172.31.7.62                : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:39:28,665 p=12538 u=smiller |   
+2014-10-08 13:39:28,665 p=12538 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=172.31.11.100,172.31.15.38,172.31.27.24
+2014-10-08 13:39:28,665 p=12538 u=smiller |   
+2014-10-08 13:39:38,574 p=12538 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-08 13:39:38,576 p=12538 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-08 13:39:40,290 p=12538 u=smiller |  ok: [10.0.16.66]
+2014-10-08 13:39:40,333 p=12538 u=smiller |  ok: [10.0.32.7]
+2014-10-08 13:39:41,121 p=12538 u=smiller |  ok: [172.31.1.166]
+2014-10-08 13:39:41,124 p=12538 u=smiller |  ok: [172.31.16.167]
+2014-10-08 13:39:41,757 p=12538 u=smiller |  ok: [172.31.6.242]
+2014-10-08 13:39:41,903 p=12538 u=smiller |  ok: [10.0.32.94]
+2014-10-08 13:39:42,371 p=12538 u=smiller |  ok: [172.31.19.67]
+2014-10-08 13:39:43,527 p=12538 u=smiller |  ok: [172.31.1.195]
+2014-10-08 13:39:43,582 p=12538 u=smiller |  ok: [172.31.6.84]
+2014-10-08 13:39:43,587 p=12538 u=smiller |  ok: [10.0.16.47]
+2014-10-08 13:39:44,035 p=12538 u=smiller |  ok: [10.0.0.128]
+2014-10-08 13:39:44,758 p=12538 u=smiller |  ok: [172.31.14.124]
+2014-10-08 13:39:45,529 p=12538 u=smiller |  ok: [172.31.7.17]
+2014-10-08 13:39:45,598 p=12538 u=smiller |  ok: [10.0.32.19]
+2014-10-08 13:39:47,076 p=12538 u=smiller |  ok: [10.0.16.61]
+2014-10-08 13:39:47,151 p=12538 u=smiller |  ok: [172.31.45.1]
+2014-10-08 13:39:47,622 p=12538 u=smiller |  ok: [172.31.6.163]
+2014-10-08 13:39:47,650 p=12538 u=smiller |  ok: [10.0.32.219]
+2014-10-08 13:39:47,998 p=12538 u=smiller |  ERROR: interrupted
+2014-10-08 13:39:54,693 p=12666 u=smiller |   
+2014-10-08 13:39:54,693 p=12666 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=172.31.11.100,172.31.15.38,172.31.27.24
+2014-10-08 13:39:54,693 p=12666 u=smiller |   
+2014-10-08 13:39:54,845 p=12666 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-08 13:39:54,848 p=12666 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-08 13:39:55,309 p=12666 u=smiller |  ok: [10.0.16.66]
+2014-10-08 13:39:55,319 p=12666 u=smiller |  ok: [172.31.16.167]
+2014-10-08 13:39:55,327 p=12666 u=smiller |  ok: [10.0.32.7]
+2014-10-08 13:39:55,355 p=12666 u=smiller |  ok: [172.31.1.166]
+2014-10-08 13:39:55,697 p=12666 u=smiller |  ok: [10.0.32.94]
+2014-10-08 13:39:55,728 p=12666 u=smiller |  ok: [172.31.19.67]
+2014-10-08 13:39:55,956 p=12666 u=smiller |  ok: [10.0.16.47]
+2014-10-08 13:39:56,080 p=12666 u=smiller |  ok: [172.31.6.84]
+2014-10-08 13:39:56,110 p=12666 u=smiller |  ok: [172.31.1.195]
+2014-10-08 13:39:56,232 p=12666 u=smiller |  ok: [172.31.6.242]
+2014-10-08 13:39:56,314 p=12666 u=smiller |  ok: [172.31.14.124]
+2014-10-08 13:39:56,441 p=12666 u=smiller |  ok: [10.0.0.128]
+2014-10-08 13:39:56,464 p=12666 u=smiller |  ok: [172.31.7.17]
+2014-10-08 13:39:56,614 p=12666 u=smiller |  ok: [10.0.32.19]
+2014-10-08 13:39:56,845 p=12666 u=smiller |  ok: [172.31.45.1]
+2014-10-08 13:39:56,996 p=12666 u=smiller |  ok: [172.31.6.163]
+2014-10-08 13:39:57,038 p=12666 u=smiller |  ERROR: interrupted
+2014-10-08 13:40:25,586 p=12728 u=smiller |   
+2014-10-08 13:40:25,586 p=12728 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=172.31.11.100
+2014-10-08 13:40:25,586 p=12728 u=smiller |   
+2014-10-08 13:40:25,734 p=12728 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-08 13:40:25,736 p=12728 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-08 13:40:26,204 p=12728 u=smiller |  ok: [172.31.16.167]
+2014-10-08 13:40:26,212 p=12728 u=smiller |  ok: [10.0.16.66]
+2014-10-08 13:40:26,229 p=12728 u=smiller |  ok: [10.0.32.7]
+2014-10-08 13:40:26,257 p=12728 u=smiller |  ok: [172.31.1.166]
+2014-10-08 13:40:26,596 p=12728 u=smiller |  ok: [10.0.32.94]
+2014-10-08 13:40:26,605 p=12728 u=smiller |  ok: [172.31.19.67]
+2014-10-08 13:40:26,646 p=12728 u=smiller |  ok: [10.0.16.47]
+2014-10-08 13:40:26,989 p=12728 u=smiller |  ok: [172.31.6.84]
+2014-10-08 13:40:27,014 p=12728 u=smiller |  ok: [172.31.1.195]
+2014-10-08 13:40:27,015 p=12728 u=smiller |  ok: [172.31.14.124]
+2014-10-08 13:40:27,099 p=12728 u=smiller |  ok: [172.31.6.242]
+2014-10-08 13:40:27,269 p=12728 u=smiller |  ERROR: interrupted
+2014-10-08 13:48:10,116 p=12789 u=smiller |   
+2014-10-08 13:48:10,116 p=12789 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=172.31.11.100,172.31.15.38,172.31.27.24
+2014-10-08 13:48:10,116 p=12789 u=smiller |   
+2014-10-08 13:48:21,090 p=12789 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-08 13:48:21,104 p=12789 u=smiller |  skipping: no hosts matched
+2014-10-08 13:48:21,104 p=12789 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-08 13:48:28,356 p=12797 u=smiller |   
+2014-10-08 13:48:28,356 p=12797 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=172.31.11.100
+2014-10-08 13:48:28,356 p=12797 u=smiller |   
+2014-10-08 13:48:28,509 p=12797 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-08 13:48:28,510 p=12797 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-08 13:48:33,029 p=12797 u=smiller |  ok: [172.31.11.100]
+2014-10-08 13:48:33,029 p=12797 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-08 13:48:33,038 p=12797 u=smiller |  skipping: [172.31.11.100]
+2014-10-08 13:48:33,039 p=12797 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-08 13:48:56,091 p=12797 u=smiller |  ok: [172.31.11.100] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:48:56,091 p=12797 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-08 13:48:56,243 p=12797 u=smiller |  ok: [172.31.11.100]
+2014-10-08 13:48:56,244 p=12797 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-08 13:48:56,429 p=12797 u=smiller |  ok: [172.31.11.100] => (item=awscreds.conf)
+2014-10-08 13:48:56,629 p=12797 u=smiller |  ok: [172.31.11.100] => (item=CloudWatchClient.pm)
+2014-10-08 13:48:56,823 p=12797 u=smiller |  ok: [172.31.11.100] => (item=mon-put-instance-data.pl)
+2014-10-08 13:48:56,823 p=12797 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-08 13:48:56,826 p=12797 u=smiller |  skipping: [172.31.11.100] => (item=CloudWatchClient.pm)
+2014-10-08 13:48:56,828 p=12797 u=smiller |  skipping: [172.31.11.100] => (item=mon-put-instance-data.pl)
+2014-10-08 13:48:56,829 p=12797 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-08 13:48:57,074 p=12797 u=smiller |  ok: [172.31.11.100]
+2014-10-08 13:48:57,075 p=12797 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-08 13:48:57,078 p=12797 u=smiller |  skipping: [172.31.11.100]
+2014-10-08 13:48:57,078 p=12797 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-08 13:48:57,389 p=12797 u=smiller |  ok: [172.31.11.100]
+2014-10-08 13:48:57,389 p=12797 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-08 13:48:57,701 p=12797 u=smiller |  changed: [172.31.11.100 -> localhost]
+2014-10-08 13:48:57,702 p=12797 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-08 13:48:57,702 p=12797 u=smiller |  172.31.11.100              : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:50:18,534 p=12841 u=smiller |   
+2014-10-08 13:50:18,534 p=12841 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=172.31.15.38
+2014-10-08 13:50:18,534 p=12841 u=smiller |   
+2014-10-08 13:50:18,683 p=12841 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-08 13:50:18,683 p=12841 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-08 13:50:20,329 p=12841 u=smiller |  ok: [172.31.15.38]
+2014-10-08 13:50:20,330 p=12841 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-08 13:50:20,339 p=12841 u=smiller |  skipping: [172.31.15.38]
+2014-10-08 13:50:20,339 p=12841 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-08 13:50:33,424 p=12841 u=smiller |  ok: [172.31.15.38] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:50:33,424 p=12841 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-08 13:50:33,487 p=12841 u=smiller |  ok: [172.31.15.38]
+2014-10-08 13:50:33,488 p=12841 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-08 13:50:33,577 p=12841 u=smiller |  ok: [172.31.15.38] => (item=awscreds.conf)
+2014-10-08 13:50:33,661 p=12841 u=smiller |  ok: [172.31.15.38] => (item=CloudWatchClient.pm)
+2014-10-08 13:50:33,744 p=12841 u=smiller |  ok: [172.31.15.38] => (item=mon-put-instance-data.pl)
+2014-10-08 13:50:33,745 p=12841 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-08 13:50:33,748 p=12841 u=smiller |  skipping: [172.31.15.38] => (item=CloudWatchClient.pm)
+2014-10-08 13:50:33,750 p=12841 u=smiller |  skipping: [172.31.15.38] => (item=mon-put-instance-data.pl)
+2014-10-08 13:50:33,750 p=12841 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-08 13:50:33,826 p=12841 u=smiller |  ok: [172.31.15.38]
+2014-10-08 13:50:33,826 p=12841 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-08 13:50:33,829 p=12841 u=smiller |  skipping: [172.31.15.38]
+2014-10-08 13:50:33,829 p=12841 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-08 13:50:33,968 p=12841 u=smiller |  ok: [172.31.15.38]
+2014-10-08 13:50:33,969 p=12841 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-08 13:50:34,496 p=12841 u=smiller |  changed: [172.31.15.38 -> localhost]
+2014-10-08 13:50:34,497 p=12841 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-08 13:50:34,497 p=12841 u=smiller |  172.31.15.38               : ok=8    changed=1    unreachable=0    failed=0   
+2014-10-08 13:51:07,406 p=12873 u=smiller |   
+2014-10-08 13:51:07,406 p=12873 u=smiller |  /usr/bin/ansible-playbook create-alarm.yaml -e hosts=172.31.27.24
+2014-10-08 13:51:07,406 p=12873 u=smiller |   
+2014-10-08 13:51:07,559 p=12873 u=smiller |  PLAY [deploy CloudWatch Scripts] ********************************************** 
+2014-10-08 13:51:07,559 p=12873 u=smiller |  GATHERING FACTS *************************************************************** 
+2014-10-08 13:51:09,225 p=12873 u=smiller |  ok: [172.31.27.24]
+2014-10-08 13:51:09,226 p=12873 u=smiller |  TASK: [common | Install Amazon-Linux dependencies] **************************** 
+2014-10-08 13:51:09,235 p=12873 u=smiller |  skipping: [172.31.27.24]
+2014-10-08 13:51:09,236 p=12873 u=smiller |  TASK: [common | Install Ubuntu dependencies] ********************************** 
+2014-10-08 13:51:14,496 p=12873 u=smiller |  ok: [172.31.27.24] => (item=unzip,libwww-perl,libcrypt-ssleay-perl,libswitch-perl,cron)
+2014-10-08 13:51:14,497 p=12873 u=smiller |  TASK: [common | Create script dir] ******************************************** 
+2014-10-08 13:51:14,556 p=12873 u=smiller |  ok: [172.31.27.24]
+2014-10-08 13:51:14,557 p=12873 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with credentials] ******************* 
+2014-10-08 13:51:14,643 p=12873 u=smiller |  ok: [172.31.27.24] => (item=awscreds.conf)
+2014-10-08 13:51:14,729 p=12873 u=smiller |  ok: [172.31.27.24] => (item=CloudWatchClient.pm)
+2014-10-08 13:51:14,814 p=12873 u=smiller |  ok: [172.31.27.24] => (item=mon-put-instance-data.pl)
+2014-10-08 13:51:14,815 p=12873 u=smiller |  TASK: [common | Deploy CloudWatch Scripts with IAM role] ********************** 
+2014-10-08 13:51:14,818 p=12873 u=smiller |  skipping: [172.31.27.24] => (item=CloudWatchClient.pm)
+2014-10-08 13:51:14,820 p=12873 u=smiller |  skipping: [172.31.27.24] => (item=mon-put-instance-data.pl)
+2014-10-08 13:51:14,820 p=12873 u=smiller |  TASK: [common | Set up cron with credentials] ********************************* 
+2014-10-08 13:51:14,888 p=12873 u=smiller |  ok: [172.31.27.24]
+2014-10-08 13:51:14,888 p=12873 u=smiller |  TASK: [common | Set up cron with IAM role] ************************************ 
+2014-10-08 13:51:14,891 p=12873 u=smiller |  skipping: [172.31.27.24]
+2014-10-08 13:51:14,891 p=12873 u=smiller |  TASK: [alarm | Get instance ec2 facts] **************************************** 
+2014-10-08 13:51:15,001 p=12873 u=smiller |  ok: [172.31.27.24]
+2014-10-08 13:51:15,001 p=12873 u=smiller |  TASK: [alarm | Create CPU utilization metric alarm] *************************** 
+2014-10-08 13:51:15,313 p=12873 u=smiller |  changed: [172.31.27.24 -> localhost]
+2014-10-08 13:51:15,314 p=12873 u=smiller |  PLAY RECAP ******************************************************************** 
+2014-10-08 13:51:15,314 p=12873 u=smiller |  172.31.27.24               : ok=8    changed=1    unreachable=0    failed=0   
