@@ -3,7 +3,7 @@ IMPORTANT!
 
 This play will only work if ec2_metric_alarm.py is on the devel branch or on version 1.8+
 
-Before running this play, create an awscreds.conf file in roles/common/files or set up your instances with a role. The credentials or tole you use should have the CloudWatch:putmetric permission.
+Before running this play, create an awscreds.conf file in roles/common/files or set up your instances with a role. The credentials or role you use should have the CloudWatch:putmetric permission.
 The format for awscreds.conf is:
 
 
