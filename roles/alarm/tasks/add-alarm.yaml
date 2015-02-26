@@ -1,5 +1,5 @@
 ---
-- name: Create CPU utilization metric alarm
+- name: Create Disk utilization metric alarm
   ec2_metric_alarm:
     state=present
     region=us-east-1
